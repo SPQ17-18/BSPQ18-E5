@@ -10,6 +10,5 @@ public class App
     {
         System.out.println( "Hello World!" );
         System.out.println("I am the client");
-        System.out.println("I am Aitor, and I am proving this");
     }
 }
