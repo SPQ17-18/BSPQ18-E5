@@ -24,11 +24,14 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.awt.Component;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class LoginWindow extends JFrame {
+public class LoginWindow extends JFrame implements Runnable {
 
 	private JPanel contentPane,panelNorth, panelSouth, panelEast, panelWest, panelSCenter, panelSRight, panelRoles, panelUsername, panelPassword, panelButtons;
 	private JTextField txtTit;
@@ -38,6 +41,10 @@ public class LoginWindow extends JFrame {
 	private JLabel lblImage, lblAccess, labelRoles, labelUsername, lblPassword;
 	private JComboBox comboBoxRoles;
 	private JButton btnRegister;
+	private JLabel labelClock;
+	String hour, minutes , seconds, ampm;
+	Calendar cal;
+	Thread t1;
 
 	/**
 	 * Launch the application.
@@ -52,6 +59,7 @@ public class LoginWindow extends JFrame {
 					e.printStackTrace();
 				}
 			}
+			
 		});
 	}
 
@@ -62,6 +70,7 @@ public class LoginWindow extends JFrame {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
+		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -96,6 +105,12 @@ public class LoginWindow extends JFrame {
 		panelSCenter = new JPanel();
 		panelSouth.add(panelSCenter);
 		
+		labelClock = new JLabel("New label");
+		labelClock.setFont(new Font("Consolas", Font.PLAIN, 20));
+		panelSCenter.add(labelClock);
+		//Screen clock		
+		Clock();
+		
 		panelSRight = new JPanel();
 		panelSouth.add(panelSRight);
 		panelSRight.setLayout(null);
@@ -118,7 +133,7 @@ public class LoginWindow extends JFrame {
 		panelWest.add(lblImage);
 		//lblHereGoesThe.setIcon(new ImageIcon("/Users/aitor/Desktop/GettyImages-579236076-59641e375f9b583f18138ca1.jpg"));
 		
-		lblImage.setIcon(ajustarImagen("file:///Users/aitor/git/BSPQ18-E5/LetterSoup-App/Client/src/main/java/es/deusto/spq/window/Image1.jpg"));
+		lblImage.setIcon(ajustarImagen("///Users/aitor/git/BSPQ18-E5/LetterSoup-App/Client/src/main/java/es/deusto/spq/window/Image1.jpg"));
 		
 		
 		panelEast = new JPanel();
@@ -252,4 +267,49 @@ public class LoginWindow extends JFrame {
 		 panelPassword.setVisible(false);
 		 panelButtons.setVisible(false);
 	 }
+	
+	 
+	 /**
+	  * This code has been adapted from http://monillo007.blogspot.com.es/2011/07/programar-un-reloj-en-java.html 
+	  */
+	 
+	 public void Clock() {
+	        t1 = new Thread(this);
+	        t1.start();
+	        
+	    }
+	 
+	 
+	 public void calcula() {
+	        Calendar calendar = new GregorianCalendar();
+	        Date fechaHoraActual = new Date();
+
+
+	        calendar.setTime(fechaHoraActual);
+	        ampm = calendar.get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM";
+
+	        if (ampm.equals("PM")) {
+	            int h = calendar.get(Calendar.HOUR_OF_DAY) - 12;
+	            hour = h > 9 ? "" + h : "0" + h;
+	        } else {
+	            hour = calendar.get(Calendar.HOUR_OF_DAY) > 9 ? "" + calendar.get(Calendar.HOUR_OF_DAY) : "0" + calendar.get(Calendar.HOUR_OF_DAY);
+	        }
+	        minutes = calendar.get(Calendar.MINUTE) > 9 ? "" + calendar.get(Calendar.MINUTE) : "0" + calendar.get(Calendar.MINUTE);
+	        seconds = calendar.get(Calendar.SECOND) > 9 ? "" + calendar.get(Calendar.SECOND) : "0" + calendar.get(Calendar.SECOND);
+	    
+	 }
+
+	public void run() {
+		//  Auto-generated method stub
+		 Thread ct = Thread.currentThread();
+	        while (ct == t1) {
+	            calcula();
+	            labelClock.setText(hour + ":" + minutes + ":" + seconds + " " + ampm);
+	            try {
+	                Thread.sleep(1000);
+	            } catch (InterruptedException e) {
+	            }
+	        }
+	}
+	 
 }
