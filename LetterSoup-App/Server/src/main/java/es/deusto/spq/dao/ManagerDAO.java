@@ -200,6 +200,8 @@ private PersistenceManagerFactory pmf;
 		try {		
 			tx.begin();
 
+			
+			
 			Query<Soup> query = pm.newQuery(Soup.class, "soup_id =='"+soup.getSoup_id()+"'");
 
 			Collection<?> result = (Collection<?>) query.execute();
