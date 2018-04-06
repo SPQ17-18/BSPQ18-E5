@@ -14,6 +14,7 @@ public interface IManagerDAO {
 	public ArrayList<Integer> getNumSoup();
 	public String getSoup(int Soupid);
 	public void storeWord(Word word);
-	public void deleteSoup(Soup soup);
+	public void deleteSoup(int soupid);
+	public void storeUser(User user);
 
 }

@@ -27,7 +27,7 @@ public class Soup {
 		this.soup_id = soup_id;
 		this.content = content;
 		this.size = size;
-		this.words = null;
+		this.words = new ArrayList<Word>();
 	}
 
 	public int getSoup_id() {
@@ -60,6 +60,9 @@ public class Soup {
 
 	public void setWords(List<Word> words) {
 		this.words = words;
+	}
+	public void setAword(Word word) {
+		this.words.add(word);
 	}
 	
 }

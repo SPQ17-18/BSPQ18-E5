@@ -13,20 +13,23 @@ public class User {
 	private String User;	
 	private String Password;	
 	private char rol;
+	private String email;
 	
 
 	@Persistent(defaultFetchGroup="true", mappedBy="user", dependentElement = "true")
 	@Join
-	private List<Record> records = new ArrayList<Record>();
+	private List<Record> records;
 	
 	
 	
-	public User(String user, String password, int score, char rol) {
-	
+	public User(String user, String password, char rol, String email) {
 		User = user;
 		Password = password;
 		this.rol = rol;
+		this.email = email;
+		this.records = new ArrayList<Record>();
 	}
+	
 	public String getUser() {
 		return User;
 	}
@@ -49,6 +52,18 @@ public class User {
 		this.rol = rol;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public void addRecord(Record record) {
+		this.records.add(record);
+	}
+	
 	
 
 }

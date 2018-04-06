@@ -1,13 +1,16 @@
 package es.deusto.spq.data;
 
 import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 
 import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+@PersistenceCapable(detachable = "true")
 public class Record {
 	@PrimaryKey
 	private int record_id;	
