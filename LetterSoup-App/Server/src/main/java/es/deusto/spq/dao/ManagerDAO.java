@@ -19,6 +19,7 @@ import es.deusto.spq.data.Word;
 
 
 public class ManagerDAO implements IManagerDAO {
+
 private PersistenceManagerFactory pmf;
 	
 	public ManagerDAO() {
