@@ -1,4 +1,4 @@
-package org.eclipse.wb.swing;
+package es.deusto.spq.window;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
