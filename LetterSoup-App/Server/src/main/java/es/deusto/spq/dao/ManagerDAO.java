@@ -131,7 +131,7 @@ private PersistenceManagerFactory pmf;
     		pm.close(); 
 	    }
 	    
-		
+		System.out.println(us.getPassword());
 		return us.getPassword().equals(data[1]);
 		
 	}
@@ -241,13 +241,13 @@ private PersistenceManagerFactory pmf;
 	
 	
 	
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
 	
-		IManagerDAO dao= new ManagerDAO();
+		//IManagerDAO dao= new ManagerDAO();
 				
-		if (System.getSecurityManager() == null) {
-			System.setSecurityManager(new SecurityManager());
-		}
+		//if (System.getSecurityManager() == null) {
+			//System.setSecurityManager(new SecurityManager());
+		//}
 		//Soup s=new Soup(1,"YABECDSNO", 3);
 		//Soup s1=new Soup(2,"ZOPENBAARESTSHWYOTVABDGCF", 5);
 		//Word a= new Word(1, 'V', "YES", 1, 3, s);
@@ -268,21 +268,21 @@ private PersistenceManagerFactory pmf;
 		//System.out.println(dao.getNumSoup().size());
 		//System.out.println("El contenido de la sopa s es:\n");
 		//System.out.println(dao.getSoup(s.getSoup_id()));
-		User u=new User("a1", "abc", 'S',"a1@gmail.com");
-		Date d=new Date();
-		Record r1=new Record(1,d, 5,u);
-		u.addRecord(r1);
-		System.out.println("Store user");
-		dao.storeUser(u);
-		System.out.println("Get records");
-		dao.getRecords(u);
-		System.out.println("Is correct");
-		System.out.println(dao.isCorrect("a1#abc"));
-		System.out.println("Is correct");
-		System.out.println(dao.isCorrect("a1#aebc"));
+		//User u=new User("a1", "abc", 'S',"a1@gmail.com");
+		//Date d=new Date();
+		//Record r1=new Record(1,d, 5,u);
+		//u.addRecord(r1);
+		//System.out.println("Store user");
+		//dao.storeUser(u);
+		//System.out.println("Get records");
+		//dao.getRecords(u);
+		//System.out.println("Is correct");
+		//System.out.println(dao.isCorrect("a1#abc"));
+		//System.out.println("Is correct");
+		//System.out.println(dao.isCorrect("a1#aebc"));
 		
 		
-	}
+	//}
 
 
 	}

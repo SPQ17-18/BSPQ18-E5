@@ -9,11 +9,18 @@
 
   <name>Client</name>
   <url>http://maven.apache.org</url>
-
+  
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<server.IP>127.0.0.1</server.IP>
+		<server.port>1099</server.port>
+		<server.Name>LetterSoupServer</server.Name>
+		<policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
+		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
+	</properties>
 
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -21,5 +28,60 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+           <groupId>es.deusto.spq</groupId>
+		   <artifactId>Server</artifactId>
+		   <version>1.0-SNAPSHOT</version>
+   </dependency>
+       
   </dependencies>
+  <profiles> 
+		<!-- run as 'mvn exec:java -Pserver' -->
+		<profile>  
+			<id>client</id>  
+	
+    			  
+			<build> 
+				<resources>
+					<resource>
+						<directory>${config.files.dir}</directory>
+						<includes>
+							<include>**/*.jdo</include>
+							<include>**/*.orm</include>
+							<include>**/*.properties</include>
+						</includes>
+					</resource>
+				</resources>
+
+				<plugins>  
+					<plugin>  
+						<groupId>org.codehaus.mojo</groupId>  
+						<artifactId>exec-maven-plugin</artifactId>  
+						<version>1.2.1</version>  
+						<configuration>  
+									<mainClass>es.deusto.spq.App</mainClass>
+									<systemProperties>
+										<systemProperty>
+											<key>java.security.manager</key>
+											<value>java.rmi.RMISecurityManager</value>
+										</systemProperty>
+										<systemProperty>
+											<key>java.security.policy</key>
+											<value>${policy.file}</value>
+										</systemProperty>
+									</systemProperties>
+									<arguments>  
+										<argument>${server.IP}</argument>  
+										<argument>${server.port}</argument>  
+										<argument>${server.Name}</argument>  
+									</arguments>  
+						</configuration>  
+					</plugin>  
+				</plugins>  
+			</build> 
+		</profile>  
+	</profiles>  
+		
+   	
 </project>
+
