@@ -17,7 +17,8 @@
 		<server.Name>LetterSoupServer</server.Name>
 		<policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
-	</properties>
+		<email.address>aitor.santa@opendeusto.es</email.address>
+  </properties>
 
 
   <dependencies>
