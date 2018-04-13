@@ -1,8 +1,7 @@
 package es.deusto.spq.data;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
-import java.util.Random;
 
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
@@ -15,7 +14,7 @@ public class Soup {
 	@PrimaryKey
 	private int soup_id;	
 	
-	private char[][] content;
+	private String content;
 	
 	private int size;
 	
@@ -29,7 +28,7 @@ public class Soup {
 		this.soup_id = soup_id;
 		this.size = size;
 		this.words = new ArrayList<Word>();
-		this.content=new char[this.size][this.size];
+		this.content=null;
 	}
 
 	public int getSoup_id() {
@@ -40,22 +39,45 @@ public class Soup {
 		this.soup_id = soup_id;
 	}
 
-	public char[][] getContent() {
+	public String getContent() {
 		return content;
 	}
 
-	public void setContent(char[][] content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
+	public char [][] getArrayContent(){
+		char [][] arraycontent=new char[size][size];
+		for(int i=0;i<this.content.length();i++) {
+			int x=i/this.size;
+			int y=i%this.size;
+			arraycontent[y][x]=this.content.charAt(i);
+		}
+		return arraycontent;
+	}
 
-	@Override
-	public String toString() {
+	public String toStringArrayContent(char [][] array) {
 		String s="";
 		for(int i=0;i<size;i++) {
 			for(int j=0;j<size;j++) {
-				s=s+this.content[i][j]+" ";
+				s=s+array[i][j];
 			}
-			s=s+'\n';
+			
+		}
+		return s;	
+		
+		
+	}
+	@Override
+	public String toString() {
+		String s="";
+		for(int i=0;i<this.content.length();i++) {
+			if(i%this.size==0) {
+				s=s+'\n'+this.content.charAt(i);
+			}else {
+				s=s+" "+this.content.charAt(i);
+			}
+			
 		}
 		
 		
@@ -82,16 +104,17 @@ public class Soup {
 	}
 	public void initialize() {
 		//Word(int word_id, char position, String word, int x, int y, Soup soup)
-
+		char [][] arrayContent=new char[this.size][this.size];
 		for(int i=0;i<size;i++) {
 			for(int j=0; j<size;j++) {
-				this.content[i][j]='\'';
+				arrayContent[i][j]='\'';
 			}
 		}
 		
 		
-		insertWords();
-		fulfill();
+		insertWords(arrayContent);
+		fulfill(arrayContent);
+		this.content=toStringArrayContent(arrayContent);
 
 		
 		
@@ -105,7 +128,7 @@ public class Soup {
 		return letra;
 				
 	}
-	public void insertWords() {
+	public void insertWords(char [][] arrayContent) {
 		int x=0;
 		int y=0;
 		for(int i=0;i<this.words.size();i++) {
@@ -114,10 +137,11 @@ public class Soup {
 			y=word.getY();
 			for(int j=0;j<word.getWord().length();j++) {
 				if(word.getPosition()=='V' || word.getPosition()=='v') {
-					this.content[y][x]=(word.getWord()).charAt(j);
+					
+					arrayContent[y][x]=(word.getWord()).charAt(j);
 					y++;
 				}else {
-					this.content[y][x]=(word.getWord()).charAt(j);
+					arrayContent[y][x]=(word.getWord()).charAt(j);
 					x++;
 				}
 			}
@@ -126,30 +150,31 @@ public class Soup {
 		
 	}
 
-	public void fulfill() {
+	public void fulfill(char [][] arrayContent) {
 		char a = '\'';
 		for(int i=0;i<this.size;i++) {
 			for(int j=0; j<this.size;j++) {
-				if(this.content[i][j]==a) {
-					this.content[i][j]=generateValue();		
+				if(arrayContent[i][j]==a) {
+					arrayContent[i][j]=generateValue();		
 				}
 			}
 		}
 	}
 	
-	public static void main(String[] args) {
+	//public static void main(String[] args) {
 		
-		Soup s = new Soup(1, 13);
-		Word a = new Word(1,'V',"ala",1,2,s);
-		Word b = new Word(1,'H',"beta",2,2,s);
-		ArrayList<Word> w = new ArrayList<>();
-		s.setAword(a);
-		s.setAword(b);
+		//Soup s = new Soup(1, 13);
+		//Word a = new Word(1,'V',"ala",1,2,s);
+		//Word b = new Word(1,'H',"beta",2,2,s);
+		//ArrayList<Word> w = new ArrayList<>();
+		//s.setAword(a);
+		//s.setAword(b);
 
 		
-		s.initialize();
-		System.out.println(s);
-	}
+		//s.initialize();
+		//System.out.println(s.toStringArrayContent(s.getArrayContent()));
+		//System.out.println(s);
+	//}
 	
 	
 }

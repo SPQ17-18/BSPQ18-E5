@@ -241,48 +241,50 @@ private PersistenceManagerFactory pmf;
 	
 	
 	
-	//public static void main(String[] args) {
+	public static void main(String[] args) {
 	
-		//IManagerDAO dao= new ManagerDAO();
+		IManagerDAO dao= new ManagerDAO();
 				
-		//if (System.getSecurityManager() == null) {
-			//System.setSecurityManager(new SecurityManager());
-		//}
-		//Soup s=new Soup(1,"YABECDSNO", 3);
-		//Soup s1=new Soup(2,"ZOPENBAARESTSHWYOTVABDGCF", 5);
-		//Word a= new Word(1, 'V', "YES", 1, 3, s);
-		//Word b= new Word(2, 'H', "NO", 2, 1, s);
-		//s.setAword(a);
-		//s.setAword(b);
-		//dao.storeSoup(s);
-		//Word c= new Word(3, 'V', "PAST", 3, 5, s1);
-		//Word d= new Word(4, 'V', "NEW", 5,5, s1);
-		//Word e=new Word(5,'H',"OPEN",2,5,s1);
-		//s1.setAword(c);
-		//s1.setAword(d);
-		//s1.setAword(e);
-		//dao.storeSoup(s1);		
+		if (System.getSecurityManager() == null) {
+			System.setSecurityManager(new SecurityManager());
+		}
+		Soup s=new Soup(1, 13);
+		Soup s1=new Soup(2, 13);
+		Word a= new Word(1, 'V', "YES", 1, 3, s);
+		Word b= new Word(2, 'H', "NO", 2, 1, s);
+		s.setAword(a);
+		s.setAword(b);
+		s.initialize();
+		dao.storeSoup(s);
+		Word c= new Word(3, 'V', "PAST", 3, 5, s1);
+		Word d= new Word(4, 'V', "NEW", 5,5, s1);
+		Word e=new Word(5,'H',"OPEN",2,5,s1);
+		s1.setAword(c);
+		s1.setAword(d);
+		s1.setAword(e);
+		s1.initialize();
+		dao.storeSoup(s1);		
 		//dao.deleteSoup(s1.getSoup_id());		
 		//dao.deleteSoup(s.getSoup_id());
-		//System.out.println("La cantidad de sopas de letras es:\n");
-		//System.out.println(dao.getNumSoup().size());
-		//System.out.println("El contenido de la sopa s es:\n");
-		//System.out.println(dao.getSoup(s.getSoup_id()));
-		//User u=new User("a1", "abc", 'S',"a1@gmail.com");
-		//Date d=new Date();
-		//Record r1=new Record(1,d, 5,u);
-		//u.addRecord(r1);
-		//System.out.println("Store user");
-		//dao.storeUser(u);
-		//System.out.println("Get records");
-		//dao.getRecords(u);
-		//System.out.println("Is correct");
-		//System.out.println(dao.isCorrect("a1#abc"));
-		//System.out.println("Is correct");
-		//System.out.println(dao.isCorrect("a1#aebc"));
+		System.out.println("La cantidad de sopas de letras es:\n");
+		System.out.println(dao.getNumSoup().size());
+		System.out.println("El contenido de la sopa s es:\n");
+		System.out.println(dao.getSoup(s.getSoup_id()));
+		User u=new User("a1", "abc", 'S',"a1@gmail.com");
+		Date date=new Date();
+		Record r1=new Record(1,date, 5,u);
+		u.addRecord(r1);
+		System.out.println("Store user");
+		dao.storeUser(u);
+		System.out.println("Get records");
+		dao.getRecords(u);
+		System.out.println("Is correct");
+		System.out.println(dao.isCorrect("a1#abc"));
+		System.out.println("Is correct");
+		System.out.println(dao.isCorrect("a1#aebc"));
 		
 		
-	//}
+	}
 
 
 	}
