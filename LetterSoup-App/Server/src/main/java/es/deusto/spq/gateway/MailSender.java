@@ -1,4 +1,4 @@
-package es.deusto.ingenieria.sd.sms.server.gateway;
+package es.deusto.spq.gateway;
 
 import java.util.Properties;
 

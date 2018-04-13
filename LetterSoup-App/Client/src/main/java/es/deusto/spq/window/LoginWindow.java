@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+
 import javax.swing.JTextField;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -24,6 +27,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -45,28 +49,42 @@ public class LoginWindow extends JFrame implements Runnable {
 	String hour, minutes , seconds, ampm;
 	Calendar cal;
 	Thread t1;
+	controller cont =null;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					LoginWindow frame = new LoginWindow();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-			
-		});
+		
+		final LoginWindow log=new LoginWindow(args);
+//		EventQueue.invokeLater(new Runnable() {
+//			LoginWindow2 frame = null;
+//			public void run() {
+//				try {
+//					 frame = new LoginWindow2();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//			
+//		});
 	}
 
 	/**
 	 * Create the frame.
+	 * @param args 
+	 * @param args 
 	 */
-	public LoginWindow() {
+	public LoginWindow(String[] args) {
+	 	
+		try {
+			cont=new controller(args);
+		} catch (RemoteException e) {
+			// Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -219,6 +237,11 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelButtons.add(button_1);
 		
 		JButton button_2 = new JButton("Enter");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cont.login(textFieldUsername.getText(), passwordField.getText());
+			}
+		});
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_2);
 	

@@ -10,7 +10,7 @@ import es.deusto.spq.controller.controller;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public void a(String [] args)
     {
     	try {
 			controller cont=new controller(args);
