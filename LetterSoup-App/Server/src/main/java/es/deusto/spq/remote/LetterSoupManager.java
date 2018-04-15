@@ -5,6 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 import es.deusto.spq.dao.IManagerDAO;
 import es.deusto.spq.dao.ManagerDAO;
+import es.deusto.spq.gateway.MailSender;
 
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
@@ -36,7 +37,7 @@ private static final long serialVersionUID = 1L;
 		
 	
 	public void sendMail(String message, email) throws RemoteException{
-		mail.setTo(email);
+		mail=MailSender(email);
 		mail.sendMessage(message);
 	}
 		
