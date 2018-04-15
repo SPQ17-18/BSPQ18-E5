@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: es.deusto.spq.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git

@@ -5,8 +5,13 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.User;
+=======
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.dto.ScoreDTO;
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -27,7 +32,11 @@ public boolean register(String user)throws RemoteException;
 	public void sendMail(String message,String email) throws RemoteException;//send a message to an email
 		
 	
+<<<<<<< HEAD
 	public ArrayList<Record> getScore(User u) throws RemoteException;
+=======
+	public ScoreDTO getScore(String u) throws RemoteException;
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 
 	
 

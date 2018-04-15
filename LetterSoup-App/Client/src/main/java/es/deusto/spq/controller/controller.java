@@ -8,6 +8,8 @@ import java.util.List;
 import es.deusto.spq.remote.RMIServiceLocator;
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -19,6 +21,8 @@ public class controller {
 		sl.setServices(args[0], args[1], args[2]);
 		
 	}
+	
+	
 	
 	
 	public boolean login (String username, String password) {
@@ -84,8 +88,10 @@ public class controller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-		
+
+	
 	}
+
 	public ArrayList<Record> getScore(User u) {
 		try {
 			return sl.getService().getScore(u);
@@ -94,6 +100,18 @@ public class controller {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	public ScoreDTO getScore(String u) {
+		ScoreDTO score=null;
+		try {
+			System.out.println("get service");
+			score=sl.getService().getScore(u);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return score;
 	}
 
 		public void exit() {

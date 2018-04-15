@@ -185,8 +185,8 @@ public class Soup {
 		boolean match=false;
 
 			for(int j=0;j<this.words.size();j++) {
-				words1=this.words.get(j)
-			if(answer1.equals(words1.getWord()) ) {//if the answer given is correct
+				words1=this.words.get(j);
+			if(answer.equals(words1.getWord()) ) {//if the answer given is correct
 				score+=5;
 				match=true;
 			}
