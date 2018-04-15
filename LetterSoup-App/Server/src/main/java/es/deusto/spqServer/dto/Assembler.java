@@ -1,7 +1,11 @@
 package es.deusto.spqServer.dto;
 
 import java.util.ArrayList;
+import java.util.Date;
 
+import com.mysql.fabric.xmlrpc.base.Data;
+
+import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
 import es.deusto.spqServer.data.Word;
 
@@ -44,6 +48,19 @@ public class Assembler {
 		}
 		
 		return soup;
+		
+	}
+	
+	public ScoreDTO assemble(ArrayList<Record> arrrecord) {
+		ArrayList<Date> arrDate=new ArrayList<Date>();
+		ArrayList<Integer> arrRecord=new ArrayList<Integer>();
+		
+		for(int i=0;i<arrrecord.size();i++) {
+			arrDate.add(arrrecord.get(i).getDate());
+			arrRecord.add(arrrecord.get(i).getRecord());
+		}
+		ScoreDTO score=new ScoreDTO(arrDate,arrRecord);
+		return score;
 		
 	}
 	

@@ -11,7 +11,7 @@ import es.deusto.spqServer.data.Word;
 
 public interface IManagerDAO {
 	public void storeSoup(Soup soup);
-	public ArrayList<Record> getRecords(User user);
+	public ArrayList<Record> getRecords(String user);
 	public boolean isCorrect(String UsuarioContrasena);
 	public ArrayList<Integer> getNumSoup();
 	public String getSoup(int Soupid);

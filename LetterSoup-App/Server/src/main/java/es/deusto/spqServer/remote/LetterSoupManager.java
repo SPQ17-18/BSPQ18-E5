@@ -2,11 +2,15 @@ package es.deusto.spqServer.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
+import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
+import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.dto.Assembler;
+import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -83,9 +87,10 @@ private static final long serialVersionUID = 1L;
 
 
 	@Override
-	public String getScore(SoupDTO s) throws RemoteException {
+	public ScoreDTO getScore(String u) throws RemoteException {
 		// TODO Auto-generated method stub
-		return null;
+		ArrayList<Record> arrRecord=dao.getRecords(u);
+		return as.assemble(arrRecord);
 	}
 	
 

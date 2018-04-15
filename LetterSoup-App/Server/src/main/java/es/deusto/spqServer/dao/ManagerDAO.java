@@ -59,7 +59,7 @@ private PersistenceManagerFactory pmf;
 	
 	
 	@SuppressWarnings("unchecked")
-	public ArrayList<Record> getRecords(User user) {
+	public ArrayList<Record> getRecords(String user) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		
 		Transaction tx = pm.currentTransaction();
@@ -69,7 +69,7 @@ private PersistenceManagerFactory pmf;
 		
 		try {
 			tx.begin();			
-			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName()+ " WHERE User=='"+user.getUser()+"'");
+			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName()+ " WHERE User=='"+user+"'");
 			List <User> result = (List<User>) q.execute();
 			User us=result.get(0);
 			for(int i=0;i<us.getScore().size();i++) {
@@ -326,7 +326,7 @@ private PersistenceManagerFactory pmf;
 		System.out.println("Store user");
 		dao.storeUser(u);
 		System.out.println("Get records");
-		dao.getRecords(u);
+		//dao.getRecords(u);
 		System.out.println("Is correct");
 		System.out.println(dao.isCorrect("a1#abc"));
 		System.out.println("Is correct");
