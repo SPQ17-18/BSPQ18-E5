@@ -59,7 +59,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>es.deusto.spq.LoginWindow</mainClass>
+									<mainClass>es.deusto.spq.window.LoginWindow</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
