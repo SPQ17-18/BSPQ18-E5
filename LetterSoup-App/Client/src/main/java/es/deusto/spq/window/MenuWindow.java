@@ -201,6 +201,9 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnExamMode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showConfirmDialog(null, "Do you really want to start the exam mode?", "Selection", JOptionPane.INFORMATION_MESSAGE);
+				ExamMode em = new ExamMode();
+				em.setVisible(true);
+				
 			}
 		});
 		btnExamMode.setBounds(59, 275, 131, 29);
