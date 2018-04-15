@@ -202,7 +202,7 @@ public class InsertNewSoup extends JFrame {
 	public void createTable(int num) {
 		
 		//1. Checking the correction
-		if(num>10) {
+		if(num>20) {
 			JOptionPane.showMessageDialog(null, "The size is too big");
 		}else {
 		System.out.println(num);
