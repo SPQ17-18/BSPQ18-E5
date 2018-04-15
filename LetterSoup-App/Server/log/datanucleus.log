@@ -7117,3 +7117,1772 @@ java.security.AccessControlException: access denied ("java.lang.RuntimePermissio
 	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:282)
 13-04-18_18:12:18 (es.deusto.spq.dao.ManagerDAO.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
 13-04-18_18:15:06 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_14:04:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=391 ms, enhance=93 ms, total=484 ms. Compruebe el LOG para los detalles
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_14:04:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=234 ms, enhance=47 ms, total=281 ms. Compruebe el LOG para los detalles
+14-04-18_20:15:49 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Record.class" con definicion enhanced
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Soup.class" con definicion enhanced
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\User.class" con definicion enhanced
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Word.class" con definicion enhanced
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:15:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=584 ms, enhance=357 ms, total=941 ms. Compruebe el LOG para los detalles
+14-04-18_20:20:15 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:20:18 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:20:18 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Soup but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Soup
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Soup
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:20:18 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:20:18 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Word but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Word
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Word
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:20:18 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:306)
+14-04-18_20:20:18 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:314)
+14-04-18_20:20:18 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getNumSoup(ManagerDAO.java:149)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:318)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:20:19 (main) INFO  [DataNucleus.JDO] - Exception thrown
+Identifier soup_id is unresolved (not a static field)
+org.datanucleus.exceptions.NucleusUserException: Identifier soup_id is unresolved (not a static field)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:183)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:20:19 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.User but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.User
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.User
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:20:19 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Record but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Record
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Record
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeUser(ManagerDAO.java:53)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:326)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:20:19 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.isCorrect(ManagerDAO.java:116)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:330)
+14-04-18_20:21:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:21:34 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=462 ms, enhance=95 ms, total=557 ms. Compruebe el LOG para los detalles
+14-04-18_20:22:04 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:22:06 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:22:06 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Soup but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Soup
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Soup
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:22:06 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:22:06 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Word but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Word
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Word
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:306)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:314)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getNumSoup(ManagerDAO.java:149)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:318)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:22:07 (main) INFO  [DataNucleus.JDO] - Exception thrown
+Identifier soup_id is unresolved (not a static field)
+org.datanucleus.exceptions.NucleusUserException: Identifier soup_id is unresolved (not a static field)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:183)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:22:07 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.User but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.User
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.User
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:22:07 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Record but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Record
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Record
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeUser(ManagerDAO.java:53)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:326)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:22:07 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.isCorrect(ManagerDAO.java:116)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:330)
+14-04-18_20:23:27 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:23:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=423 ms, enhance=95 ms, total=518 ms. Compruebe el LOG para los detalles
+14-04-18_20:23:56 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:23:59 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Soup but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Soup
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Soup
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Soup.<clinit>(Soup.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:299)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:23:59 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Word but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Word
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Word
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Word.<clinit>(Word.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:301)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:306)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeSoup(ManagerDAO.java:49)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:314)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getNumSoup(ManagerDAO.java:149)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:318)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:23:59 (main) INFO  [DataNucleus.JDO] - Exception thrown
+Identifier soup_id is unresolved (not a static field)
+org.datanucleus.exceptions.NucleusUserException: Identifier soup_id is unresolved (not a static field)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:183)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getSoup(ManagerDAO.java:185)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:320)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:23:59 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.User but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.User
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.User
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.User.<clinit>(User.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:321)
+14-04-18_20:23:59 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:23:59 (main) WARN  [DataNucleus.MetaData] - Listener attempted to load metadata for es.deusto.spq.data.Record but an exception was thrown. Ignoring this class
+Exception during population of metadata for es.deusto.spq.data.Record
+org.datanucleus.exceptions.NucleusUserException: Exception during population of metadata for es.deusto.spq.data.Record
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2884)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+Caused by: java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	... 11 more
+Nested Throwables StackTrace:
+java.lang.RuntimeException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:697)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateFileMetaData(MetaDataManagerImpl.java:2665)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadAnnotationsForClass(MetaDataManagerImpl.java:2829)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager.loadMetaDataForClass(JDOMetaDataManager.java:387)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClassInternal(MetaDataManagerImpl.java:1789)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1643)
+	at org.datanucleus.api.jdo.metadata.JDOMetaDataManager$MetaDataRegisterClassListener.registerClass(JDOMetaDataManager.java:205)
+	at org.datanucleus.enhancer.EnhancementHelper.registerClass(EnhancementHelper.java:187)
+	at es.deusto.spq.data.Record.<clinit>(Record.java)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:323)
+14-04-18_20:24:00 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.ExecutionContextImpl.assertClassPersistable(ExecutionContextImpl.java:5482)
+	at org.datanucleus.ExecutionContextImpl.persistObjectInternal(ExecutionContextImpl.java:1925)
+	at org.datanucleus.ExecutionContextImpl.persistObjectWork(ExecutionContextImpl.java:1868)
+	at org.datanucleus.ExecutionContextImpl.persistObject(ExecutionContextImpl.java:1723)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.jdoMakePersistent(JDOPersistenceManager.java:712)
+	at org.datanucleus.api.jdo.JDOPersistenceManager.makePersistent(JDOPersistenceManager.java:738)
+	at es.deusto.spq.dao.ManagerDAO.storeObject(ManagerDAO.java:34)
+	at es.deusto.spq.dao.ManagerDAO.storeUser(ManagerDAO.java:53)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:326)
+14-04-18_20:24:00 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1096)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.getType(JavaQueryCompiler.java:1088)
+	at org.datanucleus.query.expression.PrimaryExpression.bind(PrimaryExpression.java:131)
+	at org.datanucleus.query.expression.DyadicExpression.bind(DyadicExpression.java:89)
+	at org.datanucleus.query.compiler.JavaQueryCompiler.compileFilter(JavaQueryCompiler.java:614)
+	at org.datanucleus.query.compiler.JDOQLCompiler.compile(JDOQLCompiler.java:104)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileGeneric(AbstractJDOQLQuery.java:373)
+	at org.datanucleus.store.query.AbstractJDOQLQuery.compileInternal(AbstractJDOQLQuery.java:431)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:257)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:24:00 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.getRecords(ManagerDAO.java:72)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:328)
+14-04-18_20:24:00 (main) ERROR [DataNucleus.MetaData] - access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessDeclaredMembers")
+	at java.security.AccessControlContext.checkPermission(Unknown Source)
+	at java.security.AccessController.checkPermission(Unknown Source)
+	at java.lang.SecurityManager.checkPermission(Unknown Source)
+	at java.lang.Class.checkMemberAccess(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.datanucleus.metadata.ClassMetaData.addMetaDataForMembersNotInMetaData(ClassMetaData.java:578)
+	at org.datanucleus.metadata.ClassMetaData.populate(ClassMetaData.java:184)
+	at org.datanucleus.metadata.MetaDataManagerImpl$1.run(MetaDataManagerImpl.java:2867)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.datanucleus.metadata.MetaDataManagerImpl.populateAbstractClassMetaData(MetaDataManagerImpl.java:2861)
+	at org.datanucleus.metadata.MetaDataManagerImpl.getMetaDataForClass(MetaDataManagerImpl.java:1653)
+	at org.datanucleus.ExecutionContextImpl.hasPersistenceInformationForClass(ExecutionContextImpl.java:5550)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:275)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1928)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1856)
+	at org.datanucleus.store.query.Query.execute(Query.java:1838)
+	at org.datanucleus.api.jdo.JDOQuery.executeInternal(JDOQuery.java:439)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:263)
+	at es.deusto.spq.dao.ManagerDAO.isCorrect(ManagerDAO.java:116)
+	at es.deusto.spq.dao.ManagerDAO.main(ManagerDAO.java:330)
+14-04-18_20:26:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:26:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=443 ms, enhance=151 ms, total=594 ms. Compruebe el LOG para los detalles
+14-04-18_20:27:15 (es.deusto.spq.dao.ManagerDAO.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:29:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:29:43 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=309 ms, enhance=65 ms, total=374 ms. Compruebe el LOG para los detalles
+14-04-18_20:29:55 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:31:22 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:32:47 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:34:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:34:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=492 ms, enhance=125 ms, total=617 ms. Compruebe el LOG para los detalles
+14-04-18_20:35:12 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:43:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=322 ms, enhance=99 ms, total=421 ms. Compruebe el LOG para los detalles
+14-04-18_20:44:00 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_20:46:18 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_20:46:19 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=315 ms, enhance=90 ms, total=405 ms. Compruebe el LOG para los detalles
+14-04-18_20:47:41 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:03:30 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=440 ms, enhance=116 ms, total=556 ms. Compruebe el LOG para los detalles
+14-04-18_21:03:49 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:03:50 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=304 ms, enhance=60 ms, total=364 ms. Compruebe el LOG para los detalles
+14-04-18_21:09:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:09:08 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=422 ms, enhance=88 ms, total=510 ms. Compruebe el LOG para los detalles
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:09:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=291 ms, enhance=72 ms, total=363 ms. Compruebe el LOG para los detalles
+14-04-18_21:15:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:15:59 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=457 ms, enhance=106 ms, total=563 ms. Compruebe el LOG para los detalles
+14-04-18_21:16:43 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:16:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=436 ms, enhance=94 ms, total=530 ms. Compruebe el LOG para los detalles
+14-04-18_21:17:26 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:22:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=415 ms, enhance=91 ms, total=506 ms. Compruebe el LOG para los detalles
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:26:35 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=423 ms, enhance=98 ms, total=521 ms. Compruebe el LOG para los detalles
+14-04-18_21:27:13 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_21:31:02 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:31:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:31:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:31:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=455 ms, enhance=96 ms, total=551 ms. Compruebe el LOG para los detalles
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Record" esta enhanced.
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Soup" esta enhanced.
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.User" esta enhanced.
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spq.data.Word" esta enhanced.
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:31:21 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=413 ms, enhance=89 ms, total=502 ms. Compruebe el LOG para los detalles
+14-04-18_21:31:47 (es.deusto.spq.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Record.class" con definicion enhanced
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Soup.class" con definicion enhanced
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\User.class" con definicion enhanced
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Word.class" con definicion enhanced
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:37:44 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=192 ms, enhance=117 ms, total=309 ms. Compruebe el LOG para los detalles
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Record.class" con definicion enhanced
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Record
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Soup.class" con definicion enhanced
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Soup
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\User.class" con definicion enhanced
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.User
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spq\data\Word.class" con definicion enhanced
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spq.data.Word
+14-04-18_21:38:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=204 ms, enhance=108 ms, total=312 ms. Compruebe el LOG para los detalles
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Record.class" con definicion enhanced
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Soup.class" con definicion enhanced
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\User.class" con definicion enhanced
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Word.class" con definicion enhanced
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:04:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=403 ms, enhance=228 ms, total=631 ms. Compruebe el LOG para los detalles
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:04:39 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=412 ms, enhance=87 ms, total=499 ms. Compruebe el LOG para los detalles
+14-04-18_22:04:57 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:22:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=426 ms, enhance=96 ms, total=522 ms. Compruebe el LOG para los detalles
+14-04-18_22:23:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:23:07 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=306 ms, enhance=61 ms, total=367 ms. Compruebe el LOG para los detalles
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:57:38 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=423 ms, enhance=99 ms, total=522 ms. Compruebe el LOG para los detalles
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_22:58:06 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=232 ms, enhance=50 ms, total=282 ms. Compruebe el LOG para los detalles
+14-04-18_23:05:12 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_23:05:44 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+14-04-18_23:30:25 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_23:30:26 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=455 ms, enhance=105 ms, total=560 ms. Compruebe el LOG para los detalles
+14-04-18_23:31:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+14-04-18_23:31:11 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=389 ms, enhance=84 ms, total=473 ms. Compruebe el LOG para los detalles
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:13:02 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=223 ms, enhance=47 ms, total=270 ms. Compruebe el LOG para los detalles
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:13:33 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=391 ms, enhance=83 ms, total=474 ms. Compruebe el LOG para los detalles
+15-04-18_00:13:53 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_00:19:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:19:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=391 ms, enhance=82 ms, total=473 ms. Compruebe el LOG para los detalles
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:25:24 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=438 ms, enhance=91 ms, total=529 ms. Compruebe el LOG para los detalles
+15-04-18_00:25:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:25:43 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=231 ms, enhance=48 ms, total=279 ms. Compruebe el LOG para los detalles
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:26:03 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=403 ms, enhance=87 ms, total=490 ms. Compruebe el LOG para los detalles
+15-04-18_00:26:22 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_00:26:23 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=407 ms, enhance=106 ms, total=513 ms. Compruebe el LOG para los detalles
+15-04-18_00:37:50 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:09:50 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:38:46 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:38:47 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=464 ms, enhance=98 ms, total=562 ms. Compruebe el LOG para los detalles
+15-04-18_01:39:16 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:46:09 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:46:10 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=403 ms, enhance=88 ms, total=491 ms. Compruebe el LOG para los detalles
+15-04-18_01:46:22 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:48:51 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=422 ms, enhance=93 ms, total=515 ms. Compruebe el LOG para los detalles
+15-04-18_01:49:04 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:52:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Soup.class" con definicion enhanced
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Word.class" con definicion enhanced
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:52:05 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=410 ms, enhance=193 ms, total=603 ms. Compruebe el LOG para los detalles
+15-04-18_01:52:17 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:58:01 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:58:02 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=402 ms, enhance=84 ms, total=486 ms. Compruebe el LOG para los detalles
+15-04-18_01:58:15 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_01:59:53 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=232 ms, enhance=47 ms, total=279 ms. Compruebe el LOG para los detalles
+15-04-18_02:00:06 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla

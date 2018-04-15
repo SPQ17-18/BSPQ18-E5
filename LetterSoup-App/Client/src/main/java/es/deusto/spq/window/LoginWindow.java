@@ -28,6 +28,7 @@ import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -78,15 +79,15 @@ public class LoginWindow extends JFrame implements Runnable {
 	 * @param args 
 	 */
 	public LoginWindow(String[] args) {
-	 	
-		try {
+		ArrayList<JButton> botonera=new ArrayList<JButton>();
+	 	try {
 			cont=new controller(args);
 		} catch (RemoteException e) {
 			// Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		setResizable(false);
+		setResizable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
@@ -253,7 +254,7 @@ public class LoginWindow extends JFrame implements Runnable {
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_2);
 	
-	
+			
 		
 	}	
 	

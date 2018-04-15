@@ -22,6 +22,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/maider ibarra/.m2/repository/es/deusto/spq/Server/1.0-SNAPSHOT/Server-1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,9 +1,11 @@
-package es.deusto.spq.server;
+package es.deusto.spqServer.server;
 
 import java.rmi.Naming;
 
-import es.deusto.spq.remote.IFacade;
-import es.deusto.spq.remote.LetterSoupManager;
+import es.deusto.spqServer.remote.IFacade;
+import es.deusto.spqServer.remote.LetterSoupManager;
+
+
 
 
 
