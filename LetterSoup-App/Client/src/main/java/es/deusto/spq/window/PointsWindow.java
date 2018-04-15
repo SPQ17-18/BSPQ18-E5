@@ -49,7 +49,7 @@ public class PointsWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PointsWindow(controller c) {
+	public PointsWindow() {
 		final PointsWindow pw = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

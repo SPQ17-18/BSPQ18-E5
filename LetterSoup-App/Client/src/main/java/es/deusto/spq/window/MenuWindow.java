@@ -48,6 +48,7 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JLabel lblWelcome;
 	private JPanel panel;
 	private static String [] ar= new String[3];
+	private JButton btnExamMode;
 	
 //	/**
 //	 * Launch the application.
@@ -70,7 +71,7 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(final controller c) {
+	public MenuWindow() {
 		
 		final MenuWindow mw =this;
 		setResizable(false);
@@ -140,7 +141,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		JButton btnPlay = new JButton("Play!");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SolveSoup ss = new SolveSoup(c);
+				SolveSoup ss = new SolveSoup();
 				ss.setVisible(true);
 			}
 		});
@@ -151,7 +152,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		JButton btnSeeScore = new JButton("See score");
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PointsWindow pw = new PointsWindow(c);
+				PointsWindow pw = new PointsWindow();
 				pw.setVisible(true);
 			}
 		});
@@ -163,7 +164,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnInsertNewSoup.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				InsertNewSoup in = new InsertNewSoup(c);
+				InsertNewSoup in = new InsertNewSoup();
 				in.setVisible(true);
 				
 			}
@@ -195,6 +196,18 @@ public class MenuWindow extends JFrame implements Runnable {
 		});
 		btnSendEmail.setBounds(59, 224, 131, 29);
 		panel.add(btnSendEmail);
+		
+		btnExamMode = new JButton("Exam mode");
+		btnExamMode.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showConfirmDialog(null, "Do you really want to start the exam mode?", "Selection", JOptionPane.INFORMATION_MESSAGE);
+				ExamMode em = new ExamMode();
+				em.setVisible(true);
+				
+			}
+		});
+		btnExamMode.setBounds(59, 275, 131, 29);
+		panel.add(btnExamMode);
 	
 	
 		

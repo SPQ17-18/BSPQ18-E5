@@ -25,7 +25,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class SolveSoup extends JFrame {
+public class ExamMode extends JFrame {
 
 	private JPanel contentPane, panelWest;
 	private JTextField txtLetsPlay;
@@ -54,9 +54,9 @@ public class SolveSoup extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SolveSoup() {
+	public ExamMode() {
 		
-		final SolveSoup ss = this;
+		final ExamMode ss = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -75,7 +75,7 @@ public class SolveSoup extends JFrame {
 		txtLetsPlay.setHorizontalAlignment(SwingConstants.CENTER);
 		txtLetsPlay.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 22));
 		txtLetsPlay.setEditable(false);
-		txtLetsPlay.setText("LETS PLAY");
+		txtLetsPlay.setText("EXAM MODE");
 		panelN.add(txtLetsPlay);
 		txtLetsPlay.setColumns(10);
 		
@@ -109,7 +109,7 @@ public class SolveSoup extends JFrame {
 		JPanel panelEast = new JPanel();
 		contentPane.add(panelEast, BorderLayout.EAST);
 		
-		JLabel lblChooseTheWord = new JLabel("Choose the word");
+		JLabel lblChooseTheWord = new JLabel("No hints will be available");
 		panelEast.add(lblChooseTheWord);
 		
 		

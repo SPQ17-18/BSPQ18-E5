@@ -70,8 +70,7 @@ public class InsertNewSoup extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public InsertNewSoup(controller c) {
-		this.c=c;
+	public InsertNewSoup() {
 		final InsertNewSoup ins = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

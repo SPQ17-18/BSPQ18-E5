@@ -9612,3 +9612,26 @@ java.sql.SQLException: Access denied for user 'sd'@'localhost' (using password: 
 15-04-18_21:51:58 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
 15-04-18_21:51:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=893 ms, enhance=237 ms, total=1130 ms. Compruebe el LOG para los detalles
 15-04-18_21:53:14 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_22:59:45 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=667 ms, enhance=156 ms, total=823 ms. Compruebe el LOG para los detalles
+15-04-18_23:01:11 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_23:22:28 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Soup" esta enhanced.
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.User" esta enhanced.
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Word" esta enhanced.
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_23:22:29 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=564 ms, enhance=205 ms, total=769 ms. Compruebe el LOG para los detalles
+15-04-18_23:23:23 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+15-04-18_23:26:42 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
