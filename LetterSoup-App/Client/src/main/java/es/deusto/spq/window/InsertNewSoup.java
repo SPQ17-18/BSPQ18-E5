@@ -138,6 +138,7 @@ public class InsertNewSoup extends JFrame {
 		btnCreate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				textFieldRows.setEditable(false);
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
 				//CREATE TABLE CON NUMBERO TODO
