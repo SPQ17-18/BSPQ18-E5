@@ -31,19 +31,20 @@ public class controller {
 		return login;
 	}
 	public boolean register(String username, String password, String userType, String email) {
-		
+		return sl.getService().register(username,password,userType,email);
 	}
 	public String[] soupList() {//Takes from the DB all soup names
-		
+		return sl.getService().soupList();
 	}
 	public SoupDTO getSoup(String name) {//Takes from the DB the soup with that name
-		
+		return sl.getService().getSoup(name);
 	}
 	public void sendMail(String message, email) {//send a message to an email
+		 sl.getService().sendMail(message,email); 
 		
 	}
-	public String getScore(SoupDTO) {
-		
+	public void getScore(int score) {
+		 sl.getService().getScore(score);//the class soup calculates himself the score so we only need to save the score itself
 	}
 		public void exit() {
     	System.exit(0);

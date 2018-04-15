@@ -9,6 +9,7 @@ import es.deusto.spq.dao.ManagerDAO;
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;
+	private MailSender mail;
 	
 	public LetterSoupManager(String [] args) throws RemoteException {
 		dao= new ManagerDAO();
@@ -17,6 +18,31 @@ private static final long serialVersionUID = 1L;
 	public boolean login(String userpass) throws RemoteException {
 		return dao.isCorrect(userpass);
 	}
-
+	
+	public boolean register(String user, String password, String rol, String email) throws RemoteException {
+		User user= new User(user,password,rol,email);
+		dao.storeObject(user);
+		return true;
+	}
+	
+	public String[] soupList() throws RemoteException{
+		return dao.soupList();
+	}
+		
+	
+	public SoupDTO getSoup(String name) throws RemoteException{
+		return dao.getSoup();
+	}
+		
+	
+	public void sendMail(String message, email) throws RemoteException{
+		mail.setTo(email);
+		mail.sendMessage(message);
+	}
+		
+	
+	public void getScore(int score) throws RemoteException{
+		dao.storeRecord(User user, int score);
+	}
 	
 }

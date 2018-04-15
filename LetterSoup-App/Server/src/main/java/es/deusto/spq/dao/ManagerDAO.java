@@ -234,12 +234,46 @@ private PersistenceManagerFactory pmf;
 			}
 		}
 	}
+	public soupList() {
+		
 
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+		
+		pm.getFetchPlan().setMaxFetchDepth(4);
+		
+		
+		String resultSouup=null;
+
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + Soup.class.getName()+" WHERE soup_id== "+Soupid);
+			List <Soup> result = ((List<Soup>) q.execute());
+			List<String>soupNames=new ArrayList<String>();
+			for(int i=0;i<result.size();i++) {
+				soupNames.add(result.get(i));
+			}
+			
+			
+			tx.commit();	
+		} catch (Exception ex) {
+	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    				
+		return soupNames;
 
 		
+	
+		
+	}
+
 			
-	
-	
 	
 	public static void main(String[] args) {
 	

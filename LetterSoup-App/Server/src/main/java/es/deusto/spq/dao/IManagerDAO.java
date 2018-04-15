@@ -16,5 +16,6 @@ public interface IManagerDAO {
 	public void storeWord(Word word);
 	public void deleteSoup(int soupid);
 	public void storeUser(User user);
+	public void storeRecord(User user, int score);
 
 }

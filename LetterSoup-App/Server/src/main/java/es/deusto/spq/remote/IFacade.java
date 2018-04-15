@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 public interface IFacade extends Remote {
 	public boolean login(String userpass) throws RemoteException;
 		
-public boolean register(String username, String password, String userType, String email)throws RemoteException;
+	public boolean register(String username, String password, String userType, String email)throws RemoteException;
 		
 	
 	public String[] soupList() throws RemoteException;//Takes from the DB all soup names
@@ -18,7 +18,7 @@ public boolean register(String username, String password, String userType, Strin
 	public void sendMail(String message, email) throws RemoteException;//send a message to an email
 		
 	
-	public String getScore(SoupDTO) throws RemoteException;
+	public void getScore(int score) throws RemoteException; //Gets the score
 
 
 }

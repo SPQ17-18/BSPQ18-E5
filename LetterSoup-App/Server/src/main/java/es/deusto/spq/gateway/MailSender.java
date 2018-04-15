@@ -15,7 +15,7 @@ public class MailSender {
 	private final String password = "softwaredesign";
 	private final String host = "smtp.gmail.com";
 	private final String port = "587";
-	private final String subject = "Gateway Simulation: Sending SMS to Screen ...";
+	private final String subject = "Soup Simulation: Sending SMS ...";
 	private String to;
 	
 	private Properties props;
@@ -54,5 +54,8 @@ public class MailSender {
 		public PasswordAuthentication getPasswordAuthentication() {
 			return new PasswordAuthentication(from, password);
 		}
+	}
+	public void setTo(String a) {
+		this.to=a;
 	}
 }
