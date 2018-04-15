@@ -20,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class InsertNewSoup extends JFrame {
 
@@ -121,8 +122,8 @@ public class InsertNewSoup extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				String text =textFieldRows.getText();
-				int num = 0;
-					num = Integer.parseInt(text);
+				int num = Integer.parseInt(text);
+				
 				createTable(num);
 			}
 		});
@@ -186,12 +187,14 @@ public class InsertNewSoup extends JFrame {
 		System.out.println(num);
 		Rectangle r = new Rectangle();
 		r.x=r.y=num;
-		panelW.setBounds(r);
+		panelC.setBounds(r);
+		
+		ArrayList <JButton> botonera = new ArrayList <JButton>();
 		
 		//2. Creating the table TODO
 		for(int i=0; i<num;i++) {
-				JButton bot = new JButton("a");
-				panelW.add(bot);
+				botonera.add(new JButton(" "+i));
+				panelC.add(botonera.get(i));
 		}
 
 		}
