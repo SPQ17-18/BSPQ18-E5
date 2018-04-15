@@ -1,7 +1,12 @@
 package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -51,6 +56,7 @@ public class InsertNewSoup extends JFrame {
 		insertCasillas(10);
 		insertWord("hola",1,2,'V');
 		
+		
 	}
 	
 	public void insertCasillas(int size) {
@@ -62,7 +68,35 @@ public class InsertNewSoup extends JFrame {
 			for(int j=0;j<size;j++) {
 				casillas[i][j]=new JTextField();
 				casillas[i][j].setText(" ");
-				casillas[i][j].setEditable(false);
+				//casillas[i][j].setEditable(false);
+				casillas[i][j].addMouseListener(new MouseListener() {
+
+					public void mouseClicked(MouseEvent e) {
+						// TODO Auto-generated method stub
+						setBackground(Color.BLUE);
+					}
+
+					public void mousePressed(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					public void mouseReleased(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					public void mouseEntered(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+
+					public void mouseExited(MouseEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+				});
 				lines.get(i).add(casillas[i][j]);
 	
 			}
