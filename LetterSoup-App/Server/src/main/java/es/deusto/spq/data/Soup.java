@@ -18,6 +18,7 @@ public class Soup {
 	
 	private int size;
 	
+	private ArrayList<String> answer;
 	@Persistent(defaultFetchGroup="true", mappedBy="soup", dependentElement = "true")
 	@Join
 	private List<Word> words = new ArrayList<Word>();
@@ -161,6 +162,21 @@ public class Soup {
 		}
 	}
 	
+	public int calculateScore() {
+		int score=0;
+		boolean match=false;
+		for(int i=0;i<this.answer.lenght();i++) {
+			for(int j=0;j<this.words.lenght();j++) {
+			if(this.answer.get(i).equals(word[j])) {//if the answer given is correct
+				score+=5;
+				match=true;
+			}
+			}
+			if(match==false)score-=2;//if one of the answers given does not appear in the soups real answer
+			match=false;
+		}
+		return score;
+	}
 	//public static void main(String[] args) {
 		
 		//Soup s = new Soup(1, 13);

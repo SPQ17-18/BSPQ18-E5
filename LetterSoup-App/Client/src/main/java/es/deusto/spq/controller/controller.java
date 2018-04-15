@@ -30,7 +30,21 @@ public class controller {
 		
 		return login;
 	}
-	
+	public boolean register(String username, String password, String userType, String email) {
+		
+	}
+	public String[] soupList() {//Takes from the DB all soup names
+		
+	}
+	public SoupDTO getSoup(String name) {//Takes from the DB the soup with that name
+		
+	}
+	public void sendMail(String message, email) {//send a message to an email
+		
+	}
+	public String getScore(SoupDTO) {
+		
+	}
 		public void exit() {
     	System.exit(0);
     }
