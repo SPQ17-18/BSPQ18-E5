@@ -52,6 +52,41 @@ private static final long serialVersionUID = 1L;
 		return true;
 		
 	}
+
+
+	@Override
+	public boolean register(String username, String password, String userType, String email) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public String[] soupList() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public SoupDTO getSoup(String name) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void sendMail(String message, String email) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public String getScore(SoupDTO s) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 	

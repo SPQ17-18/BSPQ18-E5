@@ -32,6 +32,7 @@ public class controller {
 		
 		return login;
 	}
+
 	
 	public boolean IntroduceSoup(SoupDTO dto) {
 		boolean soupintroduced = false;
@@ -46,6 +47,27 @@ public class controller {
 	}
 	
 	
+
+	public boolean register(String username, String password, String userType, String email) {
+		return false;
+		
+	}
+	public String[] soupList() {
+		return null;//Takes from the DB all soup names
+		
+	}
+	public SoupDTO getSoup(String name) {
+		return null;//Takes from the DB the soup with that name
+		
+	}
+	public void sendMail(String message,String email) {//send a message to an email
+		
+	}
+	public String getScore(SoupDTO s) {
+		return null;
+		
+	}
+
 		public void exit() {
     	System.exit(0);
     }

@@ -179,6 +179,21 @@ public class Soup {
 		}
 	}
 	
+	public int calculateScore(ArrayList<Word> answer) {
+		int score=0;
+		boolean match=false;
+		for(int i=0;i<answer.size();i++) {
+			for(int j=0;j<this.words.size();j++) {
+			if(answer.get(i).equals(this.words.get(j))) {//if the answer given is correct
+				score+=5;
+				match=true;
+			}
+			}
+			if(match==false)score-=2;//if one of the answers given does not appear in the soups real answer
+			match=false;
+		}
+		return score;
+	}
 	//public static void main(String[] args) {
 		
 		//Soup s = new Soup(1, 13);
@@ -196,3 +211,4 @@ public class Soup {
 	
 	
 }
+

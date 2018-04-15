@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>es.deusto.spq</groupId>
+  <artifactId>MailSender</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>MailSender</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<server.Name>MailSender</server.Name>
+	</properties>
+
+
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+    	<groupId>MailSender</groupId>
+    	<artifactId>mail.jar</artifactId>
+    </dependency>
+  </dependencies>
+  <profiles> 
+		<!-- run as 'mvn exec:java -Pserver' -->
+		<profile>  
+			<id>client</id>  
+	
+    			  
+			<build> 
+				<resources>
+					<resource>
+						<directory>${config.files.dir}</directory>
+						<includes>
+							<include>**/*.jdo</include>
+							<include>**/*.orm</include>
+							<include>**/*.properties</include>
+						</includes>
+					</resource>
+				</resources>
+
+				<plugins>  
+					<plugin>  
+						<groupId>org.codehaus.mojo</groupId>  
+						<artifactId>exec-maven-plugin</artifactId>  
+						<version>1.2.1</version>  
+						<configuration>  
+									<mainClass>es.deusto.spq.window.LoginWindow</mainClass>
+									<systemProperties>
+										<systemProperty>
+											<key>java.security.manager</key>
+											<value>java.rmi.RMISecurityManager</value>
+										</systemProperty>
+										<systemProperty>
+											<key>java.security.policy</key>
+											<value>${policy.file}</value>
+										</systemProperty>
+									</systemProperties>
+									<arguments>  
+										<argument>${server.IP}</argument>  
+										<argument>${server.port}</argument>  
+										<argument>${server.Name}</argument>  
+									</arguments>  
+						</configuration>  
+					</plugin>  
+				</plugins>  
+			</build> 
+		</profile>  
+	</profiles>  
+		
+   	
+</project>
+
