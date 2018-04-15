@@ -6,7 +6,7 @@ import java.util.List;
 
 import es.deusto.spq.remote.RMIServiceLocator;
 
-
+//This class is for calling the remote service 
 public class controller {
 	private RMIServiceLocator sl;
 	
@@ -16,7 +16,7 @@ public class controller {
 		
 	}
 	
-	
+	//This method returns the service of login user and password 
 	public boolean login (String username, String password) {
 		boolean login = false;
 		String st=username+"#"+password;
@@ -30,7 +30,7 @@ public class controller {
 		
 		return login;
 	}
-	public boolean register(String username, String password, String userType, String email) {
+	public boolean register(String username, String password, String userType, String email) {//Returns the service of registering a user
 		
 	}
 	public String[] soupList() {//Takes from the DB all soup names

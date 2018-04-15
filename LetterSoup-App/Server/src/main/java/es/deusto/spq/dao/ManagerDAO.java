@@ -17,7 +17,7 @@ import es.deusto.spq.data.User;
 import es.deusto.spq.data.Word;
 
 
-
+//DAO Class for transfering objects from the application to the DB
 public class ManagerDAO implements IManagerDAO {
 
 private PersistenceManagerFactory pmf;
@@ -25,7 +25,7 @@ private PersistenceManagerFactory pmf;
 	public ManagerDAO() {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
-	
+	//Storing objects on DB
 	private void storeObject(Object object) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
@@ -43,21 +43,24 @@ private PersistenceManagerFactory pmf;
     		pm.close();
 	    }
 	}
-
+	//Storing "Soup" Objects
 	public void storeSoup(Soup soup) {
 		System.out.println("   * Storing an object: " + soup.getSoup_id());
 		 this.storeObject(soup);
 	}
-
+	//Storing users
 	public void storeUser(User user) {
 		 this.storeObject(user);
 	}
+	//Storing words for letter soups
 	public void storeWord(Word word) {
 		 this.storeObject(word);
 	}
 	
 	
 	@SuppressWarnings("unchecked")
+	
+	//Method that returns all the scores and records of one user
 	public ArrayList<Record> getRecords(User user) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		
@@ -100,6 +103,7 @@ private PersistenceManagerFactory pmf;
 	
 
 	@SuppressWarnings("unchecked")
+	//Method that returns if user and password are correct or not
 	public boolean isCorrect(String UsuarioContrasena) {
 		String [] data=UsuarioContrasena.split("#");
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -135,6 +139,7 @@ private PersistenceManagerFactory pmf;
 		return us.getPassword().equals(data[1]);
 		
 	}
+	//Method that retrieves all Soups 
 	public ArrayList<Integer> getNumSoup() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -168,7 +173,7 @@ private PersistenceManagerFactory pmf;
 
 		
 	}
-	
+	//This method gets a soup from DB by its id
 	public String getSoup(int Soupid) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -200,7 +205,7 @@ private PersistenceManagerFactory pmf;
 
 		
 	}
-	
+	//This method deletes a soup from DB by its id
 	public void deleteSoup(int soupid) {		
 		PersistenceManager pm = pmf.getPersistenceManager();
 		
@@ -242,15 +247,15 @@ private PersistenceManagerFactory pmf;
 	
 	
 	public static void main(String[] args) {
-	
+		//Creating DAO
 		IManagerDAO dao= new ManagerDAO();
 				
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}
-		Soup s=new Soup(1, 13);
+		Soup s=new Soup(1, 13);//Creating Soup
 		Soup s1=new Soup(2, 13);
-		Word a= new Word(1, 'V', "YES", 1, 3, s);
+		Word a= new Word(1, 'V', "YES", 1, 3, s);//Creating words for soup
 		Word b= new Word(2, 'H', "NO", 2, 1, s);
 		s.setAword(a);
 		s.setAword(b);
@@ -266,9 +271,9 @@ private PersistenceManagerFactory pmf;
 		dao.storeSoup(s1);		
 		//dao.deleteSoup(s1.getSoup_id());		
 		//dao.deleteSoup(s.getSoup_id());
-		System.out.println("La cantidad de sopas de letras es:\n");
+		System.out.println("The number of letter soups is:\n");
 		System.out.println(dao.getNumSoup().size());
-		System.out.println("El contenido de la sopa s es:\n");
+		System.out.println("The content of the letter soup s is:\n");
 		System.out.println(dao.getSoup(s.getSoup_id()));
 		User u=new User("a1", "abc", 'S',"a1@gmail.com");
 		Date date=new Date();

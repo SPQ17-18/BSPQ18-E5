@@ -1,7 +1,7 @@
 package es.deusto.spq.remote;
 
 
-
+//This class is for locating the service that controller provides for getting or setting it then
 public class RMIServiceLocator {
 	private IFacade facade;
 

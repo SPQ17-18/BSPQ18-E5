@@ -6,7 +6,7 @@ import es.deusto.spq.data.Record;
 import es.deusto.spq.data.Soup;
 import es.deusto.spq.data.User;
 import es.deusto.spq.data.Word;
-
+//interface for Data Access Object
 public interface IManagerDAO {
 	public void storeSoup(Soup soup);
 	public ArrayList<Record> getRecords(User user);

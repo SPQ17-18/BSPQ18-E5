@@ -9,7 +9,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
+//Class for sending mails by smtp
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
 	private final String password = "softwaredesign";
@@ -19,7 +19,7 @@ public class MailSender {
 	private String to;
 	
 	private Properties props;
-
+	//Constructor
 	public MailSender(String destination) {
 		to = destination;
 		props = new Properties();
@@ -30,7 +30,7 @@ public class MailSender {
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.debug", "false");
 	}
-
+	//Method that sends messages by getting text by paramethers 
 	public String sendMessage(String text) {
 		try {
 			Authenticator auth = new SMTPAuthenticator();
@@ -49,7 +49,7 @@ public class MailSender {
 		}
 		return "OK";
 	}
-
+ //Method for authenticating SMTP
 	private class SMTPAuthenticator extends javax.mail.Authenticator {
 		public PasswordAuthentication getPasswordAuthentication() {
 			return new PasswordAuthentication(from, password);
