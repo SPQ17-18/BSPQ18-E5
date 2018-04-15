@@ -14,11 +14,18 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
 
 public class PointsWindow extends JFrame {
 
 	private JPanel contentPane, panelE, panelW, PanelN, panelS;
 	private JTextField txtTit;
+	private JLabel Date;
+	private JLabel Points;
+	private JTextPane textPaneD;
+	private JTextPane textPaneP;
 
 	/**
 	 * Launch the application.
@@ -86,6 +93,25 @@ public class PointsWindow extends JFrame {
 		
 		panelE = new JPanel();
 		contentPane.add(panelE, BorderLayout.CENTER);
+		panelE.setLayout(new GridLayout(2, 2, 0, 0));
+		
+		Date = new JLabel("Date");
+		Date.setHorizontalAlignment(SwingConstants.CENTER);
+		Date.setFont(new Font("Avenir", Font.PLAIN, 18));
+		panelE.add(Date);
+		
+		Points = new JLabel("Points");
+		Points.setHorizontalAlignment(SwingConstants.CENTER);
+		Points.setFont(new Font("Avenir", Font.PLAIN, 18));
+		panelE.add(Points);
+		
+		textPaneD = new JTextPane();
+		textPaneD.setEditable(false);
+		panelE.add(textPaneD);
+		
+		textPaneP = new JTextPane();
+		textPaneP.setEditable(false);
+		panelE.add(textPaneP);
 	}
 
 }
