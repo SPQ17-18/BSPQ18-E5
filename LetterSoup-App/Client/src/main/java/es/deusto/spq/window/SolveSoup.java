@@ -27,6 +27,10 @@ public class SolveSoup extends JFrame {
 	private JPanel contentPane, panelWest;
 	private JTextField txtLetsPlay;
 	private JButton [][] casillas;
+	private ArrayList<String> words=new ArrayList<String>();
+	private ArrayList<Integer> posx=new ArrayList<Integer>();
+	private ArrayList<Integer> posy=new ArrayList<Integer>();
+	private ArrayList<Character> posicion=new ArrayList<Character>();
 
 	/**
 	 * Launch the application.
@@ -48,6 +52,7 @@ public class SolveSoup extends JFrame {
 	 * Create the frame.
 	 */
 	public SolveSoup() {
+		
 		final SolveSoup ss = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -104,6 +109,7 @@ public class SolveSoup extends JFrame {
 		insertCasillas(5);
 	}
 	
+	
 
 	public void insertCasillas(int size) {
 		casillas=new JButton[size][size];
@@ -115,6 +121,28 @@ public class SolveSoup extends JFrame {
 	
 			}
 		}
+	}
+	
+	public void insertWord(String word,int positionx,int positiony,char pos) {
+		words.add(word);
+		posx.add(positionx);
+		posy.add(positiony);
+		posicion.add(pos);
+		int x=positionx;
+		int y=positiony;
+		for(int i=0;i<word.length();i++) {
+			if(pos=='v' || pos=='V') {
+				casillas[y+i][x].setText(""+word.charAt(i));
+				
+			}else {
+				casillas[y][x+i].setText(""+word.charAt(i));				
+			
+			}
+		}
+
+
+		
+//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 	
 	public void actionPerformed() {

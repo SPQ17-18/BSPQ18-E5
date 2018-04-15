@@ -85,14 +85,11 @@ public class InsertNewSoup extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
-		contentPane1 = new JPanel();
-		contentPane1.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		//github.com/SPQ17-18/BSPQ18-E5.git
+		
 
-		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
-//github.com/SPQ17-18/BSPQ18-E5.git
-		setContentPane(contentPane);
-
-		contentPane.setLayout(new BorderLayout(0, 0));
+		
 		
 		panelN = new JPanel();
 		panelN.setBackground(Color.CYAN);
@@ -235,8 +232,8 @@ public class InsertNewSoup extends JFrame {
 	
 			}
 		}
-		contentPane1.repaint();
-		contentPane1.revalidate();
+//		contentPane1.repaint();
+//		contentPane1.revalidate();
 	}
 	
 	public void insertWord(String word,int positionx,int positiony,char pos) {
