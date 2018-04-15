@@ -159,7 +159,7 @@ public class LoginWindow extends JFrame implements Runnable {
 				lw.dispose();
 			}
 		});
-		btnGo.setBounds(6, -1, 37, 29);
+		btnGo.setBounds(6, -1, 46, 29);
 		panelSRight.add(btnGo);
 		
 		panelWest = new JPanel();

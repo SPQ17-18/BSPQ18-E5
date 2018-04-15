@@ -101,6 +101,12 @@ public class InsertNewSoup extends JFrame {
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Your soup has been stored");
+				ins.dispose();
+			}
+		});
 		panelS.add(btnSave);
 		//Función para meter tantos botones como tamaño asignemos
 		
@@ -135,13 +141,18 @@ public class InsertNewSoup extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
-				//CREATE TABLE CON NUMBERO TODO
+				if(num>20) {
+					JOptionPane.showMessageDialog(null, "The number is too big");
+					textFieldRows.setText("");
+				}else {
+				//CREATE TABLE CON NUMBERO 
 				deletePanel();
 				panelC.setLayout(new GridLayout(num, num, 0, 0));
 				insertCasillas(num);
 				
 				panelC.repaint();
 				panelC.revalidate();
+				}
 			}
 		});
 		btnCreate.setBounds(6, 14, 71, 29);
