@@ -11,6 +11,9 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -27,26 +30,26 @@ public class PointsWindow extends JFrame {
 	private JTextPane textPaneD;
 	private JTextPane textPaneP;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PointsWindow frame = new PointsWindow();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					PointsWindow frame = new PointsWindow();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public PointsWindow() {
+	public PointsWindow(controller c) {
 		final PointsWindow pw = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -79,8 +82,6 @@ public class PointsWindow extends JFrame {
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				pw.setVisible(false);
-				MenuWindow mw = new MenuWindow();
-				mw.setVisible(true);
 			}
 		});
 		panelS.add(btnReturn);

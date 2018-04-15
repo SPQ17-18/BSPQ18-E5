@@ -8,12 +8,14 @@ import es.deusto.spqServer.dao.ManagerDAO;
 import es.deusto.spqServer.data.Soup;
 import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.SoupDTO;
+import es.deusto.spqServer.gateway.MailSender;
 
 
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;
 	private Assembler as;
+	private MailSender mail;
 	
 	public LetterSoupManager(String [] args) throws RemoteException {
 		dao= new ManagerDAO();
@@ -77,8 +79,9 @@ private static final long serialVersionUID = 1L;
 
 	@Override
 	public void sendMail(String message, String email) throws RemoteException {
-		// TODO Auto-generated method stub
-		
+		//  Auto-generated method stub
+		mail=new MailSender(email);
+		mail.sendMessage(message);
 	}
 
 

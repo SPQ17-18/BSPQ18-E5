@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
@@ -53,27 +56,14 @@ public class InsertNewSoup extends JFrame {
 	private JTextField[][] casillas;
 	private JPanel panelC;
 	private JComboBox comboBoxVH;
+	controller c = null;
 	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					InsertNewSoup frame = new InsertNewSoup();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public InsertNewSoup() {
+	public InsertNewSoup(controller c) {
+		this.c=c;
 		final InsertNewSoup ins = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,8 +88,6 @@ public class InsertNewSoup extends JFrame {
 		btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			MenuWindow mw = new MenuWindow();
-			mw.setVisible(true);
 			ins.setVisible(false);	
 			}
 		});

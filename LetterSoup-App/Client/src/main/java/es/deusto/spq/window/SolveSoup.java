@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -32,26 +35,26 @@ public class SolveSoup extends JFrame {
 	private ArrayList<Integer> posy=new ArrayList<Integer>();
 	private ArrayList<Character> posicion=new ArrayList<Character>();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SolveSoup frame = new SolveSoup();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					SolveSoup frame = new SolveSoup();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public SolveSoup() {
+	public SolveSoup(controller c) {
 		
 		final SolveSoup ss = this;
 		setResizable(false);
@@ -82,8 +85,6 @@ public class SolveSoup extends JFrame {
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				MenuWindow nw = new MenuWindow();
-				nw.setVisible(true);
 				ss.dispose();
 			}
 		});
