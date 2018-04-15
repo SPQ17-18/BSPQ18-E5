@@ -35,7 +35,6 @@ public class MenuWindow extends JFrame implements Runnable {
 
 	private JPanel contentPane,panelNorth, panelSouth, panelSCenter, panelSRight;
 	private JTextField txtTit;
-	private JButton buttonQ;
 	private JLabel labelClock;
 	String hour, minutes , seconds, ampm;
 	Calendar cal;
@@ -43,7 +42,6 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JPanel panelCenter;
 	private JPanel panelNorthC;
 	private JLabel lblWelcome;
-	private JLabel labelName;
 	private JPanel panel;
 
 	/**
@@ -67,6 +65,7 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 */
 	public MenuWindow() {
+		final MenuWindow mw =this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -117,17 +116,6 @@ public class MenuWindow extends JFrame implements Runnable {
 		panelSouth.add(panelSRight);
 		panelSRight.setLayout(null);
 		
-		buttonQ = new JButton("?");
-		buttonQ.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showMessageDialog(buttonQ, "1. Select your role (Student, Teacher or Parent).\n2. Introduce your username and password.\n3. Press enter (or register, in the case your are not already registered).");
-			}
-		});
-		buttonQ.setFont(new Font("Avenir", Font.PLAIN, 13));
-		buttonQ.setBounds(200, 0, 46, 29);
-		panelSRight.add(buttonQ);
-		
 		panelCenter = new JPanel();
 		contentPane.add(panelCenter, BorderLayout.CENTER);
 		panelCenter.setLayout(new BorderLayout(0, 0));
@@ -135,13 +123,9 @@ public class MenuWindow extends JFrame implements Runnable {
 		panelNorthC = new JPanel();
 		panelCenter.add(panelNorthC, BorderLayout.NORTH);
 		
-		lblWelcome = new JLabel("Welcome, ");
+		lblWelcome = new JLabel("Welcome!");
 		lblWelcome.setFont(new Font("Avenir", Font.PLAIN, 13));
 		panelNorthC.add(lblWelcome);
-		
-		labelName = new JLabel("New label");
-		labelName.setFont(new Font("Avenir", Font.PLAIN, 13));
-		panelNorthC.add(labelName);
 		
 		panel = new JPanel();
 		panelCenter.add(panel, BorderLayout.CENTER);
@@ -149,13 +133,27 @@ public class MenuWindow extends JFrame implements Runnable {
 		
 		JButton btnPlay = new JButton("Play!");
 		btnPlay.setFont(new Font("Avenir", Font.PLAIN, 17));
-		btnPlay.setBounds(73, 55, 117, 29);
+		btnPlay.setBounds(59, 55, 131, 29);
 		panel.add(btnPlay);
 		
 		JButton btnSeeScore = new JButton("See score");
 		btnSeeScore.setFont(new Font("Avenir", Font.PLAIN, 17));
-		btnSeeScore.setBounds(73, 115, 117, 29);
+		btnSeeScore.setBounds(59, 115, 131, 29);
 		panel.add(btnSeeScore);
+		
+		JButton btnInsertNewSoup = new JButton("Insert new soup");
+		btnInsertNewSoup.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				InsertNewSoup in = new InsertNewSoup();
+				in.setVisible(true);
+				mw.dispose();
+				
+			}
+		});
+		
+		btnInsertNewSoup.setBounds(59, 173, 131, 29);
+		panel.add(btnInsertNewSoup);
 	
 	
 		

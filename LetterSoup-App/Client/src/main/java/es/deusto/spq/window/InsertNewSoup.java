@@ -2,9 +2,9 @@ package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -16,18 +16,21 @@ import javax.swing.JOptionPane;
 import java.awt.GridLayout;
 import java.awt.Rectangle;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class InsertNewSoup extends JFrame {
 
-
-	private JPanel contentPane1, panelN, panelS, panelE, panelW, panelC;
+	private JPanel contentPane, panelN, panelS, panelE;
 	private JLabel lblTittle;
 	private JButton btnReturn;
 	private JButton btnSave;
@@ -43,23 +46,14 @@ public class InsertNewSoup extends JFrame {
 	private JTextField textFieldPx;
 	private JTextField textFieldPy;
 	private JPanel panelBlanck2;
-	
-
-	/**
-	 * 
-	 */
-	 
-	private static final long serialVersionUID = 1L;
-	private JTextField [][] casillas;
-	private ArrayList<JPanel> lines=new ArrayList<JPanel>();
-	private JPanel contentPane;
 	private ArrayList<String> words=new ArrayList<String>();
 	private ArrayList<Integer> posx=new ArrayList<Integer>();
 	private ArrayList<Integer> posy=new ArrayList<Integer>();
 	private ArrayList<Character> posicion=new ArrayList<Character>();
-
-
-//github.com/SPQ17-18/BSPQ18-E5.git
+	private JTextField[][] casillas;
+	private JPanel panelC;
+	private JComboBox comboBoxVH;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -85,11 +79,10 @@ public class InsertNewSoup extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
-		
-		//github.com/SPQ17-18/BSPQ18-E5.git
-		
-
-		
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		panelN = new JPanel();
 		panelN.setBackground(Color.CYAN);
@@ -114,10 +107,6 @@ public class InsertNewSoup extends JFrame {
 		
 		btnSave = new JButton("Save");
 		panelS.add(btnSave);
-		
-		panelW = new JPanel();
-		contentPane.add(panelW, BorderLayout.WEST);
-		panelW.setLayout(new GridLayout(30, 30, 0, 0));
 		//Función para meter tantos botones como tamaño asignemos
 		
 		panelE = new JPanel();
@@ -151,8 +140,13 @@ public class InsertNewSoup extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
+				//CREATE TABLE CON NUMBERO TODO
+				deletePanel();
+				panelC.setLayout(new GridLayout(num, num, 0, 0));
+				insertCasillas(num);
 				
-				createTable(num);
+				panelC.repaint();
+				panelC.revalidate();
 			}
 		});
 		btnCreate.setBounds(6, 14, 71, 29);
@@ -167,6 +161,10 @@ public class InsertNewSoup extends JFrame {
 		
 		Blanck = new JPanel();
 		panelE1.add(Blanck);
+		
+		comboBoxVH = new JComboBox();
+		comboBoxVH.setModel(new DefaultComboBoxModel(new String[] {"", "Vertical", "Horizontal"}));
+		Blanck.add(comboBoxVH);
 		
 		lblPosition = new JLabel(" Position:");
 		panelE1.add(lblPosition);
@@ -205,6 +203,19 @@ public class InsertNewSoup extends JFrame {
 				
 				if(checkPos(num)==true) {
 					//TODO WE STORE THE WORD IN THE BD
+					String hv = (String) comboBoxVH.getSelectedItem();
+					char selection;
+					if(hv=="Vertical") {
+						selection='v';
+					}else {
+						selection='h';
+					}
+					
+					
+					
+					insertWord(textFieldWord.getText(), Integer.parseInt(textFieldPx.getText())-1,Integer.parseInt(textFieldPy.getText())-1, selection);
+					panelC.repaint();
+					panelC.revalidate();
 				}
 			}
 		});
@@ -212,28 +223,48 @@ public class InsertNewSoup extends JFrame {
 		
 		panelC = new JPanel();
 		contentPane.add(panelC, BorderLayout.CENTER);
-
-		insertCasillas(10);
-		insertWord("hola",1,2,'V');
+		panelC.setLayout(new GridLayout(5, 5, 0, 0));
 		
+
+	}
+	
+	
+	/**
+	 * Method for deleting all the table labels
+	 */
+	public void deletePanel() {			
+				panelC.removeAll();
+	}
+	
+	/**
+	 * Method for checking the correct position
+	 * @param num
+	 * @return
+	 */
+	private boolean checkPos(int num) {
+		//The position cannot be less than 0
+		if(Integer.parseInt(textFieldPx.getText())<0 || Integer.parseInt(textFieldPy.getText())<0 || Integer.parseInt(textFieldPx.getText())>num || Integer.parseInt(textFieldPy.getText())>num) {
+			JOptionPane.showMessageDialog(null, "The position is incorrect");
+			return false;
+		}else {
+			return true;
+		}
 	}
 	
 	public void insertCasillas(int size) {
+		
+		
 		casillas=new JTextField[size][size];
 		for(int i=0;i<size;i++) {
-			lines.add(new JPanel());
-			lines.get(i).setLayout(new BoxLayout(lines.get(i), BoxLayout.X_AXIS));
-			contentPane1.add(lines.get(i));
 			for(int j=0;j<size;j++) {
 				casillas[i][j]=new JTextField();
 				casillas[i][j].setText(" ");
+				panelC.add(casillas[i][j]);
 				casillas[i][j].setEditable(false);
-				lines.get(i).add(casillas[i][j]);
-	
 			}
+			
 		}
-//		contentPane1.repaint();
-//		contentPane1.revalidate();
+		
 	}
 	
 	public void insertWord(String word,int positionx,int positiony,char pos) {
@@ -252,58 +283,8 @@ public class InsertNewSoup extends JFrame {
 			
 			}
 		}
-		contentPane1.repaint();
-		contentPane1.revalidate();
 
 		
 //github.com/SPQ17-18/BSPQ18-E5.git
-	}
-	
-	/**
-	 * Method for creating the table
-	 */
-	public void createTable(int num) {
-		
-		//1. Checking the correction
-		if(num>20) {
-			JOptionPane.showMessageDialog(null, "The size is too big");
-		}else {
-		System.out.println(num);
-		Rectangle r = new Rectangle();
-		r.x=r.y=num;
-		panelC.setBounds(r);
-		
-		ArrayList <JButton> botonera = new ArrayList <JButton>();
-		
-		//2. Creating the table TODO
-		for(int i=0; i<num;i++) {
-				botonera.add(new JButton(" "+i));
-				panelC.add(botonera.get(i));
-		}
-
-		}
-	}
-	
-	
-	/**
-	 * Method for deleting all the table labels
-	 */
-	public void deleteLabels(int num) {			
-				panelW.removeAll();
-	}
-	
-	/**
-	 * Method for checking the correct position
-	 * @param num
-	 * @return
-	 */
-	private boolean checkPos(int num) {
-		//The position cannot be less than 0
-		if(Integer.parseInt(textFieldPx.getText())<0 || Integer.parseInt(textFieldPy.getText())<0 || Integer.parseInt(textFieldPx.getText())>num || Integer.parseInt(textFieldPy.getText())>num) {
-			JOptionPane.showMessageDialog(null, "The position is incorrect");
-			return false;
-		}else {
-			return true;
-		}
 	}
 }

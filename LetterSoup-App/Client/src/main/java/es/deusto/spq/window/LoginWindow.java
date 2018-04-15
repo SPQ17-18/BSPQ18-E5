@@ -248,13 +248,14 @@ public class LoginWindow extends JFrame implements Runnable {
 			public void actionPerformed(ActionEvent e) {
 
 				cont.login(textFieldUsername.getText(), passwordField.getText());
-				lw.setVisible(false);
-				MenuWindow mw = new MenuWindow();
-				mw.setVisible(true);
+
 
 				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
+					lw.setVisible(false);
+					MenuWindow mw = new MenuWindow();
+					mw.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
 					System.out.println("log in failed");
