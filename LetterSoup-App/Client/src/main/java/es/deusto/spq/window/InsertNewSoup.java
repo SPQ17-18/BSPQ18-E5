@@ -1,7 +1,15 @@
 package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -140,6 +148,7 @@ public class InsertNewSoup extends JFrame {
 		btnCreate.setBounds(6, 14, 71, 29);
 		panelCreate.add(btnCreate);
 		
+
 		lblWords = new JLabel(" Introduce word:");
 		panelE1.add(lblWords);
 		
@@ -237,6 +246,7 @@ public class InsertNewSoup extends JFrame {
 		}else {
 			return true;
 		}
+
 	}
 	
 	public void insertCasillas(int size) {
@@ -247,8 +257,6 @@ public class InsertNewSoup extends JFrame {
 			for(int j=0;j<size;j++) {
 				casillas[i][j]=new JTextField();
 				casillas[i][j].setText(" ");
-				panelC.add(casillas[i][j]);
-				casillas[i][j].setEditable(false);
 			}
 			
 		}
@@ -275,6 +283,5 @@ public class InsertNewSoup extends JFrame {
 		}
 
 		
-//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 }

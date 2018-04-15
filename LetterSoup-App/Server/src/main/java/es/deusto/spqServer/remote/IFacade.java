@@ -3,6 +3,8 @@ package es.deusto.spqServer.remote;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -23,7 +25,7 @@ public boolean register(String username, String password, String userType, Strin
 	public void sendMail(String message,String email) throws RemoteException;//send a message to an email
 		
 	
-	public String getScore(SoupDTO s) throws RemoteException;
+	public ScoreDTO getScore(String u) throws RemoteException;
 
 	
 

@@ -6,6 +6,8 @@ import java.util.List;
 
 
 import es.deusto.spq.remote.RMIServiceLocator;
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -72,9 +74,17 @@ public class controller {
 		
 		
 	}
-	public String getScore(SoupDTO s) {
-		return null;
+	public ScoreDTO getScore(String u) {
+		ScoreDTO score=null;
+		try {
+			System.out.println("get service");
+			score=sl.getService().getScore(u);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+		return score;
 	}
 
 		public void exit() {
