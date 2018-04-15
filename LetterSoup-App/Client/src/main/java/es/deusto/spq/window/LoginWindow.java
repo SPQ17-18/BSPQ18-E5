@@ -28,6 +28,7 @@ import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -57,6 +58,7 @@ public class LoginWindow extends JFrame implements Runnable {
 	public static void main(String[] args) {
 		
 		final LoginWindow log=new LoginWindow(args);
+		log.setVisible(true);
 //		EventQueue.invokeLater(new Runnable() {
 //			LoginWindow2 frame = null;
 //			public void run() {
@@ -77,16 +79,20 @@ public class LoginWindow extends JFrame implements Runnable {
 	 * @param args 
 	 */
 	public LoginWindow(String[] args) {
-	 	
-		try {
+		ArrayList<JButton> botonera=new ArrayList<JButton>();
+	 	try {
 			cont=new controller(args);
 		} catch (RemoteException e) {
 			// Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+
 		final LoginWindow lw =this;
 		setResizable(false);
+
+		setResizable(true);
+//github.com/SPQ17-18/BSPQ18-E5.git
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
@@ -240,16 +246,27 @@ public class LoginWindow extends JFrame implements Runnable {
 		JButton button_2 = new JButton("Enter");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				cont.login(textFieldUsername.getText(), passwordField.getText());
 				lw.setVisible(false);
 				MenuWindow mw = new MenuWindow();
 				mw.setVisible(true);
+
+				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
+					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
+					System.out.println("logged");
+				}else {
+					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
+					System.out.println("log in failed");
+				}
+				
+//github.com/SPQ17-18/BSPQ18-E5.git
 			}
 		});
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_2);
 	
-	
+			
 		
 	}	
 	

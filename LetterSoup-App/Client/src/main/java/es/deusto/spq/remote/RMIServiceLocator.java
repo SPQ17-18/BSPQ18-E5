@@ -1,6 +1,6 @@
 package es.deusto.spq.remote;
 
-
+import es.deusto.spqServer.remote.IFacade;
 
 public class RMIServiceLocator {
 	private IFacade facade;
@@ -16,10 +16,10 @@ public class RMIServiceLocator {
 
 			facade = (IFacade) java.rmi.Naming.lookup(service);
 			
-			System.out.println("Identification Service OK.");
+			System.out.println("Getting service...");
 
 		} catch (Exception e) {
-			System.out.println("Error trying to set Identification Service.");
+			System.out.println("Error trying to set Service.");
 		}
 	}
 

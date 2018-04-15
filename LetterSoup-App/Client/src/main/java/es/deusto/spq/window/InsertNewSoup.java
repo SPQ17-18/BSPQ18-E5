@@ -2,9 +2,9 @@ package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.util.ArrayList;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -26,7 +26,8 @@ import java.awt.event.ActionEvent;
 
 public class InsertNewSoup extends JFrame {
 
-	private JPanel contentPane, panelN, panelS, panelE, panelW, panelC;
+
+	private JPanel contentPane1, panelN, panelS, panelE, panelW, panelC;
 	private JLabel lblTittle;
 	private JButton btnReturn;
 	private JButton btnSave;
@@ -43,6 +44,22 @@ public class InsertNewSoup extends JFrame {
 	private JTextField textFieldPy;
 	private JPanel panelBlanck2;
 	
+
+	/**
+	 * 
+	 */
+	 
+	private static final long serialVersionUID = 1L;
+	private JTextField [][] casillas;
+	private ArrayList<JPanel> lines=new ArrayList<JPanel>();
+	private JPanel contentPane;
+	private ArrayList<String> words=new ArrayList<String>();
+	private ArrayList<Integer> posx=new ArrayList<Integer>();
+	private ArrayList<Integer> posy=new ArrayList<Integer>();
+	private ArrayList<Character> posicion=new ArrayList<Character>();
+
+
+//github.com/SPQ17-18/BSPQ18-E5.git
 	/**
 	 * Launch the application.
 	 */
@@ -68,9 +85,13 @@ public class InsertNewSoup extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane1 = new JPanel();
+		contentPane1.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
+//github.com/SPQ17-18/BSPQ18-E5.git
 		setContentPane(contentPane);
+
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		panelN = new JPanel();
@@ -194,6 +215,51 @@ public class InsertNewSoup extends JFrame {
 		
 		panelC = new JPanel();
 		contentPane.add(panelC, BorderLayout.CENTER);
+
+		insertCasillas(10);
+		insertWord("hola",1,2,'V');
+		
+	}
+	
+	public void insertCasillas(int size) {
+		casillas=new JTextField[size][size];
+		for(int i=0;i<size;i++) {
+			lines.add(new JPanel());
+			lines.get(i).setLayout(new BoxLayout(lines.get(i), BoxLayout.X_AXIS));
+			contentPane1.add(lines.get(i));
+			for(int j=0;j<size;j++) {
+				casillas[i][j]=new JTextField();
+				casillas[i][j].setText(" ");
+				casillas[i][j].setEditable(false);
+				lines.get(i).add(casillas[i][j]);
+	
+			}
+		}
+		contentPane1.repaint();
+		contentPane1.revalidate();
+	}
+	
+	public void insertWord(String word,int positionx,int positiony,char pos) {
+		words.add(word);
+		posx.add(positionx);
+		posy.add(positiony);
+		posicion.add(pos);
+		int x=positionx;
+		int y=positiony;
+		for(int i=0;i<word.length();i++) {
+			if(pos=='v' || pos=='V') {
+				casillas[y+i][x].setText(""+word.charAt(i));
+				
+			}else {
+				casillas[y][x+i].setText(""+word.charAt(i));				
+			
+			}
+		}
+		contentPane1.repaint();
+		contentPane1.revalidate();
+
+		
+//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 	
 	/**

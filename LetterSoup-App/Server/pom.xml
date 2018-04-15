@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>es.deusto.spq</groupId>
-  <artifactId>Server</artifactId>
+  <groupId>Server</groupId>
+  <artifactId>es.deusto.spqServer</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -18,10 +18,16 @@
 		<policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
 		<email.address>aitor.santa@opendeusto.es</email.address>
-  </properties>
+	</properties>
 
 
   <dependencies>
+	<dependency>
+		<groupId>com.sun.mail</groupId>
+       <artifactId>javax.mail</artifactId>    
+		<version>1.4.7</version>
+	</dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -102,7 +108,9 @@
 					 <!-- This line is for skipping set/get and constructor trivial methods. The coverage is higher-->
 					  <ignoreTrivial>true</ignoreTrivial>  
 						<excludes>
-							<exclude>es/deusto/spq/**/I*.*</exclude>
+							<exclude>es/deusto/spqServer/**/I*.*</exclude>
+							 
+							
 							
 							<!-- This lines is for excluding from the instrumentation and the coverage calculations all the classes from server down							
 							<exclude>es/deusto/server/**/*</exclude> 
@@ -110,10 +118,6 @@
 					
 						</excludes>
 				 
-						<excludes>
-							
-					
-						</excludes>
 				  </instrumentation>
 					<check>
 						<branchRate>50</branchRate>
@@ -216,7 +220,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>es.deusto.spq.server.LetterSoupServer</mainClass>
+									<mainClass>es.deusto.spqServer.server.LetterSoupServer</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
