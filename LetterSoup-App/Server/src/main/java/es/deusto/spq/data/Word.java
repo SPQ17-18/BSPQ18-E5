@@ -8,7 +8,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-
+//Class for having word object with his attributes
 @PersistenceCapable(detachable = "true")
 public class Word {
 	@PrimaryKey
@@ -26,7 +26,7 @@ public class Word {
 	private Soup soup;
 	
 	
-
+//Constructor
 	public Word(int word_id, char position, String word, int x, int y, Soup soup) {
 		this.word_id = word_id;
 		this.position = position;
@@ -35,7 +35,7 @@ public class Word {
 		this.y = y;
 		this.soup = soup;
 	}
-
+//Getters and setters
 	public int getWord_id() {
 		return word_id;
 	}

@@ -6,7 +6,7 @@ import es.deusto.spq.remote.IFacade;
 import es.deusto.spq.remote.LetterSoupManager;
 
 
-
+//letter soup server
 public class LetterSoupServer {
 	public static void main(String[] args) {
 		if (args.length != 3) {
@@ -21,7 +21,7 @@ public class LetterSoupServer {
 		
 		try {
 			
-			IFacade soupManager = new LetterSoupManager(args);	
+			IFacade soupManager = new LetterSoupManager(args);	//Create soup Manager façade
 			Naming.rebind(name, soupManager);
 			System.out.println("* SoupLetter server '" + name + "' active and waiting...");
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader ( System.in );

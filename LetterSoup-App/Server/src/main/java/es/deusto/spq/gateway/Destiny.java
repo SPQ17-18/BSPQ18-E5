@@ -1,18 +1,18 @@
 package es.deusto.spq.gateway;
-
+//Destiny class for having a destination address
 public class Destiny {
 
 	private String ip;
 	private int port;
 	private String email_address;
-	
+	//Constructor
 	public Destiny(String ip, int port, String email_address) {
 		super();
 		this.ip = ip;
 		this.port = port;
 		this.email_address = email_address;
 	}
-
+//Getters and setters
 	public String getIp() {
 		return ip;
 	}

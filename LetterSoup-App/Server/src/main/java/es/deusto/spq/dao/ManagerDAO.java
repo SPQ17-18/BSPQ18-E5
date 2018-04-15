@@ -275,14 +275,14 @@ private PersistenceManagerFactory pmf;
 		System.out.println(dao.getNumSoup().size());
 		System.out.println("The content of the letter soup s is:\n");
 		System.out.println(dao.getSoup(s.getSoup_id()));
-		User u=new User("a1", "abc", 'S',"a1@gmail.com");
-		Date date=new Date();
+		User u=new User("a1", "abc", 'S',"a1@gmail.com");//creating new User
+		Date date=new Date();//Creating date
 		Record r1=new Record(1,date, 5,u);
-		u.addRecord(r1);
+		u.addRecord(r1);//Add records for user
 		System.out.println("Store user");
-		dao.storeUser(u);
+		dao.storeUser(u);//Store user
 		System.out.println("Get records");
-		dao.getRecords(u);
+		dao.getRecords(u);//Get user records
 		System.out.println("Is correct");
 		System.out.println(dao.isCorrect("a1#abc"));
 		System.out.println("Is correct");

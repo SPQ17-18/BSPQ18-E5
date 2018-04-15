@@ -8,7 +8,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-
+//Method for creating soup objects with their attributes
 @PersistenceCapable(detachable = "true")
 public class Soup {
 	@PrimaryKey
@@ -23,7 +23,7 @@ public class Soup {
 	@Join
 	private List<Word> words = new ArrayList<Word>();
 	
-
+//Constructor
 	public Soup(int soup_id, int size) {
 		
 		this.soup_id = soup_id;
@@ -31,7 +31,7 @@ public class Soup {
 		this.words = new ArrayList<Word>();
 		this.content=null;
 	}
-
+//Getters and setters
 	public int getSoup_id() {
 		return soup_id;
 	}
@@ -56,7 +56,7 @@ public class Soup {
 		}
 		return arraycontent;
 	}
-
+//To string
 	public String toStringArrayContent(char [][] array) {
 		String s="";
 		for(int i=0;i<size;i++) {
@@ -69,6 +69,7 @@ public class Soup {
 		
 		
 	}
+//To string
 	@Override
 	public String toString() {
 		String s="";
@@ -103,6 +104,7 @@ public class Soup {
 	public void setAword(Word word) {
 		this.words.add(word);
 	}
+	//method for initializing the soup with words and random characters
 	public void initialize() {
 		//Word(int word_id, char position, String word, int x, int y, Soup soup)
 		char [][] arrayContent=new char[this.size][this.size];
@@ -120,6 +122,7 @@ public class Soup {
 		
 		
 	}
+	//Method for generating random character
 	public char generateValue() {
 		int num1 = 97;
 		int num2 = 122;
@@ -129,6 +132,7 @@ public class Soup {
 		return letra;
 				
 	}
+	//Method for inserting words into the array(soup)
 	public void insertWords(char [][] arrayContent) {
 		int x=0;
 		int y=0;
@@ -150,7 +154,7 @@ public class Soup {
 		}
 		
 	}
-
+//Method for filling the bidimensional array(soup)
 	public void fulfill(char [][] arrayContent) {
 		char a = '\'';
 		for(int i=0;i<this.size;i++) {
@@ -161,7 +165,7 @@ public class Soup {
 			}
 		}
 	}
-	
+	//method for calculating the actual score
 	public int calculateScore() {
 		int score=0;
 		boolean match=false;

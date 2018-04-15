@@ -9,7 +9,7 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
-
+//A class for creating Record object with its attributes
 @PersistenceCapable(detachable = "true")
 public class Record {
 	@PrimaryKey
@@ -18,7 +18,7 @@ public class Record {
 	private int record;
 	@Persistent(defaultFetchGroup="true")
 	private User user;
-	
+	//Constructor
 	public Record(int record_id, Date date, int record, User user) {
 		
 		this.record_id = record_id;
@@ -26,7 +26,7 @@ public class Record {
 		this.record = record;
 		this.user = user;
 	}
-
+	//Getters and setters
 	public int getRecord_id() {
 		return record_id;
 	}

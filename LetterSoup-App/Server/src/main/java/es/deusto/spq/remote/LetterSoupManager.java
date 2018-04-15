@@ -5,7 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 import es.deusto.spq.dao.IManagerDAO;
 import es.deusto.spq.dao.ManagerDAO;
-
+//Façade
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;

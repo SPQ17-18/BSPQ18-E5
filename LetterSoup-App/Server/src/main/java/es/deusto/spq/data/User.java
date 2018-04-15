@@ -7,6 +7,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+//Method for creating user objects with their attributes
 @PersistenceCapable(detachable = "true")
 public class User {
 	@PrimaryKey
@@ -21,7 +22,7 @@ public class User {
 	private List<Record> records;
 	
 	
-	
+	//Constructor
 	public User(String user, String password, char rol, String email) {
 		User = user;
 		Password = password;
@@ -29,7 +30,7 @@ public class User {
 		this.email = email;
 		this.records = new ArrayList<Record>();
 	}
-	
+	//Getters and setters
 	public String getUser() {
 		return User;
 	}
