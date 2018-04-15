@@ -277,6 +277,8 @@ public class InsertNewSoup extends JFrame {
 		for(int i=0;i<word.length();i++) {
 			if(pos=='v' || pos=='V') {
 				casillas[y+i][x].setText(""+word.charAt(i));
+//				casillas[y+i][x].setFont(new Font("Avenir", Font.PLAIN, 15));
+//				casillas[y+i][x].setHorizontalAlignment(SwingConstants.CENTER);
 				
 			}else {
 				casillas[y][x+i].setText(""+word.charAt(i));				

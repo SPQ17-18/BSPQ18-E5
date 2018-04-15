@@ -96,9 +96,8 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnExit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				LoginWindow lw = new LoginWindow(null);
-				lw.setVisible(true);
-				
+				JOptionPane.showMessageDialog(null, "Thank you for playing \nSee you soon!");
+				System.exit(0);
 			}
 		});
 		panelSouth.add(btnExit);
@@ -132,6 +131,13 @@ public class MenuWindow extends JFrame implements Runnable {
 		panel.setLayout(null);
 		
 		JButton btnPlay = new JButton("Play!");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SolveSoup ss = new SolveSoup();
+				ss.setVisible(true);
+				mw.dispose();
+			}
+		});
 		btnPlay.setFont(new Font("Avenir", Font.PLAIN, 17));
 		btnPlay.setBounds(59, 55, 131, 29);
 		panel.add(btnPlay);

@@ -80,6 +80,13 @@ public class SolveSoup extends JFrame {
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
 		JButton btnReturn = new JButton("Return");
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {				
+				MenuWindow nw = new MenuWindow();
+				nw.setVisible(true);
+				ss.dispose();
+			}
+		});
 		panelS.add(btnReturn);
 		
 		JButton btnFinish = new JButton("Finish");
