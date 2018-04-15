@@ -54,7 +54,7 @@ public class SolveSoup extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SolveSoup(controller c) {
+	public SolveSoup() {
 		
 		final SolveSoup ss = this;
 		setResizable(false);

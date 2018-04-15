@@ -51,6 +51,7 @@ public class LoginWindow extends JFrame implements Runnable {
 	Calendar cal;
 	Thread t1;
 	controller cont =null;
+	private JButton btnGo;
 
 	/**
 	 * Launch the application.
@@ -76,16 +77,15 @@ public class LoginWindow extends JFrame implements Runnable {
 	/**
 	 * Create the frame.
 	 * @param args 
-	 * @param args 
 	 */
 	public LoginWindow(String[] args) {
 		ArrayList<JButton> botonera=new ArrayList<JButton>();
-	 	try {
-			cont=new controller(args);
-		} catch (RemoteException e) {
-			// Auto-generated catch block
-			e.printStackTrace();
-		}
+//	 	try {
+//			cont=new controller(args);
+//		} catch (RemoteException e) {
+//			// Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 
 		final LoginWindow lw =this;
@@ -150,6 +150,17 @@ public class LoginWindow extends JFrame implements Runnable {
 		buttonQ.setFont(new Font("Avenir", Font.PLAIN, 13));
 		buttonQ.setBounds(200, 0, 46, 29);
 		panelSRight.add(buttonQ);
+		
+		btnGo = new JButton("Go!");
+		btnGo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MenuWindow mw = new MenuWindow();
+				mw.setVisible(true);
+				lw.dispose();
+			}
+		});
+		btnGo.setBounds(6, -1, 37, 29);
+		panelSRight.add(btnGo);
 		
 		panelWest = new JPanel();
 		contentPane.add(panelWest, BorderLayout.WEST);
@@ -254,7 +265,7 @@ public class LoginWindow extends JFrame implements Runnable {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
 					lw.setVisible(false);
-					MenuWindow mw = new MenuWindow(cont);
+					MenuWindow mw = new MenuWindow();
 					mw.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
