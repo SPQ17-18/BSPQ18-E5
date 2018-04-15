@@ -97,7 +97,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnExit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				LoginWindow lw = new LoginWindow();
+				LoginWindow lw = new LoginWindow(null);
 				lw.setVisible(true);
 				
 			}

@@ -21,6 +21,8 @@ import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class InsertNewSoup extends JFrame {
 
@@ -61,6 +63,7 @@ public class InsertNewSoup extends JFrame {
 	 * Create the frame.
 	 */
 	public InsertNewSoup() {
+		final InsertNewSoup ins = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -82,6 +85,13 @@ public class InsertNewSoup extends JFrame {
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
 		btnReturn = new JButton("Return");
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			MenuWindow mw = new MenuWindow();
+			mw.setVisible(true);
+			ins.setVisible(false);	
+			}
+		});
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
@@ -169,6 +179,17 @@ public class InsertNewSoup extends JFrame {
 		panelE1.add(panelBlanck2);
 		
 		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//We check if the position is okay
+				String text =textFieldRows.getText();
+				int num = Integer.parseInt(text);
+				
+				if(checkPos(num)==true) {
+					//TODO WE STORE THE WORD IN THE BD
+				}
+			}
+		});
 		panelE1.add(btnConfirm);
 		
 		panelC = new JPanel();
@@ -206,5 +227,20 @@ public class InsertNewSoup extends JFrame {
 	 */
 	public void deleteLabels(int num) {			
 				panelW.removeAll();
+	}
+	
+	/**
+	 * Method for checking the correct position
+	 * @param num
+	 * @return
+	 */
+	private boolean checkPos(int num) {
+		//The position cannot be less than 0
+		if(Integer.parseInt(textFieldPx.getText())<0 || Integer.parseInt(textFieldPy.getText())<0 || Integer.parseInt(textFieldPx.getText())>num || Integer.parseInt(textFieldPy.getText())>num) {
+			JOptionPane.showMessageDialog(null, "The position is incorrect");
+			return false;
+		}else {
+			return true;
+		}
 	}
 }

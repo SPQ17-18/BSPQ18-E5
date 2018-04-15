@@ -85,6 +85,7 @@ public class LoginWindow extends JFrame implements Runnable {
 			e.printStackTrace();
 		}
 		
+		final LoginWindow lw =this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -240,6 +241,9 @@ public class LoginWindow extends JFrame implements Runnable {
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cont.login(textFieldUsername.getText(), passwordField.getText());
+				lw.setVisible(false);
+				MenuWindow mw = new MenuWindow();
+				mw.setVisible(true);
 			}
 		});
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));
