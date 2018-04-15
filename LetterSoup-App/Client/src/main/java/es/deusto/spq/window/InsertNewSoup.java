@@ -11,6 +11,7 @@ public class InsertNewSoup extends JFrame {
 	/**
 	 * 
 	 */
+	 
 	private static final long serialVersionUID = 1L;
 	private JTextField [][] casillas;
 	private ArrayList<JPanel> lines=new ArrayList<JPanel>();
