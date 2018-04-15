@@ -16,6 +16,7 @@ public class SoupDTO implements Serializable {
 	private String nombre;
 	private String content;
 	
+	
 	public SoupDTO(ArrayList<String> arraywords, ArrayList<Integer> arrayposx, ArrayList<Integer> arrayposy,
 			ArrayList<Character> arrayorientation, int size, String nombre) {
 		this.arraywords = arraywords;

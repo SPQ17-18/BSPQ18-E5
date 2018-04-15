@@ -15,6 +15,7 @@ public class LetterSoupServer {
 			System.exit(0);
 		}
 
+		
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}

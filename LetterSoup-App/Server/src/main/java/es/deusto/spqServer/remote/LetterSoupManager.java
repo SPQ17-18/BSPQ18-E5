@@ -20,6 +20,7 @@ private static final long serialVersionUID = 1L;
 		as=new Assembler();
 	}
 
+	
 	public boolean login(String userpass) throws RemoteException {
 		return dao.isCorrect(userpass);
 	}

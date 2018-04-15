@@ -20,5 +20,6 @@ public interface IManagerDAO {
 	public void storeUser(User user);
 	public int getLastSoupId();
 	public int getLastWordId();
+	
 
 }

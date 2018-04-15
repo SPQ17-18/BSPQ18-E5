@@ -20,6 +20,7 @@ public class Soup {
 	
 	private int size;
 	
+	
 	@Persistent(defaultFetchGroup="true", mappedBy="soup", dependentElement = "true")
 	@Join
 	private List<Word> words = new ArrayList<Word>();
