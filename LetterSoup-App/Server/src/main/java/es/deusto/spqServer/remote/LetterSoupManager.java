@@ -2,19 +2,24 @@ package es.deusto.spqServer.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.List;
 
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
+import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
+import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.SoupDTO;
+import es.deusto.spqServer.gateway.MailSender;
 
 
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;
 	private Assembler as;
-	
+	private MailSender mail;
 	public LetterSoupManager(String [] args) throws RemoteException {
 		dao= new ManagerDAO();
 		as=new Assembler();
@@ -55,37 +60,40 @@ private static final long serialVersionUID = 1L;
 
 
 	@Override
-	public boolean register(String username, String password, String userType, String email) throws RemoteException {
-		// TODO Auto-generated method stub
+	public boolean register(String user) throws RemoteException {
+		String[] result = "user".split("#");
+		dao.storeUser(new User(result[0],result[1],result[2].charAt(0),result[3]));
 		return false;
 	}
 
 
 	@Override
-	public String[] soupList() throws RemoteException {
+	public List<String> soupList() throws RemoteException {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.soupList();
 	}
 
 
 	@Override
 	public SoupDTO getSoup(String name) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		Assembler a=new Assembler();
+		
+		return a.assemble(dao.getSoup(name));
 	}
 
 
 	@Override
 	public void sendMail(String message, String email) throws RemoteException {
-		// TODO Auto-generated method stub
+		mail=new MailSender(email);
+		mail.sendMessage(message);
 		
 	}
 
 
 	@Override
-	public String getScore(SoupDTO s) throws RemoteException {
-		// TODO Auto-generated method stub
+	public ArrayList<Record> getScore(User u) throws RemoteException {
 		return null;
+		
 	}
 	
 

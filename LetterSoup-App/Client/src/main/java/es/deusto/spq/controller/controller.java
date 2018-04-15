@@ -6,6 +6,8 @@ import java.util.List;
 
 
 import es.deusto.spq.remote.RMIServiceLocator;
+import es.deusto.spqServer.data.Record;
+import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -49,23 +51,49 @@ public class controller {
 	
 
 	public boolean register(String username, String password, String userType, String email) {
+		try {
+			return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
-		
 	}
-	public String[] soupList() {
-		return null;//Takes from the DB all soup names
-		
+	public List<String> soupList() {
+		try {
+			return sl.getService().soupList();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//Takes from the DB all soup names
+		return null;
 	}
 	public SoupDTO getSoup(String name) {
-		return null;//Takes from the DB the soup with that name
-		
+		try {
+			return sl.getService().getSoup(name);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//Takes from the DB the soup with that name
+		return null;
 	}
 	public void sendMail(String message,String email) {//send a message to an email
+		try {
+			sl.getService().sendMail(message,email);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
 	}
-	public String getScore(SoupDTO s) {
+	public ArrayList<Record> getScore(User u) {
+		try {
+			return sl.getService().getScore(u);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return null;
-		
 	}
 
 		public void exit() {
