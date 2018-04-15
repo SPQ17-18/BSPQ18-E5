@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+
 import javax.swing.JTextField;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -24,6 +27,7 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.BevelBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -35,7 +39,6 @@ public class MenuWindow extends JFrame implements Runnable {
 
 	private JPanel contentPane,panelNorth, panelSouth, panelSCenter, panelSRight;
 	private JTextField txtTit;
-	private JButton buttonQ;
 	private JLabel labelClock;
 	String hour, minutes , seconds, ampm;
 	Calendar cal;
@@ -43,30 +46,33 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JPanel panelCenter;
 	private JPanel panelNorthC;
 	private JLabel lblWelcome;
-	private JLabel labelName;
 	private JPanel panel;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MenuWindow frame = new MenuWindow();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-			
-		});
-	}
+	private static String [] ar= new String[3];
+	
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					MenuWindow frame = new MenuWindow(c);
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+	
 
 	/**
 	 * Create the frame.
+	 *  
 	 */
-	public MenuWindow() {
+	public MenuWindow(final controller c) {
+		
+		final MenuWindow mw =this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -97,9 +103,8 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnExit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				LoginWindow lw = new LoginWindow(null);
-				lw.setVisible(true);
-				
+				JOptionPane.showMessageDialog(null, "Thank you for playing \nSee you soon!");
+				System.exit(0);
 			}
 		});
 		panelSouth.add(btnExit);
@@ -117,17 +122,6 @@ public class MenuWindow extends JFrame implements Runnable {
 		panelSouth.add(panelSRight);
 		panelSRight.setLayout(null);
 		
-		buttonQ = new JButton("?");
-		buttonQ.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showMessageDialog(buttonQ, "1. Select your role (Student, Teacher or Parent).\n2. Introduce your username and password.\n3. Press enter (or register, in the case your are not already registered).");
-			}
-		});
-		buttonQ.setFont(new Font("Avenir", Font.PLAIN, 13));
-		buttonQ.setBounds(200, 0, 46, 29);
-		panelSRight.add(buttonQ);
-		
 		panelCenter = new JPanel();
 		contentPane.add(panelCenter, BorderLayout.CENTER);
 		panelCenter.setLayout(new BorderLayout(0, 0));
@@ -135,27 +129,72 @@ public class MenuWindow extends JFrame implements Runnable {
 		panelNorthC = new JPanel();
 		panelCenter.add(panelNorthC, BorderLayout.NORTH);
 		
-		lblWelcome = new JLabel("Welcome, ");
+		lblWelcome = new JLabel("Welcome!");
 		lblWelcome.setFont(new Font("Avenir", Font.PLAIN, 13));
 		panelNorthC.add(lblWelcome);
-		
-		labelName = new JLabel("New label");
-		labelName.setFont(new Font("Avenir", Font.PLAIN, 13));
-		panelNorthC.add(labelName);
 		
 		panel = new JPanel();
 		panelCenter.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
 		JButton btnPlay = new JButton("Play!");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SolveSoup ss = new SolveSoup(c);
+				ss.setVisible(true);
+			}
+		});
 		btnPlay.setFont(new Font("Avenir", Font.PLAIN, 17));
-		btnPlay.setBounds(73, 55, 117, 29);
+		btnPlay.setBounds(59, 55, 131, 29);
 		panel.add(btnPlay);
 		
 		JButton btnSeeScore = new JButton("See score");
+		btnSeeScore.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PointsWindow pw = new PointsWindow(c);
+				pw.setVisible(true);
+			}
+		});
 		btnSeeScore.setFont(new Font("Avenir", Font.PLAIN, 17));
-		btnSeeScore.setBounds(73, 115, 117, 29);
+		btnSeeScore.setBounds(59, 115, 131, 29);
 		panel.add(btnSeeScore);
+		
+		JButton btnInsertNewSoup = new JButton("Insert new soup");
+		btnInsertNewSoup.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				InsertNewSoup in = new InsertNewSoup(c);
+				in.setVisible(true);
+				
+			}
+		});
+		
+		btnInsertNewSoup.setBounds(59, 173, 131, 29);
+		panel.add(btnInsertNewSoup);
+		
+		JButton btnSendEmail = new JButton("Send email");
+		btnSendEmail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+//				ar[0]= "127.0.0.1";
+//				ar[1]= "1099";
+//				ar[2]="LetterSoupServer";
+//				
+//					try {
+//						controller c = new controller(ar);
+//						c.sendMail("We have a 10 :D", "aitor.santa@opendeusto.es");
+//					} catch (RemoteException e1) {
+//						// Auto-generated catch block
+//						e1.printStackTrace();
+//					}
+//			
+//				
+//				
+				
+			}
+		});
+		btnSendEmail.setBounds(59, 224, 131, 29);
+		panel.add(btnSendEmail);
 	
 	
 		

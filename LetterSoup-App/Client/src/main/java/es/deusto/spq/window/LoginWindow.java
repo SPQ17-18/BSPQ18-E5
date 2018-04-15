@@ -87,7 +87,12 @@ public class LoginWindow extends JFrame implements Runnable {
 			e.printStackTrace();
 		}
 		
+
+		final LoginWindow lw =this;
+		setResizable(false);
+
 		setResizable(true);
+//github.com/SPQ17-18/BSPQ18-E5.git
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
@@ -241,14 +246,22 @@ public class LoginWindow extends JFrame implements Runnable {
 		JButton button_2 = new JButton("Enter");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+				cont.login(textFieldUsername.getText(), passwordField.getText());
+
+
 				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
+					lw.setVisible(false);
+					MenuWindow mw = new MenuWindow(cont);
+					mw.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
 					System.out.println("log in failed");
 				}
 				
+//github.com/SPQ17-18/BSPQ18-E5.git
 			}
 		});
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));

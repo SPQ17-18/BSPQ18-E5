@@ -21,6 +21,8 @@ public class controller {
 	}
 	
 	
+	
+	
 	public boolean login (String username, String password) {
 		boolean login = false;
 		String st=username+"#"+password;
@@ -63,6 +65,13 @@ public class controller {
 		
 	}
 	public void sendMail(String message,String email) {//send a message to an email
+		try {
+			sl.getService().sendMail(message, email);
+		} catch (RemoteException e) {
+			//  Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 	public ScoreDTO getScore(String u) {
