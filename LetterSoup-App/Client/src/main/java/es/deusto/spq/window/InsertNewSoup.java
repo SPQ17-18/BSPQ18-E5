@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 
@@ -16,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.controller.controller;
+import es.deusto.spqServer.dto.SoupDTO;
 
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -70,7 +72,13 @@ public class InsertNewSoup extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public InsertNewSoup() {
+	public InsertNewSoup(String [] args) {
+		try {
+			c=new controller(args);
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		final InsertNewSoup ins = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,6 +109,14 @@ public class InsertNewSoup extends JFrame {
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SoupDTO s=new SoupDTO(words,posx,posy,posicion,Integer.parseInt(textFieldRows.getText()),"s12");
+				c.IntroduceSoup(s);
+				JOptionPane.showMessageDialog(null, "Your soup has been stored");
+				ins.dispose();
+			}
+		});
 		panelS.add(btnSave);
 		//Función para meter tantos botones como tamaño asignemos
 		
@@ -135,13 +151,18 @@ public class InsertNewSoup extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
-				//CREATE TABLE CON NUMBERO TODO
+				if(num>20) {
+					JOptionPane.showMessageDialog(null, "The number is too big");
+					textFieldRows.setText("");
+				}else {
+				//CREATE TABLE CON NUMBERO 
 				deletePanel();
 				panelC.setLayout(new GridLayout(num, num, 0, 0));
 				insertCasillas(num);
 				
 				panelC.repaint();
 				panelC.revalidate();
+				}
 			}
 		});
 		btnCreate.setBounds(6, 14, 71, 29);
@@ -212,6 +233,10 @@ public class InsertNewSoup extends JFrame {
 					insertWord(textFieldWord.getText(), Integer.parseInt(textFieldPx.getText())-1,Integer.parseInt(textFieldPy.getText())-1, selection);
 					panelC.repaint();
 					panelC.revalidate();
+					words.add(textFieldWord.getText());
+					posx.add(Integer.parseInt(textFieldPx.getText())-1);
+					posy.add(Integer.parseInt(textFieldPy.getText())-1);
+					posicion.add(selection);
 				}
 			}
 		});
@@ -256,6 +281,8 @@ public class InsertNewSoup extends JFrame {
 			for(int j=0;j<size;j++) {
 				casillas[i][j]=new JTextField();
 				casillas[i][j].setText(" ");
+				panelC.add(casillas[i][j]);
+				casillas[i][j].setEditable(false);
 			}
 			
 		}
