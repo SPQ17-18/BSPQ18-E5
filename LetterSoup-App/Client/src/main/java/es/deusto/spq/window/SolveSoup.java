@@ -56,7 +56,7 @@ public class SolveSoup extends JFrame {
 	 */
 	public SolveSoup() {
 		
-		final SolveSoup ss = this;
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -85,7 +85,7 @@ public class SolveSoup extends JFrame {
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				ss.dispose();
+				dispose();
 			}
 		});
 		panelS.add(btnReturn);

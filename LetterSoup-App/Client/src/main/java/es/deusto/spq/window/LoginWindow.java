@@ -52,7 +52,7 @@ public class LoginWindow extends JFrame implements Runnable {
 	Thread t1;
 	controller cont =null;
 	private JButton btnGo;
-	private String[] args;
+	private String[] args=null;
 	
 	MenuWindow mw;
 
@@ -92,7 +92,7 @@ public class LoginWindow extends JFrame implements Runnable {
 		}
 		
 
-		final LoginWindow lw =this;
+		
 		setResizable(false);
 
 		setResizable(true);
@@ -160,7 +160,7 @@ public class LoginWindow extends JFrame implements Runnable {
 		btnGo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mw.setVisible(true);
-				lw.dispose();
+				//lw.dispose();
 			}
 		});
 		btnGo.setBounds(6, -1, 46, 29);
@@ -270,7 +270,7 @@ public class LoginWindow extends JFrame implements Runnable {
 				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
-					lw.setVisible(false);
+					
 					mw.setUser(textFieldUsername.getText());
 					mw.setVisible(true);
 				}else {

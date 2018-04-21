@@ -1,8 +1,8 @@
 package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
+
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +18,11 @@ import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.controller.controller;
 import es.deusto.spqServer.dto.SoupDTO;
+
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -66,20 +71,26 @@ public class InsertNewSoup extends JFrame {
 	private JTextField[][] casillas;
 	private JPanel panelC;
 	private JComboBox comboBoxVH;
-	controller c = null;
+	private controller c;
+	private String [] args;
+	private MenuWindow mw;
 	
-
+	/**
+	 * Launch the application.
+	 */
+	
 	/**
 	 * Create the frame.
 	 */
 	public InsertNewSoup(String [] args) {
+		this.args=args;
 		try {
 			c=new controller(args);
 		} catch (RemoteException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		final InsertNewSoup ins = this;
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -100,21 +111,25 @@ public class InsertNewSoup extends JFrame {
 		panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		//mw = new MenuWindow(args);
+		
 		btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			ins.setVisible(false);	
+			//mw.setVisible(true);
+			setVisible(false);	
 			}
 		});
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
+
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SoupDTO s=new SoupDTO(words,posx,posy,posicion,Integer.parseInt(textFieldRows.getText()),"s12");
 				c.IntroduceSoup(s);
 				JOptionPane.showMessageDialog(null, "Your soup has been stored");
-				ins.dispose();
+				dispose();
 			}
 		});
 		panelS.add(btnSave);
@@ -149,26 +164,21 @@ public class InsertNewSoup extends JFrame {
 		btnCreate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				textFieldRows.setEditable(false);
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
-				if(num>20) {
-					JOptionPane.showMessageDialog(null, "The number is too big");
-					textFieldRows.setText("");
-				}else {
-				//CREATE TABLE CON NUMBERO 
+				//CREATE TABLE CON NUMBERO TODO
 				deletePanel();
 				panelC.setLayout(new GridLayout(num, num, 0, 0));
 				insertCasillas(num);
 				
 				panelC.repaint();
 				panelC.revalidate();
-				}
 			}
 		});
 		btnCreate.setBounds(6, 14, 71, 29);
 		panelCreate.add(btnCreate);
 		
-
 		lblWords = new JLabel(" Introduce word:");
 		panelE1.add(lblWords);
 		
@@ -270,7 +280,6 @@ public class InsertNewSoup extends JFrame {
 		}else {
 			return true;
 		}
-
 	}
 	
 	public void insertCasillas(int size) {
@@ -299,8 +308,6 @@ public class InsertNewSoup extends JFrame {
 		for(int i=0;i<word.length();i++) {
 			if(pos=='v' || pos=='V') {
 				casillas[y+i][x].setText(""+word.charAt(i));
-//				casillas[y+i][x].setFont(new Font("Avenir", Font.PLAIN, 15));
-//				casillas[y+i][x].setHorizontalAlignment(SwingConstants.CENTER);
 				
 			}else {
 				casillas[y][x+i].setText(""+word.charAt(i));				
@@ -309,5 +316,6 @@ public class InsertNewSoup extends JFrame {
 		}
 
 		
+//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 }

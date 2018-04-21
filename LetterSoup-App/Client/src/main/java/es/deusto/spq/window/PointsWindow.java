@@ -2,6 +2,7 @@ package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -13,12 +14,15 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.controller.controller;
+import es.deusto.spqServer.dto.ScoreDTO;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JTextPane;
 
 public class PointsWindow extends JFrame {
@@ -27,8 +31,16 @@ public class PointsWindow extends JFrame {
 	private JTextField txtTit;
 	private JLabel Date;
 	private JLabel Points;
-	private JTextPane textPaneD;
-	private JTextPane textPaneP;
+	private JList<String> textPaneD;
+	private JList<String> textPaneP;
+	private String [] a;
+	private String [] b;
+	private controller cont;
+	private ScoreDTO score = null;
+	private String [] args=null;
+	private String user=null;
+	
+
 
 //	/**
 //	 * Launch the application.
@@ -49,8 +61,11 @@ public class PointsWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PointsWindow() {
-		final PointsWindow pw = this;
+	public PointsWindow(String [] args) {
+		System.out.println("Getting records...");
+		this.args=args;
+			
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -81,7 +96,7 @@ public class PointsWindow extends JFrame {
 		JButton btnReturn = new JButton("Menu");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				pw.setVisible(false);
+				setVisible(false);
 			}
 		});
 		panelS.add(btnReturn);
@@ -105,14 +120,44 @@ public class PointsWindow extends JFrame {
 		Points.setHorizontalAlignment(SwingConstants.CENTER);
 		Points.setFont(new Font("Avenir", Font.PLAIN, 18));
 		panelE.add(Points);
+		System.out.println("points window");
 		
-		textPaneD = new JTextPane();
-		textPaneD.setEditable(false);
-		panelE.add(textPaneD);
-		
-		textPaneP = new JTextPane();
-		textPaneP.setEditable(false);
-		panelE.add(textPaneP);
 	}
+	public void getUser() {
+		System.out.println("get user");
+		try {
+			cont = new controller(args);
+			score=cont.getScore(user);
+			
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		a=new String[score.getArrayDate().size()];
+		b=new String[score.getArrayrecord().size()];
+		
+		
+		for(int i=0;i<score.getArrayDate().size();i++) {
+			System.out.println(a[i]);
+			System.out.println(b[i]);
+			a[i]=score.getArrayDate().get(i).toString();
+			b[i]=score.getArrayrecord().get(i).toString();
+			//textPaneD.add(,null);
+			//textPaneP.add(score.getArrayrecord().get(i).toString(),null);
+		}
+		textPaneD = new JList<String>(a);
+		textPaneP = new JList<String>(b);
+		panelE.add(textPaneD);
+		panelE.add(textPaneP);
+		
+		panelE.repaint();
+		panelE.revalidate();
+		
+		
+	}
+	public void setUser(String user) {
+		this.user = user;
+	}
+	
 
 }
