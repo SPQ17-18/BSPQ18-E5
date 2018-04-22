@@ -29,6 +29,8 @@ public class PointsWindow extends JFrame {
 	private JLabel Points;
 	private JTextPane textPaneD;
 	private JTextPane textPaneP;
+	private JLabel lblTime;
+	private JTextPane textPaneT;
 
 //	/**
 //	 * Launch the application.
@@ -106,6 +108,11 @@ public class PointsWindow extends JFrame {
 		Points.setFont(new Font("Avenir", Font.PLAIN, 18));
 		panelE.add(Points);
 		
+		lblTime = new JLabel("Time");
+		lblTime.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTime.setFont(new Font("Avenir", Font.PLAIN, 18));
+		panelE.add(lblTime);
+		
 		textPaneD = new JTextPane();
 		textPaneD.setEditable(false);
 		panelE.add(textPaneD);
@@ -113,6 +120,9 @@ public class PointsWindow extends JFrame {
 		textPaneP = new JTextPane();
 		textPaneP.setEditable(false);
 		panelE.add(textPaneP);
+		
+		textPaneT = new JTextPane();
+		panelE.add(textPaneT);
 	}
 
 }
