@@ -3,9 +3,27 @@ package es.deusto.spq.window;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.controller.controller;
+import es.deusto.spqServer.dto.SoupDTO;
+
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Font;
@@ -53,28 +71,26 @@ public class InsertNewSoup extends JFrame {
 	private JTextField[][] casillas;
 	private JPanel panelC;
 	private JComboBox comboBoxVH;
+	private controller c;
+	private String [] args;
+	private MenuWindow mw;
 	
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					InsertNewSoup frame = new InsertNewSoup();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
 	/**
 	 * Create the frame.
 	 */
-	public InsertNewSoup() {
-		final InsertNewSoup ins = this;
+	public InsertNewSoup(String [] args) {
+		this.args=args;
+		try {
+			c=new controller(args);
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -95,17 +111,27 @@ public class InsertNewSoup extends JFrame {
 		panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		//mw = new MenuWindow(args);
+		
 		btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			MenuWindow mw = new MenuWindow();
-			mw.setVisible(true);
-			ins.setVisible(false);	
+			//mw.setVisible(true);
+			setVisible(false);	
 			}
 		});
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
+
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SoupDTO s=new SoupDTO(words,posx,posy,posicion,Integer.parseInt(textFieldRows.getText()),"s12");
+				c.IntroduceSoup(s);
+				JOptionPane.showMessageDialog(null, "Your soup has been stored");
+				dispose();
+			}
+		});
 		panelS.add(btnSave);
 		//Función para meter tantos botones como tamaño asignemos
 		
@@ -217,6 +243,10 @@ public class InsertNewSoup extends JFrame {
 					insertWord(textFieldWord.getText(), Integer.parseInt(textFieldPx.getText())-1,Integer.parseInt(textFieldPy.getText())-1, selection);
 					panelC.repaint();
 					panelC.revalidate();
+					words.add(textFieldWord.getText());
+					posx.add(Integer.parseInt(textFieldPx.getText())-1);
+					posy.add(Integer.parseInt(textFieldPy.getText())-1);
+					posicion.add(selection);
 				}
 			}
 		});

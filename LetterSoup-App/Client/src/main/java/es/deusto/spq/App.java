@@ -37,7 +37,7 @@ public class App
 			
 			//SoupDTO s=new SoupDTO(arrs,arrx,arry,arrayc,14,"s12");
 			//System.out.println("Introduciendo sopa");
-			System.out.println("Getting records...");
+			//System.out.println("Getting records...");
 			ScoreDTO score=cont.getScore("a1");
 			score.getArrayDate().size();
 			System.out.println(score.getArrayDate().get(0));

@@ -52,6 +52,9 @@ public class LoginWindow extends JFrame implements Runnable {
 	Thread t1;
 	controller cont =null;
 	private JButton btnGo;
+	private String[] args=null;
+	
+	MenuWindow mw;
 
 	/**
 	 * Launch the application.
@@ -79,16 +82,17 @@ public class LoginWindow extends JFrame implements Runnable {
 	 * @param args 
 	 */
 	public LoginWindow(String[] args) {
+		this.args=args;
 		ArrayList<JButton> botonera=new ArrayList<JButton>();
-//	 	try {
-//			cont=new controller(args);
-//		} catch (RemoteException e) {
-//			// Auto-generated catch block
-//			e.printStackTrace();
-//		}
+	 	try {
+			cont=new controller(args);
+		} catch (RemoteException e) {
+			// Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 
-		final LoginWindow lw =this;
+		
 		setResizable(false);
 
 		setResizable(true);
@@ -152,11 +156,11 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelSRight.add(buttonQ);
 		
 		btnGo = new JButton("Go!");
+		
 		btnGo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuWindow mw = new MenuWindow();
 				mw.setVisible(true);
-				lw.dispose();
+				//lw.dispose();
 			}
 		});
 		btnGo.setBounds(6, -1, 46, 29);
@@ -253,8 +257,10 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelButtons.add(btnRegister);
 		button_1.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_1);
-		
 		JButton button_2 = new JButton("Enter");
+		mw = new MenuWindow(args);
+		
+		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -264,8 +270,8 @@ public class LoginWindow extends JFrame implements Runnable {
 				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
-					lw.setVisible(false);
-					MenuWindow mw = new MenuWindow();
+					
+					mw.setUser(textFieldUsername.getText());
 					mw.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
