@@ -22,6 +22,11 @@ public class RegisterWindow extends JFrame implements Runnable{
 	Thread t1;
 	controller cont =null;
 	private JLabel labelClock;
+	private JPanel topPanel;
+	private JPanel leftPanel;
+	private JPanel rightPanel;
+	private JPanel botPanel; 
+	
 
 	/**
 	 * Launch the application.
@@ -50,9 +55,27 @@ public class RegisterWindow extends JFrame implements Runnable{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		labelClock.setBounds(378, 236, 46, 14);
+		
+	
+		topPanel.setBounds(0, 0, 434, 70);
+		contentPane.add(topPanel);
+		
+		
+		leftPanel.setBounds(0, 70, 216, 131);
+		contentPane.add(leftPanel);
+		
+		
+		rightPanel.setBounds(218, 70, 216, 131);
+		contentPane.add(rightPanel);
+		
+		
+		botPanel.setBounds(0, 202, 434, 59);
+		contentPane.add(botPanel);
+		botPanel.setLayout(null);
 		labelClock = new JLabel("New label");
+		labelClock.setBounds(335, 35, 99, 24);
+		botPanel.add(labelClock);
 		labelClock.setFont(new Font("Consolas", Font.PLAIN, 20));
-		contentPane.add(labelClock);
 		Clock();//Screen clock	
 	}
 
