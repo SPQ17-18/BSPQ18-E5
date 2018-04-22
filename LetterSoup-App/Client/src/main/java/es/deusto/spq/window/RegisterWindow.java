@@ -56,27 +56,29 @@ public class RegisterWindow extends JFrame implements Runnable{
 		contentPane.setLayout(null);
 		labelClock.setBounds(378, 236, 46, 14);
 		
-	
+		JPanel topPanel = new JPanel();
 		topPanel.setBounds(0, 0, 434, 70);
 		contentPane.add(topPanel);
+		topPanel.setLayout(null);
+		labelClock = new JLabel("New label");
+		labelClock.setBounds(335, 0, 99, 24);
+		topPanel.add(labelClock);
+		labelClock.setFont(new Font("Consolas", Font.PLAIN, 20));
+		Clock();//Screen clock	
 		
-		
+		JPanel leftPanel = new JPanel();
 		leftPanel.setBounds(0, 70, 216, 131);
 		contentPane.add(leftPanel);
 		
-		
+		JPanel rightPanel = new JPanel();
 		rightPanel.setBounds(218, 70, 216, 131);
 		contentPane.add(rightPanel);
 		
-		
+		JPanel botPanel = new JPanel();
 		botPanel.setBounds(0, 202, 434, 59);
 		contentPane.add(botPanel);
 		botPanel.setLayout(null);
-		labelClock = new JLabel("New label");
-		labelClock.setBounds(335, 35, 99, 24);
-		botPanel.add(labelClock);
-		labelClock.setFont(new Font("Consolas", Font.PLAIN, 20));
-		Clock();//Screen clock	
+
 	}
 
 	 
@@ -85,13 +87,14 @@ public class RegisterWindow extends JFrame implements Runnable{
 	  */
 	 
 	 public void Clock() {
-	        t1 = new Thread(this);
+		 	//Creating new thread for the clock
+		 	t1 = new Thread(this);
 	        t1.start();
-	        
 	    }
 	 
 	 
 	 public void calcula() {
+		 //Calendar and hour for clock
 	        Calendar calendar = new GregorianCalendar();
 	        Date fechaHoraActual = new Date();
 
