@@ -62,7 +62,7 @@ public class SolveSoup extends JFrame implements Runnable{
 	 */
 	public SolveSoup() {
 		
-		
+		final SolveSoup ss = this;
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);

@@ -31,12 +31,10 @@ public class PointsWindow extends JFrame {
 	private JTextField txtTit;
 	private JLabel Date;
 	private JLabel Points;
-<<<<<<< HEAD
-	private JTextPane textPaneD;
-	private JTextPane textPaneP;
+
 	private JLabel lblTime;
 	private JTextPane textPaneT;
-=======
+
 	private JList<String> textPaneD;
 	private JList<String> textPaneP;
 	private String [] a;
@@ -47,7 +45,6 @@ public class PointsWindow extends JFrame {
 	private String user=null;
 	
 
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 
 //	/**
 //	 * Launch the application.
@@ -129,24 +126,24 @@ public class PointsWindow extends JFrame {
 		panelE.add(Points);
 		System.out.println("points window");
 		
-<<<<<<< HEAD
+
 		lblTime = new JLabel("Time");
 		lblTime.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTime.setFont(new Font("Avenir", Font.PLAIN, 18));
 		panelE.add(lblTime);
 		
-		textPaneD = new JTextPane();
-		textPaneD.setEditable(false);
+//		textPaneD = new JTextPane();
+//		textPaneD.setEditable(false);
 		panelE.add(textPaneD);
 		
-		textPaneP = new JTextPane();
-		textPaneP.setEditable(false);
+//		textPaneP = new JTextPane();
+//		textPaneP.setEditable(false);
 		panelE.add(textPaneP);
 		
 		textPaneT = new JTextPane();
 		panelE.add(textPaneT);
-=======
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+
+
 	}
 	public void getUser() {
 		System.out.println("get user");
