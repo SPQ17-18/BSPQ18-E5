@@ -9,7 +9,11 @@ import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
 import es.deusto.spqServer.data.Word;
 
-
+/**
+ * 
+ * Assembler class for converting an object to a DTO
+ *
+ */
 
 public class Assembler {
 	

@@ -10,7 +10,11 @@ import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
-
+/**
+ * 
+ * Class for creating RMI connection
+ *
+ */
 public class controller {
 	private RMIServiceLocator sl;
 	
@@ -22,7 +26,7 @@ public class controller {
 	
 	
 	
-	
+	//Login
 	public boolean login (String username, String password) {
 		boolean login = false;
 		String st=username+"#"+password;
@@ -37,7 +41,10 @@ public class controller {
 		return login;
 	}
 
-	
+	/**
+	 * Method for introducing DTO Soups into Database
+	 * @return the soup that has been introduced into DB
+	 */
 	public boolean IntroduceSoup(SoupDTO dto) {
 		boolean soupintroduced = false;
 		try {
@@ -74,6 +81,9 @@ public class controller {
 		
 		
 	}
+	/**
+	 * @return the score from the users
+	 */
 	public ScoreDTO getScore(String u) {
 		ScoreDTO score=null;
 		try {

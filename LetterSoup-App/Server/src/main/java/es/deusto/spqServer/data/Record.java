@@ -11,6 +11,11 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
+/**
+ * 
+ * Record class with his attributes, constructors, getters and setters
+ *
+ */
 public class Record {
 	@PrimaryKey
 	private int record_id;	

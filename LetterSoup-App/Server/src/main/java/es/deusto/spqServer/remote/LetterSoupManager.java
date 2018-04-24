@@ -14,7 +14,10 @@ import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 import es.deusto.spqServer.gateway.MailSender;
 
-
+/**Class for creating assembler, DAO manager and mail sender and manage them
+ * 
+ *
+ */
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {
 private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;

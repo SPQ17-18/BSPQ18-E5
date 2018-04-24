@@ -10,6 +10,11 @@ import javax.jdo.annotations.PrimaryKey;
 
 
 @PersistenceCapable(detachable = "true")
+/**
+ * 
+ * Soup class with his attributes, constructors, getters and setters
+ *
+ */
 public class Soup {
 	@PrimaryKey
 	private int soup_id;
