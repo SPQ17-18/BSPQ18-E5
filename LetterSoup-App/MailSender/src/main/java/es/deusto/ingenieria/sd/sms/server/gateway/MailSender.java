@@ -10,6 +10,11 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * 
+ * gateway class for creating mail sender 
+ *
+ */
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
 	private final String password = "softwaredesign";
@@ -19,7 +24,7 @@ public class MailSender {
 	private String to;
 	
 	private Properties props;
-
+//Constructor
 	public MailSender(String destination) {
 		to = destination;
 		props = new Properties();
@@ -30,7 +35,11 @@ public class MailSender {
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.debug", "false");
 	}
-
+/**
+ * method for sending message
+ * @param text for sending it by message
+ * @return OK when it's sent
+ */
 	public String sendMessage(String text) {
 		try {
 			Authenticator auth = new SMTPAuthenticator();

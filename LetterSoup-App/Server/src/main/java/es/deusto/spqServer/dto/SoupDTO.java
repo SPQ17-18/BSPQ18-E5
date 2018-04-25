@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class SoupDTO implements Serializable {
 	/**
-	 * 
+	 * class for creating Soup DTO with attributes, constructor, getters and setters
 	 */
 	private static final long serialVersionUID = 1L;
 	private ArrayList<String> arraywords=new ArrayList<String>();

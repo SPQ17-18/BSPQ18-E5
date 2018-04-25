@@ -49,6 +49,10 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JPanel panel;
 	private static String [] ar= new String[3];
 	private JButton btnExamMode;
+	InsertNewSoup in;
+	PointsWindow pw;
+	private String user=null;
+	private String [] args=null;
 	
 //	/**
 //	 * Launch the application.
@@ -71,9 +75,9 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow() {
+	public MenuWindow(String[] args) {
 		
-		final MenuWindow mw =this;
+		System.out.println("menu window");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -150,21 +154,24 @@ public class MenuWindow extends JFrame implements Runnable {
 		panel.add(btnPlay);
 		
 		JButton btnSeeScore = new JButton("See score");
+		pw = new PointsWindow(args);
+		
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PointsWindow pw = new PointsWindow();
+				pw.setUser(user);
+				pw.getUser();
 				pw.setVisible(true);
 			}
 		});
 		btnSeeScore.setFont(new Font("Avenir", Font.PLAIN, 17));
 		btnSeeScore.setBounds(59, 115, 131, 29);
 		panel.add(btnSeeScore);
+		in = new InsertNewSoup(args);
 		
 		JButton btnInsertNewSoup = new JButton("Insert new soup");
 		btnInsertNewSoup.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				InsertNewSoup in = new InsertNewSoup();
 				in.setVisible(true);
 				
 			}
@@ -209,13 +216,37 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnExamMode.setBounds(59, 275, 131, 29);
 		panel.add(btnExamMode);
 	
-	
+	System.out.println("menu window terminada");
 		
 	}	
 	
 	
 	 
-	 /**
+	 public String getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+
+	public String[] getArgs() {
+		return args;
+	}
+
+
+
+	public void setArgs(String[] args) {
+		this.args = args;
+	}
+
+
+
+	/**
 	  * This code has been adapted from http://monillo007.blogspot.com.es/2011/07/programar-un-reloj-en-java.html 
 	  */
 	 

@@ -9,7 +9,11 @@ import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.data.Word;
 
 
-
+/**
+ * 
+ * Data access object interface 
+ *
+ */
 public interface IManagerDAO {
 	public void storeSoup(Soup soup);
 	public ArrayList<Record> getRecords(String user);

@@ -4,6 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * 
+ * class for creating Score DTO, with attributes, constructor, getters and setters
+ *
+ */
 public class ScoreDTO implements Serializable{
 	private ArrayList<Date> arrayDate=new ArrayList<Date>();
 	

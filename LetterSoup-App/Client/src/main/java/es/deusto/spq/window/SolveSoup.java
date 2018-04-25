@@ -5,7 +5,9 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 import es.deusto.spq.controller.controller;
 
@@ -20,12 +22,14 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class SolveSoup extends JFrame {
+public class SolveSoup extends JFrame implements Runnable{
 
 	private JPanel contentPane, panelWest;
 	private JTextField txtLetsPlay;
@@ -34,6 +38,8 @@ public class SolveSoup extends JFrame {
 	private ArrayList<Integer> posx=new ArrayList<Integer>();
 	private ArrayList<Integer> posy=new ArrayList<Integer>();
 	private ArrayList<Character> posicion=new ArrayList<Character>();
+	Thread t1;
+	JLabel lblNewLabel;
 
 //	/**
 //	 * Launch the application.
@@ -85,12 +91,29 @@ public class SolveSoup extends JFrame {
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				ss.dispose();
+				dispose();
 			}
 		});
 		panelS.add(btnReturn);
 		
 		JButton btnFinish = new JButton("Finish");
+		btnFinish.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				//We stop the clock
+				t1.stop();
+				
+				//We display a message window with the final information
+				String time = lblNewLabel.getText();
+				
+				//TODO We need to add the real values
+				int totWords = 0;
+				int totPoints = 0;
+				
+				JOptionPane.showMessageDialog(null, "This is the overview of the game:\n- Time played: "+time+" \n- Total correct words: "+totWords+" \n- Total points: "+totPoints, "Information summary", JOptionPane.INFORMATION_MESSAGE);
+				ss.dispose();
+			}
+		});
 		panelS.add(btnFinish);
 		
 		panelWest = new JPanel();
@@ -108,13 +131,21 @@ public class SolveSoup extends JFrame {
 		
 		JPanel panelEast = new JPanel();
 		contentPane.add(panelEast, BorderLayout.EAST);
+		Border border = LineBorder.createGrayLineBorder();
 		
-		JLabel lblChooseTheWord = new JLabel("Choose the word");
-		panelEast.add(lblChooseTheWord);
+		JPanel panelE1 = new JPanel();
+		panelE1.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		panelEast.add(panelE1);
 		
+		lblNewLabel = new JLabel("New label");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		panelE1.add(lblNewLabel);
+		lblNewLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
 		
 
 		insertCasillas(5);
+		Clock();
+		
 	}
 	
 	
@@ -157,5 +188,32 @@ public class SolveSoup extends JFrame {
 		setVisible(false);
 	}
 	
+	
+	 public void Clock() {
+	        t1 = new Thread(this);
+	        t1.start();
+	        
+	    }
+	
+	 public void run() {
+			//  Auto-generated method stub
+			int sec=0;
+			int min=0;
+			 Thread ct = Thread.currentThread();
+		        while (ct == t1) {
+		            try {
+		            	for(min=0;min<60;min++) {
+							for(sec=0;sec<60;sec++) {
+								lblNewLabel.setText(min+":"+sec);
+				                Thread.sleep(1000);
+								}
+		            	}
 
+		            } catch (InterruptedException e) {
+		            }
+		        }
+	}
+	 
+	 
+	 
 }

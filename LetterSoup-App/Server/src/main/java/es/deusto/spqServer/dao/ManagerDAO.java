@@ -18,7 +18,11 @@ import es.deusto.spqServer.data.Word;
 
 
 
-
+/**
+ * 
+ * Class for managing all DAO actions
+ *
+ */
 public class ManagerDAO implements IManagerDAO {
 
 private PersistenceManagerFactory pmf;
@@ -26,7 +30,7 @@ private PersistenceManagerFactory pmf;
 	public ManagerDAO() {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
-	
+	//Store object
 	private void storeObject(Object object) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
@@ -44,15 +48,16 @@ private PersistenceManagerFactory pmf;
     		pm.close();
 	    }
 	}
-
+//store soup
 	public void storeSoup(Soup soup) {
 		System.out.println("   * Storing an object: " + soup.getSoup_id());
 		 this.storeObject(soup);
 	}
-
+//store user
 	public void storeUser(User user) {
 		 this.storeObject(user);
 	}
+//Store word for putting it into a letter soup
 	public void storeWord(Word word) {
 		 this.storeObject(word);
 	}
@@ -169,7 +174,7 @@ private PersistenceManagerFactory pmf;
 
 		
 	}
-	
+	//Database query that selects soups by their ID
 	public String getSoup(int Soupid) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -201,7 +206,7 @@ private PersistenceManagerFactory pmf;
 
 		
 	}
-	
+	//Database query that deletes soup selecting it by its ID
 	public void deleteSoup(int soupid) {		
 		PersistenceManager pm = pmf.getPersistenceManager();
 		
@@ -235,7 +240,7 @@ private PersistenceManagerFactory pmf;
 			}
 		}
 	}
-	
+	//Database query that selects the last soup's ID
 	public int getLastSoupId() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(4);

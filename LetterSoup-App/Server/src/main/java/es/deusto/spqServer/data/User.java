@@ -8,6 +8,11 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
+/**
+ * 
+ * User class with his attributes, constructors, getters and setters
+ *
+ */
 public class User {
 	@PrimaryKey
 	private String User;	
@@ -59,7 +64,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	//Method for adding a record to an specific user
 	public void addRecord(Record record) {
 		this.records.add(record);
 	}

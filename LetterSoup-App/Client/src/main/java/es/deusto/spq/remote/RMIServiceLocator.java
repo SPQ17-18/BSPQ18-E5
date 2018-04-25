@@ -1,7 +1,11 @@
 package es.deusto.spq.remote;
 
 import es.deusto.spqServer.remote.IFacade;
-
+/**
+ * 
+ * Class for for setting the service locator
+ *
+ */
 public class RMIServiceLocator {
 	private IFacade facade;
 

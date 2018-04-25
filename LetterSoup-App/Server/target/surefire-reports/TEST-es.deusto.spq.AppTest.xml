@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="es.deusto.spq.AppTest" time="0.004" errors="0" skipped="0">
 =======
 <testsuite tests="1" failures="0" name="es.deusto.spq.AppTest" time="0.012" errors="0" skipped="0">
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+=======
+<testsuite tests="1" failures="0" name="es.deusto.spq.AppTest" time="0.024" errors="0" skipped="0">
 >>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -70,8 +74,12 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <testcase classname="es.deusto.spq.AppTest" name="testApp" time="0.004"/>
 =======
   <testcase classname="es.deusto.spq.AppTest" name="testApp" time="0.012"/>
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+=======
+  <testcase classname="es.deusto.spq.AppTest" name="testApp" time="0.024"/>
 >>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 </testsuite>

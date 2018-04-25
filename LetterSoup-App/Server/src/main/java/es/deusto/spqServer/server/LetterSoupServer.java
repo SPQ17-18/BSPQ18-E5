@@ -7,7 +7,11 @@ import es.deusto.spqServer.remote.LetterSoupManager;
 
 
 
-
+/**
+ * 
+ * Server
+ *
+ */
 
 public class LetterSoupServer {
 	public static void main(String[] args) {

@@ -10,6 +10,11 @@ import javax.jdo.annotations.PrimaryKey;
 
 
 @PersistenceCapable(detachable = "true")
+/**
+ * 
+ * Word class with his attributes, constructors, getters and setters
+ *
+ */
 public class Word {
 	@PrimaryKey
 	private int word_id;	

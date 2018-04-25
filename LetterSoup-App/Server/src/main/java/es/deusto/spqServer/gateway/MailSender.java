@@ -9,7 +9,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
+//Mail sender class 
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
 	private final String password = "softwaredesign";
