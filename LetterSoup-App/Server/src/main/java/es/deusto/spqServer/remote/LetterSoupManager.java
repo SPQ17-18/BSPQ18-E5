@@ -3,10 +3,7 @@ package es.deusto.spqServer.remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
-<<<<<<< HEAD
 import java.util.List;
-=======
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
@@ -24,10 +21,7 @@ private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;
 	private Assembler as;
 	private MailSender mail;
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+
 	public LetterSoupManager(String [] args) throws RemoteException {
 		dao= new ManagerDAO();
 		as=new Assembler();
@@ -69,7 +63,7 @@ private static final long serialVersionUID = 1L;
 
 	@Override
 	public boolean register(String user) throws RemoteException {
-		String[] result = "user".split("#");
+		String[] result = user.split("#");
 		dao.storeUser(new User(result[0],result[1],result[2].charAt(0),result[3]));
 		return false;
 	}
@@ -92,29 +86,23 @@ private static final long serialVersionUID = 1L;
 
 	@Override
 	public void sendMail(String message, String email) throws RemoteException {
-<<<<<<< HEAD
 		mail=new MailSender(email);
 		mail.sendMessage(message);
 		
-=======
 		//  Auto-generated method stub
 		mail=new MailSender(email);
 		mail.sendMessage(message);
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 	}
 
 
 	@Override
-<<<<<<< HEAD
 	public ArrayList<Record> getScore(User u) throws RemoteException {
 		return null;
-		
-=======
+	}
 	public ScoreDTO getScore(String u) throws RemoteException {
 		// TODO Auto-generated method stub
 		ArrayList<Record> arrRecord=dao.getRecords(u);
 		return as.assemble(arrRecord);
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 	}
 	
 

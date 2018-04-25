@@ -10889,3 +10889,22 @@ org.datanucleus.exceptions.ClassNotResolvedException: ¡La clase es.deusto.spqSer
 15-04-18_21:51:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=893 ms, enhance=237 ms, total=1130 ms. Compruebe el LOG para los detalles
 15-04-18_21:53:14 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
 >>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+15-04-18_23:44:42 (main) ERROR [DataNucleus.MetaData] - ¡La clase es.deusto.spqServer.gateway.MailSender$SMTPAuthenticator no esta en el CLASSPATH!. Por favor compruebe la especificación y el CLASSPATH.
+org.datanucleus.exceptions.ClassNotResolvedException: ¡La clase es.deusto.spqServer.gateway.MailSender$SMTPAuthenticator no esta en el CLASSPATH!. Por favor compruebe la especificación y el CLASSPATH.
+	at org.datanucleus.ClassLoaderResolverImpl.classForName(ClassLoaderResolverImpl.java:219)
+	at org.datanucleus.ClassLoaderResolverImpl.classForName(ClassLoaderResolverImpl.java:347)
+	at org.datanucleus.metadata.MetaDataManagerImpl.loadClasses(MetaDataManagerImpl.java:591)
+	at org.datanucleus.enhancer.DataNucleusEnhancer.getFileMetadataForInput(DataNucleusEnhancer.java:719)
+	at org.datanucleus.enhancer.DataNucleusEnhancer.enhance(DataNucleusEnhancer.java:501)
+	at org.datanucleus.enhancer.DataNucleusEnhancer.main(DataNucleusEnhancer.java:1157)
+
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Record.class" con definicion enhanced
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Soup.class" con definicion enhanced
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\User.class" con definicion enhanced
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Word.class" con definicion enhanced
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+15-04-18_23:44:42 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=157 ms, enhance=89 ms, total=246 ms. Compruebe el LOG para los detalles

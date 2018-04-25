@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\remote\IFacade.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\User.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\Destiny.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\App.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\Assembler.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\ScoreDTO.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\Record.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\SoupDTO.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\server\LetterSoupServer.java
@@ -14,21 +14,3 @@ C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqS
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\MailSender.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\GatewayFactory.java
 C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dao\IManagerDAO.java
-=======
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\server\LetterSoupServer.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\User.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\App.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\GatewayFactory.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\Assembler.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\Destiny.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\Word.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dao\ManagerDAO.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dao\IManagerDAO.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\Record.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\data\Soup.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\gateway\MailSender.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\remote\IFacade.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\SoupDTO.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\dto\ScoreDTO.java
-C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Server\src\main\java\es\deusto\spqServer\remote\LetterSoupManager.java
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
