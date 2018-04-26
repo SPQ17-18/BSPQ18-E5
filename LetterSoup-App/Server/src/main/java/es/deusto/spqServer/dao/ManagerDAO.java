@@ -56,6 +56,9 @@ private PersistenceManagerFactory pmf;
 	public void storeWord(Word word) {
 		 this.storeObject(word);
 	}
+	public void storeScore(Record record) {
+		 this.storeObject(record);
+	}
 	
 	
 	@SuppressWarnings("unchecked")
@@ -136,6 +139,81 @@ private PersistenceManagerFactory pmf;
 		return us.getPassword().equals(data[1]);
 		
 	}
+	
+	public User getUser(String User) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		
+		Transaction tx = pm.currentTransaction();
+		ArrayList <Record> records = new ArrayList<Record>();
+		User us=null;
+		
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName()+ " WHERE User=='"+User+"'");
+			List <User> result = (List<User>) q.execute();
+			us=new User(result.get(0).getUser(),result.get(0).getPassword(),result.get(0).getRol(),result.get(0).getEmail());
+			ArrayList<Record> arr=new ArrayList<Record>();
+			for(int i=0;i<result.get(0).getScore().size();i++) {
+				Record r=new Record(result.get(0).getScore().get(i).getRecord_id(),result.get(0).getScore().get(i).getDate(),result.get(0).getScore().get(i).getRecord(),result.get(0));
+				us.addRecord(r);
+			}
+						
+			System.out.println("All  retrieved.");
+			
+			
+			
+			tx.commit();			
+		} catch (Exception ex) {
+	    	System.out.println("   $ Error retrieving User: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    
+		System.out.println(us.getPassword());
+		return us;
+		
+	}
+	
+	public List <User> getAllUser() {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		
+		Transaction tx = pm.currentTransaction();
+		ArrayList <Record> records = new ArrayList<Record>();
+		User us=null;
+		
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		List <User> result=null;
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName());
+			result = (List<User>) q.execute();
+						
+			System.out.println("All  retrieved.");
+			
+			
+			
+			tx.commit();			
+		} catch (Exception ex) {
+	    	System.out.println("   $ Error retrieving User: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    
+		
+		return result;
+		
+	}
+	
+	
+	
 	public ArrayList<Integer> getNumSoup() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -202,6 +280,79 @@ private PersistenceManagerFactory pmf;
 		
 	}
 	
+	public Soup getSoup(String Soupname) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+		
+		pm.getFetchPlan().setMaxFetchDepth(4);
+		
+		
+		Soup resultSouup=null;
+
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + Soup.class.getName()+" WHERE nombre=='"+Soupname+"'");
+			List <Soup> result = ((List<Soup>) q.execute());
+			resultSouup=new Soup(result.get(0).getSoup_id(), result.get(0).getSize(), result.get(0).getNombre());
+			resultSouup.setContent(result.get(0).getContent());
+			for(int i=0;i<result.get(0).getWords().size();i++) {
+				Word w=new Word(result.get(0).getWords().get(i).getWord_id(),result.get(0).getWords().get(i).getPosition(), result.get(0).getWords().get(i).getWord(),result.get(0).getWords().get(i).getX(),result.get(0).getWords().get(i).getY(),resultSouup);
+				resultSouup.setAword(w);
+			}
+			
+			
+			tx.commit();	
+		} catch (Exception ex) {
+	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    				
+		return resultSouup;
+
+		
+	}
+
+	
+	
+	public String [] getSoups() {
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+		
+		pm.getFetchPlan().setMaxFetchDepth(4);
+		
+		
+		String [] resultSouup=null;
+
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + Soup.class.getName());
+			List <Soup> result = ((List<Soup>) q.execute());
+			resultSouup=new String[result.size()];
+			for(int i=0;i<result.size();i++) {
+				resultSouup[i]=result.get(i).getNombre();
+			}
+			
+			
+			tx.commit();	
+		} catch (Exception ex) {
+	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    				
+		return resultSouup;
+
+	}
+	
 	public void deleteSoup(int soupid) {		
 		PersistenceManager pm = pmf.getPersistenceManager();
 		
@@ -236,6 +387,43 @@ private PersistenceManagerFactory pmf;
 		}
 	}
 	
+	public void deleteUser(String user) {		
+		PersistenceManager pm = pmf.getPersistenceManager();
+		
+		Transaction tx = pm.currentTransaction();
+			
+		try {		
+			tx.begin();
+
+			
+			
+			Query<?> query = pm.newQuery("SELECT FROM "+User.class.getName() + " WHERE User =='"+user+"'");
+
+			Collection<?> result = (Collection<?>) query.execute();
+
+			User s = (User) result.iterator().next();
+
+			query.close(result);
+
+			pm.deletePersistent(s);
+			tx.commit();
+			
+		} catch (Exception ex) {
+			System.out.println("   $ Error cleaning the user: " + ex.getMessage());
+			ex.printStackTrace();
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			
+				pm.close();
+			
+		}
+		
+	}
+	
+
+	
 	public int getLastSoupId() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(4);
@@ -259,6 +447,31 @@ private PersistenceManagerFactory pmf;
 	    }
 	    return soupid;
 	}
+	
+	public int getLastRecordId() {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(4);
+		Transaction tx = pm.currentTransaction();
+		int recordid = -1;
+		
+		try {
+			tx.begin();			
+			Query<?> q = pm.newQuery("SELECT FROM " + Record.class.getName() + 
+                    " ORDER BY record_id");
+			List <Record> result = (List<Record>) q.execute();
+			recordid = result.get(result.size()-1).getRecord_id()+1;
+			tx.commit();					
+		} catch (Exception ex) {
+			System.out.println("   $ Error the last soup: " + ex.getMessage());
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+    		pm.close(); 
+	    }
+	    return recordid;
+	}
+	
 	public int getLastWordId() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(4);

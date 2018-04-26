@@ -2,6 +2,7 @@ package es.deusto.spqServer.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import es.deusto.spqServer.dao.IManagerDAO;
@@ -70,14 +71,16 @@ private static final long serialVersionUID = 1L;
 	@Override
 	public String[] soupList() throws RemoteException {
 		// TODO Auto-generated method stub
-		return null;
+		String [] list=dao.getSoups();
+		return list;
 	}
 
 
 	@Override
 	public SoupDTO getSoup(String name) throws RemoteException {
 		// TODO Auto-generated method stub
-		return null;
+		Soup s=dao.getSoup(name);
+		return as.assemble(s);
 	}
 
 
@@ -94,6 +97,23 @@ private static final long serialVersionUID = 1L;
 		// TODO Auto-generated method stub
 		ArrayList<Record> arrRecord=dao.getRecords(u);
 		return as.assemble(arrRecord);
+	}
+
+
+	@Override
+	public int getScoreGame(SoupDTO sdto,String user) throws RemoteException {
+		// TODO Auto-generated method stub
+		System.out.println("empiezo score");
+		Soup s=dao.getSoup(sdto.getNombre());
+		int score=s.calculatePuntuation(sdto.getArraywords());
+		User u=dao.getUser(user);
+		Record record=new Record(dao.getLastRecordId(), new Date(System.currentTimeMillis()), score , u);
+		u.addRecord(record);
+		dao.storeScore(record);
+		//dao.deleteUser(u.getUser());
+		//dao.storeUser(u);
+		System.out.println("acabo score");
+		return score;
 	}
 	
 

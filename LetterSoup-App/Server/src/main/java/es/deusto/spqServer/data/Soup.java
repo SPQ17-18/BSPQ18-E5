@@ -8,6 +8,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import es.deusto.spqServer.dto.SoupDTO;
+
 
 @PersistenceCapable(detachable = "true")
 public class Soup {
@@ -177,24 +179,41 @@ public class Soup {
 				}
 			}
 		}
+		
+		
 	}
 	
 	public int calculateScore(String answer) {
 		int score=0;
 		Word words1;
 		boolean match=false;
-
 			for(int j=0;j<this.words.size();j++) {
 				words1=this.words.get(j);
 			if(answer.equals(words1.getWord()) ) {//if the answer given is correct
 				score+=5;
 				match=true;
+				}
 			}
+			if(match==false) {
+				score-=2;//if one of the answers given does not appear in the soups real answer
 			}
-			if(match==false)score-=2;//if one of the answers given does not appear in the soups real answer
 			match=false;
 		
 		return score;
+	}
+	
+	
+	public int calculatePuntuation(ArrayList<String> arrWord) {
+		int score=0;
+		for(int i=0;i<arrWord.size();i++) {
+			score=score+calculateScore(arrWord.get(i));
+			
+		}
+		return score;
+	}
+	
+	public int ScoreDTO(SoupDTO dto) {
+		return calculatePuntuation(dto.getArraywords());
 	}
 	//public static void main(String[] args) {
 		
@@ -210,6 +229,7 @@ public class Soup {
 		//System.out.println(s.toStringArrayContent(s.getArrayContent()));
 		//System.out.println(s);
 	//}
+	
 	
 	
 }

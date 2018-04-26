@@ -1,6 +1,7 @@
 package es.deusto.spqServer.dao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
@@ -20,6 +21,13 @@ public interface IManagerDAO {
 	public void storeUser(User user);
 	public int getLastSoupId();
 	public int getLastWordId();
+	public String [] getSoups();
+	public Soup getSoup(String Soupname);
+	public int getLastRecordId();
+	public void storeScore(Record record);
+	public User getUser(String User);
+	public void deleteUser(String user);
+	public List <User> getAllUser();
 	
 
 }

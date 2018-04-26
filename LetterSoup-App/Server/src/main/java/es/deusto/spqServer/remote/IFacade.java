@@ -26,6 +26,8 @@ public boolean register(String username, String password, String userType, Strin
 		
 	
 	public ScoreDTO getScore(String u) throws RemoteException;
+	
+	public int getScoreGame(SoupDTO s,String user) throws RemoteException;
 
 	
 
