@@ -258,7 +258,7 @@ public class LoginWindow extends JFrame implements Runnable {
 		button_1.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_1);
 		JButton button_2 = new JButton("Enter");
-		mw = new MenuWindow(args);
+		mw = new MenuWindow(args, null, textFieldUsername.getText());
 		
 		
 		button_2.addActionListener(new ActionListener() {

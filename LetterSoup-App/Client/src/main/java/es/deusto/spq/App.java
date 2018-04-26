@@ -38,11 +38,16 @@ public class App
 			//SoupDTO s=new SoupDTO(arrs,arrx,arry,arrayc,14,"s12");
 			//System.out.println("Introduciendo sopa");
 			//System.out.println("Getting records...");
-			ScoreDTO score=cont.getScore("a1");
-			score.getArrayDate().size();
-			System.out.println(score.getArrayDate().get(0));
-			score.getArrayrecord().size();
-			System.out.println(score.getArrayrecord().get(0));
+			//ScoreDTO score=cont.getScore("a1");
+			//score.getArrayDate().size();
+			//System.out.println(score.getArrayDate().get(0));
+			//score.getArrayrecord().size();
+			//System.out.println(score.getArrayrecord().get(0));
+			//cont.sendMail("hello","maideribarra@opendeusto.es");
+			//String [] s=cont.soupList();
+			//for(int i=0;i<s.length;i++) {
+				//System.out.println(s[i]+'\n');
+			//}
 			
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block

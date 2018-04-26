@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.controller.controller;
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.dto.SoupDTO;
 
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -17,11 +19,17 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 
 import javax.swing.BoxLayout;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -34,29 +42,46 @@ public class SolveSoup extends JFrame {
 	private ArrayList<Integer> posx=new ArrayList<Integer>();
 	private ArrayList<Integer> posy=new ArrayList<Integer>();
 	private ArrayList<Character> posicion=new ArrayList<Character>();
+	private SoupDTO sopa;
+	private controller c;
+	private JPanel panelE1=new JPanel();
+	private JTextField textFieldWord;
+	private JComboBox<Character> comboBoxVH;
+	private JTextField textFieldPx;
+	private JTextField textFieldPy;
+	
+	private String nombre;
+	private String User;
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					SolveSoup frame = new SolveSoup();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+				
+					SolveSoup frame = new SolveSoup(args,"s1","a1");
+					frame.setVisible(true);
+		}
 
 	/**
 	 * Create the frame.
 	 */
-	public SolveSoup() {
-		
-		
+	public SolveSoup(String[] args,String nameSoup,String user) {
+		try {
+			c=new controller(args);
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		this.User=user;
+		this.nombre=nameSoup;
+		this.sopa=c.getSoup(nameSoup);
+		System.out.println(this.sopa.getArraywords().size());
+		System.out.println(this.sopa.getArrayorientation().size());
+		System.out.println(this.sopa.getArrayposx().size());
+		System.out.println(this.sopa.getArrayposy().size());
+		System.out.println(this.sopa.getContent());
+		System.out.println(this.sopa.getNombre());
+		System.out.println(this.sopa.getSize());
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
@@ -65,7 +90,52 @@ public class SolveSoup extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
+		JLabel lblWords = new JLabel(" Introduce word:");
+		panelE1.setLayout(new BoxLayout(panelE1,BoxLayout.Y_AXIS));
+		panelE1.add(lblWords);
 		
+		textFieldWord = new JTextField();
+		panelE1.add(textFieldWord);
+		textFieldWord.setColumns(7);
+		
+		JPanel Blanck = new JPanel();
+		panelE1.add(Blanck);
+		
+		comboBoxVH = new JComboBox<Character>();
+		comboBoxVH.addItem('V');
+		comboBoxVH.addItem('H');
+		Blanck.add(comboBoxVH);
+		
+		JLabel lblPosition = new JLabel(" Position:");
+		panelE1.add(lblPosition);
+		
+		JPanel panelPos = new JPanel();
+		panelPos.setLayout(new BoxLayout(panelPos,BoxLayout.Y_AXIS));
+		
+		textFieldPx = new JTextField();
+		textFieldPx.setBounds(15, 17, 29, 26);
+		panelPos.add(textFieldPx);
+		textFieldPx.setColumns(10);
+		
+		JLabel lblX = new JLabel("x");
+		lblX.setBounds(23, 0, 21, 16);
+		panelPos.add(lblX);
+		
+		textFieldPy = new JTextField();
+		textFieldPy.setBounds(56, 17, 29, 26);
+		panelPos.add(textFieldPy);
+		textFieldPy.setColumns(10);
+		
+		JLabel lblY = new JLabel("y");
+		lblY.setBounds(67, 0, 29, 16);
+		panelPos.add(lblY);
+		panelE1.add(panelPos);
+		
+		JPanel panelBlanck2 = new JPanel();
+		panelE1.add(panelBlanck2);
+		JButton badd=new JButton("Add");
+		panelE1.add(badd);
+		contentPane.add(panelE1,BorderLayout.EAST);
 		JPanel panelN = new JPanel();
 		panelN.setBackground(Color.CYAN);
 		contentPane.add(panelN, BorderLayout.NORTH);
@@ -82,6 +152,13 @@ public class SolveSoup extends JFrame {
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		badd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {				
+				insertWord(textFieldWord.getText(),Integer.parseInt(textFieldPx.getText()),Integer.parseInt(textFieldPy.getText()),(Character) comboBoxVH.getSelectedItem());
+			}
+		});
+		
+		
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
@@ -92,6 +169,15 @@ public class SolveSoup extends JFrame {
 		
 		JButton btnFinish = new JButton("Finish");
 		panelS.add(btnFinish);
+		btnFinish.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SoupDTO s=new SoupDTO(words,posx ,posy, posicion, sopa.getSize(), nombre);
+				int score=c.getScoreGame(s,User);
+				JOptionPane.showMessageDialog(null,"Your score is"+score , "Score", JOptionPane.INFORMATION_MESSAGE, null);
+				dispose();
+			}
+		});
+		
 		
 		panelWest = new JPanel();
 		panelWest.addMouseListener(new MouseAdapter() {
@@ -102,29 +188,28 @@ public class SolveSoup extends JFrame {
 			}
 		});
 		contentPane.add(panelWest, BorderLayout.WEST);
-		panelWest.setLayout(new GridLayout(5, 5, 0, 0));
+		panelWest.setLayout(new GridLayout(sopa.getSize(),sopa.getSize(), 0, 0));
 		
 
 		
-		JPanel panelEast = new JPanel();
-		contentPane.add(panelEast, BorderLayout.EAST);
 		
-		JLabel lblChooseTheWord = new JLabel("Choose the word");
-		panelEast.add(lblChooseTheWord);
+		
 		
 		
 
-		insertCasillas(5);
+		insertCasillas();
 	}
 	
 	
-
-	public void insertCasillas(int size) {
+	
+	public void insertCasillas() {
+		System.out.println("entro");
+		int size=sopa.getSize();
 		casillas=new JButton[size][size];
 		for(int i=0;i<size;i++) {
 			for(int j=0;j<size;j++) {
 				casillas[i][j]=new JButton();
-				casillas[i][j].setText(" ");
+				casillas[i][j].setText(""+sopa.getContent().charAt((size*i)+j));
 				panelWest.add(casillas[i][j]);
 	
 			}
@@ -140,10 +225,10 @@ public class SolveSoup extends JFrame {
 		int y=positiony;
 		for(int i=0;i<word.length();i++) {
 			if(pos=='v' || pos=='V') {
-				casillas[y+i][x].setText(""+word.charAt(i));
+				casillas[y+i][x].setBackground(Color.blue);
 				
 			}else {
-				casillas[y][x+i].setText(""+word.charAt(i));				
+				casillas[y][x+i].setBackground(Color.blue);				
 			
 			}
 		}

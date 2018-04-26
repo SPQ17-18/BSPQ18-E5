@@ -51,8 +51,9 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JButton btnExamMode;
 	InsertNewSoup in;
 	PointsWindow pw;
-	private String user=null;
-	private String [] args=null;
+	private String us=null;
+	private String [] arg=null;
+	private String nameS=null;
 	
 //	/**
 //	 * Launch the application.
@@ -75,8 +76,10 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(String[] args) {
-		
+	public MenuWindow(String[] args,String nameSoup,String user) {
+		this.arg=args;
+		this.us=user;
+		this.nameS=nameSoup;
 		System.out.println("menu window");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -145,7 +148,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		JButton btnPlay = new JButton("Play!");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SolveSoup ss = new SolveSoup();
+				SolveSoup ss = new SolveSoup(arg,nameS,us);
 				ss.setVisible(true);
 			}
 		});
@@ -158,7 +161,7 @@ public class MenuWindow extends JFrame implements Runnable {
 		
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				pw.setUser(user);
+				pw.setUser(us);
 				pw.getUser();
 				pw.setVisible(true);
 			}
@@ -223,25 +226,25 @@ public class MenuWindow extends JFrame implements Runnable {
 	
 	 
 	 public String getUser() {
-		return user;
+		return us;
 	}
 
 
 
 	public void setUser(String user) {
-		this.user = user;
+		this.us = user;
 	}
 
 
 
 	public String[] getArgs() {
-		return args;
+		return arg;
 	}
 
 
 
 	public void setArgs(String[] args) {
-		this.args = args;
+		this.arg = args;
 	}
 
 

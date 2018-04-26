@@ -57,12 +57,26 @@ public class controller {
 		
 	}
 	public String[] soupList() {
-		return null;//Takes from the DB all soup names
+		String [] listSoup=null;
+		try {
+			listSoup=sl.getService().soupList();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(listSoup.length);
+		return listSoup;//Takes from the DB all soup names
 		
 	}
 	public SoupDTO getSoup(String name) {
-		return null;//Takes from the DB the soup with that name
-		
+		SoupDTO sDTO=null;
+		try {
+			sDTO=sl.getService().getSoup(name);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//Takes from the DB the soup with that name
+		return sDTO;
 	}
 	public void sendMail(String message,String email) {//send a message to an email
 		try {
@@ -90,6 +104,22 @@ public class controller {
 		public void exit() {
     	System.exit(0);
     }
+
+
+
+
+		public int getScoreGame(SoupDTO s, String user) {
+			// TODO Auto-generated method stub
+			int score=-1;
+			try {
+				score=sl.getService().getScoreGame(s, user);
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return score;
+			
+		}
 		
 
 }
