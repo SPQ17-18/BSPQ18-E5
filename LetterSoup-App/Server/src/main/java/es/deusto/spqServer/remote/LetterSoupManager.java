@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
@@ -14,7 +15,7 @@ import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 import es.deusto.spqServer.gateway.MailSender;
-
+import java.util.Date;
 /**Class for creating assembler, DAO manager and mail sender and manage them
  * 
  *
@@ -106,6 +107,12 @@ private static final long serialVersionUID = 1L;
 		// TODO Auto-generated method stub
 		ArrayList<Record> arrRecord=dao.getRecords(u);
 		return as.assemble(arrRecord);
+	}
+	public void setScore(User u, int score) throws RemoteException {
+		Random r=new Random();
+		Date d=new Date();
+		Record record =new Record(r.nextInt(100),d,score,u);
+		//FALTA EN LA DAO GUARDAR RECORD
 	}
 	
 

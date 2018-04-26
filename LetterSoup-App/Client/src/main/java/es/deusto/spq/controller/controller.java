@@ -2,8 +2,9 @@ package es.deusto.spq.controller;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
+import java.util.Random;
 
 import es.deusto.spq.remote.RMIServiceLocator;
 import es.deusto.spqServer.data.Record;
@@ -53,7 +54,7 @@ public class controller {
 			System.out.println("get service");
 			soupintroduced=sl.getService().IntroduceSoup(dto);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return soupintroduced;
@@ -65,7 +66,7 @@ public class controller {
 		try {
 			return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return false;
@@ -74,7 +75,7 @@ public class controller {
 		try {
 			return sl.getService().soupList();
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}//Takes from the DB all soup names
 		return null;
@@ -83,7 +84,6 @@ public class controller {
 		try {
 			return sl.getService().getSoup(name);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}//Takes from the DB the soup with that name
 		return null;
@@ -92,7 +92,7 @@ public class controller {
 		try {
 			sl.getService().sendMail(message,email);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} 
 
@@ -103,7 +103,7 @@ public class controller {
 		try {
 			return sl.getService().getScore(u);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 		return null;
@@ -117,11 +117,18 @@ public class controller {
 			System.out.println("get service");
 			score=sl.getService().getScore(u);
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
 		return score;
+	}
+	public void setScore(User u, int score) throws RemoteException {
+		try {
+		sl.getService().setScore(u,score);
+		}catch(RemoteException e) {
+			e.printStackTrace();
+		}
 	}
 
 		public void exit() {

@@ -31,7 +31,7 @@ public boolean register(String user)throws RemoteException;
 	
 	public ArrayList<Record> getScore(User u) throws RemoteException;
 	public ScoreDTO getScore(String u) throws RemoteException;
-
+	public void setScore(User u, int score) throws RemoteException;
 
 	
 
