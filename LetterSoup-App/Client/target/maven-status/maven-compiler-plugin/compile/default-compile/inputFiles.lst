@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\SolveSoup.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\PointsWindow.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\remote\RMIServiceLocator.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\MenuWindow.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\ExamMode.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\InsertNewSoup.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\LoginWindow.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\App.java
+C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\controller\controller.java
+=======
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\controller\controller.java
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\PointsWindow.java
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\InsertNewSoup.java
@@ -7,3 +18,4 @@ C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\sp
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\ExamMode.java
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\LoginWindow.java
 C:\softwareDesign\git\BSPQ18-E5\LetterSoup-App\Client\src\main\java\es\deusto\spq\window\MenuWindow.java
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git

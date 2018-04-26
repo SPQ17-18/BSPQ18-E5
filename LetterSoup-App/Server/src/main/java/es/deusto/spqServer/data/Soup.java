@@ -12,6 +12,11 @@ import es.deusto.spqServer.dto.SoupDTO;
 
 
 @PersistenceCapable(detachable = "true")
+/**
+ * 
+ * Soup class with his attributes, constructors, getters and setters
+ *
+ */
 public class Soup {
 	@PrimaryKey
 	private int soup_id;
@@ -201,6 +206,7 @@ public class Soup {
 		
 		return score;
 	}
+
 	
 	
 	public int calculatePuntuation(ArrayList<String> arrWord) {
@@ -214,6 +220,15 @@ public class Soup {
 	
 	public int ScoreDTO(SoupDTO dto) {
 		return calculatePuntuation(dto.getArraywords());
+	}
+	
+	public String getLevel() {
+		
+		if(this.size<=6)return "Easy";
+		if(this.size>6 && this.size<=9 ) return "Medium";
+		if(this.size>10)return "Complex";
+				return null;
+
 	}
 	//public static void main(String[] args) {
 		

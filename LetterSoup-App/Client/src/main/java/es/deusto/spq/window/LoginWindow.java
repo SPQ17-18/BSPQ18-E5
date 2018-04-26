@@ -253,6 +253,13 @@ public class LoginWindow extends JFrame implements Runnable {
 		});
 		
 		btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			//panelButtons.setVisible(false);
+			//while(register.isVisible());
+			//panelButtons.setVisible(true);
+			}
+		});
 		btnRegister.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(btnRegister);
 		button_1.setFont(new Font("Avenir", Font.PLAIN, 16));

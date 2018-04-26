@@ -1,5 +1,9 @@
 package es.deusto.spqServer.gateway;
-
+/**
+ * 
+ * class for setting destination address with attributes, constructor, getters and setters
+ *
+ */
 public class Destiny {
 
 	private String ip;

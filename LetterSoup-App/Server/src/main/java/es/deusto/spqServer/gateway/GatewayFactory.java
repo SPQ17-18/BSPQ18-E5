@@ -1,4 +1,9 @@
 package es.deusto.spqServer.gateway;
+/**
+ * 
+ * Factory for gateways
+ *
+ */
 public class GatewayFactory {
 
 	GatewayFactory GatewayFactory = new GatewayFactory();
