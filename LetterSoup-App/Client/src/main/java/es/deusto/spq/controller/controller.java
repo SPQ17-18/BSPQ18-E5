@@ -62,15 +62,15 @@ public class controller {
 	
 	
 
-	public boolean register(String username, String password, String userType, String email) {
-		try {
-			return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
-		} catch (RemoteException e) {
+	//public boolean register(String username, String password, String userType, String email) {
+		//try {
+			//return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
+		//} catch (RemoteException e) {
 			
-			e.printStackTrace();
-		}
-		return false;
-	}
+			//e.printStackTrace();
+		//}
+		//return false;
+	//}
 
 	public String[] soupList() {
 		String [] listSoup=null;
@@ -105,15 +105,15 @@ public class controller {
 	
 	}
 
-	public ArrayList<Record> getScore(User u) {
-		try {
-			return sl.getService().getScore(u);
-		} catch (RemoteException e) {
+	//public ArrayList<Record> getScore(User u) {
+		//try {
+			//return sl.getService().getScore(u);
+		//} catch (RemoteException e) {
 		
-			e.printStackTrace();
-		}
-		return null;
-	}
+			//e.printStackTrace();
+		//}
+		//return null;
+	//}
 	/**
 	 * @return the score from the users
 	 */
