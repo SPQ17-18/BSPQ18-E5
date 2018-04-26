@@ -201,6 +201,13 @@ public class Soup {
 		
 		return score;
 	}
+	public String getLevel() {
+		
+		if(this.size<=6)return "Easy";
+		if(this.size>6 && this.size<=9 ) return "Medium";
+		if(this.size>10)return "Complex";
+				return null;
+	}
 	//public static void main(String[] args) {
 		
 		//Soup s = new Soup(1, 13);
