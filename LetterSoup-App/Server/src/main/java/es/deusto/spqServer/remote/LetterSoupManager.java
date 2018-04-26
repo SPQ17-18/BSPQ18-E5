@@ -108,12 +108,12 @@ private static final long serialVersionUID = 1L;
 		ArrayList<Record> arrRecord=dao.getRecords(u);
 		return as.assemble(arrRecord);
 	}
-	public void setScore(User u, int score) throws RemoteException {
-		Random r=new Random();
-		Date d=new Date();
-		Record record =new Record(r.nextInt(100),d,score,u);
-		//FALTA EN LA DAO GUARDAR RECORD
-	}
+//	public void setScore(User u, int score) throws RemoteException {
+//		Random r=new Random();
+//		Date d=new Date();
+//		Record record =new Record(r.nextInt(100),d,score,u);
+//		//FALTA EN LA DAO GUARDAR RECORD
+//	}
 	
 
 	

@@ -123,13 +123,13 @@ public class controller {
 		
 		return score;
 	}
-	public void setScore(User u, int score) throws RemoteException {
-		try {
-		sl.getService().setScore(u,score);
-		}catch(RemoteException e) {
-			e.printStackTrace();
-		}
-	}
+//	public void setScore(User u, int score) throws RemoteException {
+//		try {
+//		sl.getService().setScore(u,score);
+//		}catch(RemoteException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 		public void exit() {
     	System.exit(0);
