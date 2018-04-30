@@ -75,9 +75,9 @@ private static final long serialVersionUID = 1L;
 
 
 	@Override
-	public String [] soupList() throws RemoteException {
+	public String[] soupList() throws RemoteException {
 		// TODO Auto-generated method stub
-		String [] list=dao.getSoups();
+		String[] list=dao.getSoups();
 		return list;
 
 	}

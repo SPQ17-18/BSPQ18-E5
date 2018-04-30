@@ -76,26 +76,19 @@ public class controller {
  * @return list with all soup names from db
  */
 
-<<<<<<< HEAD
-	public List<String> soupList() {
-		List<String> listSoup=null;
-=======
-	
-  	public String[] soupList() {
-		String [] listSoup=null;
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+	public String[] soupList() {
+		String[] listSoup=null;
+
+
 		try {
-			
-			listSoup = new String[sl.getService().soupList().size()];
-			for(int i = 0; i < sl.getService().soupList().size(); i++) { 
-				listSoup[i] = sl.getService().soupList().get(i);
+				listSoup = sl.getService().soupList();
 		//	listSoup=sl.getService().soupList(); //error on converting from array to list
-			}
+			
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(listSoup.size());
+		System.out.println(listSoup.length);
 		return listSoup;//Takes from the DB all soup names
 		
 	}
