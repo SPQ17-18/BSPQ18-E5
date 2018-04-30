@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-=======
-es\deusto\spq\window\InsertNewSoup$1.class
-es\deusto\spq\window\LoginWindow.class
-es\deusto\spq\window\MenuWindow$6.class
-es\deusto\spq\window\LoginWindow$3.class
-es\deusto\spq\window\ExamMode$1.class
-es\deusto\spq\window\MenuWindow$1.class
-es\deusto\spq\window\ExamMode.class
-es\deusto\spq\window\LoginWindow$5.class
-es\deusto\spq\controller\controller.class
-es\deusto\spq\window\MenuWindow$2.class
-es\deusto\spq\window\LoginWindow$2.class
-es\deusto\spq\window\ExamMode$2.class
-es\deusto\spq\remote\RMIServiceLocator.class
-es\deusto\spq\window\LoginWindow$4.class
-es\deusto\spq\window\InsertNewSoup.class
-es\deusto\spq\window\MenuWindow.class
-es\deusto\spq\window\LoginWindow$6.class
-es\deusto\spq\window\LoginWindow$1.class
-es\deusto\spq\window\MenuWindow$3.class
->>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
+es\deusto\spq\window\Register$2.class
+es\deusto\spq\window\Register$4.class
+es\deusto\spq\window\Register.class
+es\deusto\spq\window\Register$3.class
+es\deusto\spq\window\Register$1.class

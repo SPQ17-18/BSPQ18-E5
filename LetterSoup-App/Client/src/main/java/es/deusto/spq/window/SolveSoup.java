@@ -189,7 +189,7 @@ public class SolveSoup extends JFrame implements Runnable{
 				int totPoints = 0;
 				
 				JOptionPane.showMessageDialog(null, "This is the overview of the game:\n- Time played: "+time+" \n- Total correct words: "+totWords+" \n- Total points: "+totPoints, "Information summary", JOptionPane.INFORMATION_MESSAGE);
-				ss.dispose();
+				
 			}
 		});
 		panelS.add(btnFinish);

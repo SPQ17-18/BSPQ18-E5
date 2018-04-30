@@ -62,20 +62,35 @@ public class controller {
 	
 	
 
-	public boolean register(String username, String password, String userType, String email) {
-		try {
-			return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
-		} catch (RemoteException e) {
+	//public boolean register(String username, String password, String userType, String email) {
+		//try {
+			//return sl.getService().register(username+"#"+password+"#"+userType+"#"+email);
+		//} catch (RemoteException e) {
 			
-			e.printStackTrace();
-		}
-		return false;
-	}
+			//e.printStackTrace();
+		//}
+		//return false;
+	//}
+/**
+ * 
+ * @return list with all soup names from db
+ */
 
+<<<<<<< HEAD
 	public List<String> soupList() {
 		List<String> listSoup=null;
+=======
+	
+  	public String[] soupList() {
+		String [] listSoup=null;
+>>>>>>> branch 'HEAD' of https://github.com/SPQ17-18/BSPQ18-E5.git
 		try {
-			listSoup=sl.getService().soupList();
+			
+			listSoup = new String[sl.getService().soupList().size()];
+			for(int i = 0; i < sl.getService().soupList().size(); i++) { 
+				listSoup[i] = sl.getService().soupList().get(i);
+		//	listSoup=sl.getService().soupList(); //error on converting from array to list
+			}
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,6 +99,7 @@ public class controller {
 		return listSoup;//Takes from the DB all soup names
 		
 	}
+  	
 	public SoupDTO getSoup(String name) {
 		SoupDTO sDTO=null;
 		try {
@@ -105,15 +121,15 @@ public class controller {
 	
 	}
 
-	public ArrayList<Record> getScore(User u) {
-		try {
-			return sl.getService().getScore(u);
-		} catch (RemoteException e) {
+	//public ArrayList<Record> getScore(User u) {
+		//try {
+			//return sl.getService().getScore(u);
+		//} catch (RemoteException e) {
 		
-			e.printStackTrace();
-		}
-		return null;
-	}
+			//e.printStackTrace();
+		//}
+		//return null;
+	//}
 	/**
 	 * @return the score from the users
 	 */
