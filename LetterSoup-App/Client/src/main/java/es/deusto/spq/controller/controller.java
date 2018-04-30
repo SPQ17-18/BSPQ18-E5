@@ -72,15 +72,15 @@ public class controller {
 		return false;
 	}
 
-	public String[] soupList() {
-		String [] listSoup=null;
+	public List<String> soupList() {
+		List<String> listSoup=null;
 		try {
 			listSoup=sl.getService().soupList();
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(listSoup.length);
+		System.out.println(listSoup.size());
 		return listSoup;//Takes from the DB all soup names
 		
 	}
