@@ -164,7 +164,12 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				pw.setUser(us);
-				pw.getUser();
+				try {
+					pw.getUser();
+				} catch (RemoteException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				pw.setVisible(true);
 			}
 		});

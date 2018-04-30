@@ -30,7 +30,6 @@ public class SelectSoup extends JFrame implements Runnable{
 	private JPanel panel;
 	private JList<String> list; 
 	private DefaultListModel<String> modelo; 
-	controller cont = null; 
 	private String[] args=null;
 	String[] listOfSoups;
 	private String us=null;
@@ -64,7 +63,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		this.us=user;
 		this.nameS=nameSoup;
 		try {
-			cont=new controller(args);
+			controller.setController(args);
 		} catch (RemoteException e) {
 			// Auto-generated catch block
 			e.printStackTrace();
@@ -86,7 +85,7 @@ public class SelectSoup extends JFrame implements Runnable{
         
         //Array for the JList
 		
-        listOfSoups = cont.soupList();
+        listOfSoups = controller.getController().soupList();
         ArrayList<String> soupList = new ArrayList<String>(Arrays.asList(listOfSoups));
         
         //Ciclo para agregar los elemntos del arreglo
@@ -128,9 +127,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		// TODO Auto-generated method stub
 		
 	}
-	public void setCont(controller cont) {
-		this.cont = cont;
-	}
+	
 
 	public String[] getListOfSoups() {
 		return listOfSoups;
@@ -139,7 +136,5 @@ public class SelectSoup extends JFrame implements Runnable{
 	public void setListOfSoups(String[] listOfSoups) {
 		this.listOfSoups = listOfSoups;
 	}
-	public controller getCont() {
-	return cont;
-}
+	
 }

@@ -50,7 +50,6 @@ public class LoginWindow extends JFrame implements Runnable {
 	String hour, minutes , seconds, ampm;
 	Calendar cal;
 	Thread t1;
-	controller cont =null;
 	private JButton btnGo;
 	private String[] args=null;
 	
@@ -84,14 +83,6 @@ public class LoginWindow extends JFrame implements Runnable {
 	public LoginWindow(String[] args) {
 		this.args=args;
 		ArrayList<JButton> botonera=new ArrayList<JButton>();
-	 	try {
-			cont=new controller(args);
-		} catch (RemoteException e) {
-			// Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-
 		
 		setResizable(false);
 
@@ -270,10 +261,10 @@ public class LoginWindow extends JFrame implements Runnable {
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				cont.login(textFieldUsername.getText(), passwordField.getText());
+				controller.getController().login(textFieldUsername.getText(), passwordField.getText());
 
 
-				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
+				if(controller.getController().login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
 					

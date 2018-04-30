@@ -19,9 +19,14 @@ import es.deusto.spqServer.dto.SoupDTO;
  *
  */
 public class controller {
-	private RMIServiceLocator sl;
+	private static final controller cont= new controller();//singleton instance
+	private static RMIServiceLocator sl;
+	public controller() {}//singleton object creator
+	public static controller getController() {//method for getting the instance
+		return cont;
+	}
 	
-	public controller(String[] args) throws RemoteException {
+	public static void setController(String[] args) throws RemoteException {
 		sl = new RMIServiceLocator();
 		sl.setServices(args[0], args[1], args[2]);
 		
@@ -30,7 +35,7 @@ public class controller {
 	
 	
 	//Login
-	public boolean login (String username, String password) {
+	public static boolean login (String username, String password) {
 		boolean login = false;
 		String st=username+"#"+password;
 		
@@ -48,7 +53,7 @@ public class controller {
 	 * Method for introducing DTO Soups into Database
 	 * @return the soup that has been introduced into DB
 	 */
-	public boolean IntroduceSoup(SoupDTO dto) {
+	public static boolean IntroduceSoup(SoupDTO dto) {
 		boolean soupintroduced = false;
 		try {
 			System.out.println("get service");
@@ -76,10 +81,8 @@ public class controller {
  * @return list with all soup names from db
  */
 
-	public String[] soupList() {
+	public static String[] soupList() {
 		String[] listSoup=null;
-
-
 		try {
 				listSoup = sl.getService().soupList();
 		//	listSoup=sl.getService().soupList(); //error on converting from array to list
@@ -93,7 +96,7 @@ public class controller {
 		
 	}
   	
-	public SoupDTO getSoup(String name) {
+	public static SoupDTO getSoup(String name) {
 		SoupDTO sDTO=null;
 		try {
 			sDTO=sl.getService().getSoup(name);
@@ -103,7 +106,7 @@ public class controller {
 		}//Takes from the DB the soup with that name
 		return sDTO;
 	}
-	public void sendMail(String message,String email) {//send a message to an email
+	public static void sendMail(String message,String email) {//send a message to an email
 		try {
 			sl.getService().sendMail(message,email);
 		} catch (RemoteException e) {
@@ -126,7 +129,7 @@ public class controller {
 	/**
 	 * @return the score from the users
 	 */
-	public ScoreDTO getScore(String u) {
+	public static ScoreDTO getScore(String u) {
 		ScoreDTO score=null;
 		try {
 			System.out.println("get service");
@@ -146,14 +149,14 @@ public class controller {
 //		}
 //	}
 
-		public void exit() {
+		public static void exit() {
     	System.exit(0);
     }
 
 
 
 
-		public int getScoreGame(SoupDTO s, String user) {
+		public static int getScoreGame(SoupDTO s, String user) {
 			// TODO Auto-generated method stub
 			int score=-1;
 			try {

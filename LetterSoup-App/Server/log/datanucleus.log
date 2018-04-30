@@ -13217,3 +13217,13 @@ java.security.AccessControlException: access denied ("java.lang.RuntimePermissio
 26-04-18_21:01:19 (es.deusto.spqServer.server.LetterSoupServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
 26-04-18_21:02:13 (RMI TCP Connection(2)-192.168.65.1) WARN  [DataNucleus.Datastore.Persist] - Persistencia del objeto "es.deusto.spqServer.data.User@305ead1f" con SQL "INSERT INTO `USER` (`PASSWORD`,`EMAIL`,`ROL`,`USER`) VALUES (?,?,?,?)" ha tirado un error : Duplicate entry 'a1' for key 'PRIMARY'
 
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Record.class" con definicion enhanced
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Soup.class" con definicion enhanced
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Soup
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\User.class" con definicion enhanced
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.User
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\gaizka\Git\BSPQ18-E5\LetterSoup-App\Server\target\classes\es\deusto\spqServer\data\Word.class" con definicion enhanced
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
+30-04-18_21:54:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=138 ms, enhance=77 ms, total=215 ms. Compruebe el LOG para los detalles

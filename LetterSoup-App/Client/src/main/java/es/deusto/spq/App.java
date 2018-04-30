@@ -19,8 +19,8 @@ public class App
 {
     public static void main(String [] args)
     {
-    	try {
-			controller cont=new controller(args);
+    	
+		controller.getController();
 			//System.out.println(cont.login("a1","abc"));
 			//ArrayList<String> arrs=new ArrayList<String>();
 			//arrs.add("hello");
@@ -49,9 +49,6 @@ public class App
 				//System.out.println(s[i]+'\n');
 			//}
 			
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
     }
 }
