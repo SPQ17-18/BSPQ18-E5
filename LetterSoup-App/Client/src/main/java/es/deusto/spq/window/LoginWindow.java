@@ -96,7 +96,6 @@ public class LoginWindow extends JFrame implements Runnable {
 		setResizable(false);
 
 		setResizable(true);
-//github.com/SPQ17-18/BSPQ18-E5.git
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);

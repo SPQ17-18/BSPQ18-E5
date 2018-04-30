@@ -2,6 +2,9 @@ package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -19,28 +22,39 @@ public class SelectSoup extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panel;
-	private JList list; 
-	private DefaultListModel modelo; 
+	private JList<String> list; 
+	private DefaultListModel<String> modelo; 
+	controller cont = null; 
+	private String[] args=null;
+	String[] listOfSoups;
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SelectSoup frame = new SelectSoup();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		SelectSoup frame = new SelectSoup(args);
+		frame.setVisible(true);
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	public SelectSoup() {
+	public SelectSoup(String[] args) {
+		this.args=args;
+		try {
+			cont=new controller(args);
+		} catch (RemoteException e) {
+			// Auto-generated catch block
+			e.printStackTrace();
+		}
 		setTitle("Select Soup");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -53,11 +67,21 @@ public class SelectSoup extends JFrame {
 		panel.setBounds(0, 34, 250, 227);
 		contentPane.add(panel);
 		
-		list = new JList();//insert here the method that extracts all the soups name from database
-		modelo = new DefaultListModel();
-		for(int i=0; i<=controller.soupList().size(); i++) {// searching for code that allows me to pass a list from a method of "controller" class to the model of JList
-		}
-		list.setModel(modelo);
+		//insert here the method that extracts all the soups name from database
+		modelo = new DefaultListModel<String>();
+        
+        //Array for the JList
+		
+        listOfSoups = cont.soupList();
+        ArrayList<String> soupList = new ArrayList<String>(Arrays.asList(listOfSoups));
+        
+        //Ciclo para agregar los elemntos del arreglo
+        for(int i=0;i<soupList.size();i++) {
+            modelo.addElement(soupList.get(i));
+        }
+  
+        //Creating the JList and inserting the model on it
+        list = new JList<String>(modelo);
 		panel.add(list);
 	}
 }
