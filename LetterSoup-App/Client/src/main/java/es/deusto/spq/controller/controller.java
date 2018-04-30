@@ -77,18 +77,24 @@ public class controller {
  */
 
 	
-	  	public String[] soupList() {
+  	public String[] soupList() {
 		String [] listSoup=null;
 		try {
-			listSoup=sl.getService().soupList(); //error on converting from array to list
+			
+			listSoup = new String[sl.getService().soupList().size()];
+			for(int i = 0; i < sl.getService().soupList().size(); i++) { 
+				listSoup[i] = sl.getService().soupList().get(i);
+		//	listSoup=sl.getService().soupList(); //error on converting from array to list
+			}
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(listSoup.size());
+		System.out.println(listSoup.length);
 		return listSoup;//Takes from the DB all soup names
 		
 	}
+  	
 	public SoupDTO getSoup(String name) {
 		SoupDTO sDTO=null;
 		try {
