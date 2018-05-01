@@ -61,11 +61,11 @@ public class SolveSoup extends JFrame implements Runnable{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-				
-					SolveSoup frame = new SolveSoup(args,"s1","a1");
-					frame.setVisible(true);
-		}
+//	public static void main(String[] args) {
+//				
+//					SolveSoup frame = new SolveSoup(args,"s1","a1");
+//					frame.setVisible(true);
+//		}
 
 	/**
 	 * Create the frame.
