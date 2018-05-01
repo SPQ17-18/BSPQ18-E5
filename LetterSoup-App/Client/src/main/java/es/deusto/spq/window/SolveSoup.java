@@ -48,6 +48,9 @@ public class SolveSoup extends JFrame implements Runnable{
 	private SoupDTO sopa;
 	private JPanel panelE1=new JPanel();
 	private JTextField textFieldWord;
+	private JComboBox<Character> comboBoxVH;
+	private JTextField textFieldPx;
+	private JTextField textFieldPy;
 	
 	private String nombre;
 	private String User;
@@ -58,11 +61,11 @@ public class SolveSoup extends JFrame implements Runnable{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-				
-					SolveSoup frame = new SolveSoup(args,"s1","a1");
-					frame.setVisible(true);
-		}
+//	public static void main(String[] args) {
+//				
+//					SolveSoup frame = new SolveSoup(args,"s1","a1");
+//					frame.setVisible(true);
+//		}
 
 	/**
 	 * Create the frame.
@@ -96,9 +99,42 @@ public class SolveSoup extends JFrame implements Runnable{
 		panelE1.add(textFieldWord);
 		textFieldWord.setColumns(7);
 		
+		JPanel Blanck = new JPanel();
+		panelE1.add(Blanck);
+		
+		comboBoxVH = new JComboBox<Character>();
+		comboBoxVH.addItem('V');
+		comboBoxVH.addItem('H');
+		Blanck.add(comboBoxVH);
+		
+		JLabel lblPosition = new JLabel(" Position:");
+		panelE1.add(lblPosition);
+		
+		JPanel panelPos = new JPanel();
+		panelPos.setLayout(new BoxLayout(panelPos,BoxLayout.Y_AXIS));
+		
+		textFieldPx = new JTextField();
+		textFieldPx.setBounds(15, 17, 29, 26);
+		panelPos.add(textFieldPx);
+		textFieldPx.setColumns(10);
+		
+		JLabel lblX = new JLabel("x");
+		lblX.setBounds(23, 0, 21, 16);
+		panelPos.add(lblX);
+		
+		textFieldPy = new JTextField();
+		textFieldPy.setBounds(56, 17, 29, 26);
+		panelPos.add(textFieldPy);
+		textFieldPy.setColumns(10);
+		
+		JLabel lblY = new JLabel("y");
+		lblY.setBounds(67, 0, 29, 16);
+		panelPos.add(lblY);
+		panelE1.add(panelPos);
+		
 		JPanel panelBlanck2 = new JPanel();
 		panelE1.add(panelBlanck2);
-		JButton badd=new JButton("Check");
+		JButton badd=new JButton("Add");
 		panelE1.add(badd);
 		contentPane.add(panelE1,BorderLayout.EAST);
 		JPanel panelN = new JPanel();
@@ -116,6 +152,13 @@ public class SolveSoup extends JFrame implements Runnable{
 		
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
+		
+		badd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {				
+				insertWord(textFieldWord.getText(),Integer.parseInt(textFieldPx.getText()),Integer.parseInt(textFieldPy.getText()),(Character) comboBoxVH.getSelectedItem());
+			}
+		});
+		
 		
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
@@ -176,54 +219,6 @@ public class SolveSoup extends JFrame implements Runnable{
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panelE1.add(lblNewLabel);
 		lblNewLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
-		
-		JPanel panel_15 = new JPanel();
-		panelE1.add(panel_15);
-		
-		JPanel panel_14 = new JPanel();
-		panelE1.add(panel_14);
-		
-		JPanel panel_13 = new JPanel();
-		panelE1.add(panel_13);
-		
-		JPanel panel_12 = new JPanel();
-		panelE1.add(panel_12);
-		
-		JPanel panel_11 = new JPanel();
-		panelE1.add(panel_11);
-		
-		JPanel panel_10 = new JPanel();
-		panelE1.add(panel_10);
-		
-		JPanel panel_9 = new JPanel();
-		panelE1.add(panel_9);
-		
-		JPanel panel_8 = new JPanel();
-		panelE1.add(panel_8);
-		
-		JPanel panel_7 = new JPanel();
-		panelE1.add(panel_7);
-		
-		JPanel panel_6 = new JPanel();
-		panelE1.add(panel_6);
-		
-		JPanel panel = new JPanel();
-		panelE1.add(panel);
-		
-		JPanel panel_1 = new JPanel();
-		panelE1.add(panel_1);
-		
-		JPanel panel_2 = new JPanel();
-		panelE1.add(panel_2);
-		
-		JPanel panel_3 = new JPanel();
-		panelE1.add(panel_3);
-		
-		JPanel panel_4 = new JPanel();
-		panelE1.add(panel_4);
-		
-		JPanel panel_5 = new JPanel();
-		panelE1.add(panel_5);
 		
 
 		insertCasillas();

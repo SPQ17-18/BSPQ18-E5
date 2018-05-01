@@ -94,6 +94,8 @@ private static final long serialVersionUID = 1L;
 	public SoupDTO getSoup(String name) throws RemoteException {
 		// TODO Auto-generated method stub
 		Soup s=dao.getSoup(name);
+		System.out.println("aaaaaaaaaaaaaaaa"+s);
+		s.toString();
 		return as.assemble(s);
 	}
 

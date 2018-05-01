@@ -651,7 +651,38 @@ public List<String> soupList() {
 	}
 		
 			
-	
+////public Soup getSoup(String Soupid) {
+////	PersistenceManager pm = pmf.getPersistenceManager();
+////
+////	Transaction tx = pm.currentTransaction();
+////	
+////	pm.getFetchPlan().setMaxFetchDepth(4);
+////	
+////	Soup result=null;
+////
+////	try {
+////		tx.begin();			
+////		Query<?> q = pm.newQuery("SELECT FROM " + Soup.class+" WHERE nombre== "+Soupid);
+////		 result = ((Soup) q.execute());
+////		
+////		
+////		
+////		tx.commit();	
+////	} catch (Exception ex) {
+////    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+////    } finally {
+////    	if (tx != null && tx.isActive()) {
+////    		tx.rollback();
+////    	}
+////		pm.close(); 
+////    }
+////    				
+////	return result;
+////
+////	
+//}
+//	
+
 	
 //	public static void main(String[] args) {
 //	

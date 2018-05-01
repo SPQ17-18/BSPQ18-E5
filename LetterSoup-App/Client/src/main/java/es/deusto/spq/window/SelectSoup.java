@@ -62,12 +62,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		this.arg=args;
 		this.us=user;
 		this.nameS=nameSoup;
-		try {
-			controller.setController(args);
-		} catch (RemoteException e) {
-			// Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		setTitle("Select Soup");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -105,7 +100,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		JButton btnSelect = new JButton("Select");
 		btnSelect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SolveSoup ss = new SolveSoup(arg,nameS,us);
+				SolveSoup ss = new SolveSoup(arg,list.getSelectedValue(),us);
 				ss.setVisible(true);
 			}
 		});//For the moment it can not select the soup 
