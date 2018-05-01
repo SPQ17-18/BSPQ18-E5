@@ -191,7 +191,9 @@ public class SolveSoup extends JFrame implements Runnable{
 			public void actionPerformed(ActionEvent e) {
 				SoupDTO s=new SoupDTO(words,posx ,posy, posicion, sopa.getSize(), nombre);
 				int score=controller.getController().getScoreGame(s,User);
-				JOptionPane.showMessageDialog(null,"Your score is"+score , "Score", JOptionPane.INFORMATION_MESSAGE, null);
+				String time = lblNewLabel.getText();
+				
+				JOptionPane.showMessageDialog(null, "This is the overview of the game:\n- Time played: "+time+" \n- Total correct words: "+(score/5)+" \n- Total points: "+score, "Information summary", JOptionPane.INFORMATION_MESSAGE);
 				dispose();
 			}
 		});
