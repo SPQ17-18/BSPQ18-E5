@@ -149,7 +149,6 @@ public class controller {
 		try {
 			logger.addAppender(new ConsoleAppender(new PatternLayout(),"Getting service"));
 			
-			System.out.println("get service");
 			score=sl.getService().getScore(u);
 		} catch (RemoteException e) {
 			

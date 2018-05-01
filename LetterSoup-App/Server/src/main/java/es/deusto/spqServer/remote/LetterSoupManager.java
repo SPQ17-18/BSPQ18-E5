@@ -3,6 +3,7 @@ package es.deusto.spqServer.remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -94,8 +95,6 @@ private static final long serialVersionUID = 1L;
 	public SoupDTO getSoup(String name) throws RemoteException {
 		// TODO Auto-generated method stub
 		Soup s=dao.getSoup(name);
-		System.out.println("aaaaaaaaaaaaaaaa"+s);
-		s.toString();
 		return as.assemble(s);
 	}
 
@@ -131,7 +130,6 @@ private static final long serialVersionUID = 1L;
 		User u=dao.getUser(user);
 		dao.deleteUser(u.getUser());
 		int n=dao.getAllUser().size();
-		System.out.println(n);
 		//IManagerDAO dao2=new ManagerDAO();
 		
 		if(n==0) {
