@@ -20,7 +20,6 @@ public interface IManagerDAO {
 	public boolean isCorrect(String UsuarioContrasena);
 	public ArrayList<Integer> getNumSoup();
 	public String getSoup(int Soupid);
-	public Soup getSoup(String Soupid);
 	public void storeWord(Word word);
 	public void deleteSoup(int soupid);
 	public void storeUser(User user);
