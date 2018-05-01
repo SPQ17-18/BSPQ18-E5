@@ -2,11 +2,7 @@ package es.deusto.spqServer.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.sql.Date;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
 import es.deusto.spqServer.data.Record;
@@ -75,9 +71,9 @@ private static final long serialVersionUID = 1L;
 
 
 	@Override
-	public String [] soupList() throws RemoteException {
+	public String[] soupList() throws RemoteException {
 		// TODO Auto-generated method stub
-		String [] list=dao.getSoups();
+		String[] list=dao.getSoups();
 		return list;
 
 	}

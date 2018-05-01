@@ -20,7 +20,7 @@ public interface IFacade extends Remote {
 public boolean register(String user)throws RemoteException;
 		
 	
-	public List<String> soupList() throws RemoteException;//Takes from the DB all soup names
+	public String[] soupList() throws RemoteException;//Takes from the DB all soup names
 		
 	
 	public SoupDTO getSoup(String name) throws RemoteException;//Takes from the DB the soup with that name

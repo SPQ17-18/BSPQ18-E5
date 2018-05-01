@@ -71,7 +71,6 @@ public class InsertNewSoup extends JFrame {
 	private JTextField[][] casillas;
 	private JPanel panelC;
 	private JComboBox comboBoxVH;
-	private controller c;
 	private String [] args;
 	private MenuWindow mw;
 	
@@ -84,12 +83,6 @@ public class InsertNewSoup extends JFrame {
 	 */
 	public InsertNewSoup(String [] args) {
 		this.args=args;
-		try {
-			c=new controller(args);
-		} catch (RemoteException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,7 +120,7 @@ public class InsertNewSoup extends JFrame {
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SoupDTO s=new SoupDTO(words,posx,posy,posicion,Integer.parseInt(textFieldRows.getText()),"s12");
-				c.IntroduceSoup(s);
+				controller.getController().IntroduceSoup(s);
 				JOptionPane.showMessageDialog(null, "Your soup has been stored");
 				dispose();
 			}

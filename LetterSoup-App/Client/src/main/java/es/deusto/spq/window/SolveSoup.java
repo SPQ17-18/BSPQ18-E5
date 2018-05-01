@@ -46,7 +46,6 @@ public class SolveSoup extends JFrame implements Runnable{
 	private ArrayList<Character> posicion=new ArrayList<Character>();
 
 	private SoupDTO sopa;
-	private controller c;
 	private JPanel panelE1=new JPanel();
 	private JTextField textFieldWord;
 	private JComboBox<Character> comboBoxVH;
@@ -72,15 +71,10 @@ public class SolveSoup extends JFrame implements Runnable{
 	 * Create the frame.
 	 */
 	public SolveSoup(String[] args,String nameSoup,String user) {
-		try {
-			c=new controller(args);
-		} catch (RemoteException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		
 		this.User=user;
 		this.nombre=nameSoup;
-		this.sopa=c.getSoup(nameSoup);
+		this.sopa=controller.getController().getSoup(nameSoup);
 		System.out.println(this.sopa.getArraywords().size());
 		System.out.println(this.sopa.getArrayorientation().size());
 		System.out.println(this.sopa.getArrayposx().size());
@@ -196,7 +190,7 @@ public class SolveSoup extends JFrame implements Runnable{
 		btnFinish.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SoupDTO s=new SoupDTO(words,posx ,posy, posicion, sopa.getSize(), nombre);
-				int score=c.getScoreGame(s,User);
+				int score=controller.getController().getScoreGame(s,User);
 				JOptionPane.showMessageDialog(null,"Your score is"+score , "Score", JOptionPane.INFORMATION_MESSAGE, null);
 				dispose();
 			}
