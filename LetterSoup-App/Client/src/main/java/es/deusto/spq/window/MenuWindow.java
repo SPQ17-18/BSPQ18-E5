@@ -76,7 +76,7 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(String[] args,String nameSoup,String user) {
+	public MenuWindow(final String[] args,String nameSoup,String user) {
 		this.arg=args;
 		this.us=user;
 		this.nameS=nameSoup;
@@ -159,10 +159,11 @@ public class MenuWindow extends JFrame implements Runnable {
 		panel.add(btnPlay);
 		
 		JButton btnSeeScore = new JButton("See score");
-		pw = new PointsWindow(args);
+	
 		
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				pw = new PointsWindow(args);
 				pw.setUser(us);
 				try {
 					pw.getUser();
