@@ -6,6 +6,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.AsyncAppender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.PropertyConfigurator;
+
+import org.apache.log4j.lf5.viewer.LogFactor5Dialog;
+import org.datanucleus.util.Log4JLogger;
+
 import es.deusto.spq.remote.RMIServiceLocator;
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.User;
@@ -20,6 +30,9 @@ import es.deusto.spqServer.dto.SoupDTO;
  */
 public class controller {
 	private RMIServiceLocator sl;
+	private final static Logger logger = Logger.getLogger(controller.class.getName());
+	
+	 
 	
 	public controller(String[] args) throws RemoteException {
 		sl = new RMIServiceLocator();
@@ -37,7 +50,7 @@ public class controller {
 		try {
 			login = sl.getService().login(st);
 		} catch (Exception e) {
-			System.out.println("A problem occured in the log in.");
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"A problem occured in the log in."));
 			// e.printStackTrace();
 		}
 		
@@ -51,7 +64,7 @@ public class controller {
 	public boolean IntroduceSoup(SoupDTO dto) {
 		boolean soupintroduced = false;
 		try {
-			System.out.println("get service");
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"get service"));
 			soupintroduced=sl.getService().IntroduceSoup(dto);
 		} catch (RemoteException e) {
 			
@@ -80,7 +93,8 @@ public class controller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(listSoup.length);
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),"the lenght of the llist is"+listSoup.length));
+		
 		return listSoup;//Takes from the DB all soup names
 		
 	}
@@ -120,6 +134,8 @@ public class controller {
 	public ScoreDTO getScore(String u) {
 		ScoreDTO score=null;
 		try {
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"Getting service"));
+			
 			System.out.println("get service");
 			score=sl.getService().getScore(u);
 		} catch (RemoteException e) {
