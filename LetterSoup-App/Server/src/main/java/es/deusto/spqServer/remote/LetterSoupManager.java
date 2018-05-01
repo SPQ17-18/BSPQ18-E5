@@ -3,6 +3,13 @@ package es.deusto.spqServer.remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
 import es.deusto.spqServer.dao.IManagerDAO;
 import es.deusto.spqServer.dao.ManagerDAO;
 import es.deusto.spqServer.data.Record;
@@ -12,7 +19,7 @@ import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 import es.deusto.spqServer.gateway.MailSender;
-import java.util.Date;
+
 /**Class for creating assembler, DAO manager and mail sender and manage them
  * 
  *
@@ -22,6 +29,8 @@ private static final long serialVersionUID = 1L;
 	private IManagerDAO dao;
 	private Assembler as;
 	private MailSender mail;
+	private final static Logger logger = Logger.getLogger(LetterSoupManager.class.getName());
+
 
 	public LetterSoupManager(String [] args) throws RemoteException {
 		dao= new ManagerDAO();
@@ -34,24 +43,26 @@ private static final long serialVersionUID = 1L;
 	}
 	
 	public boolean IntroduceSoup(SoupDTO dto) throws RemoteException {
-		System.out.println("Introduciendo sopa al server");
-		int lastsoupid=dao.getLastSoupId();
-		System.out.println(lastsoupid);
-		int lastwordid=dao.getLastWordId();
-		System.out.println(lastwordid);
-		System.out.println("Dissasemble");
-		System.out.println(dto.getArrayorientation().size());
-		System.out.println(dto.getArrayposx().size());
-		System.out.println(dto.getArrayposy().size());
-		System.out.println(dto.getArraywords().size());
-		System.out.println(dto.getNombre());
-		System.out.println(dto.getSize());
-		try {
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),"Introduciendo sopa al server"));
+    	int lastsoupid=dao.getLastSoupId();
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+lastsoupid));
+    	int lastwordid=dao.getLastWordId();
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+lastwordid));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),"Dissasemble"));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getArrayorientation().size()));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getArrayposx().size()));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getArrayposy().size()));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getArraywords().size()));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getNombre()));
+    	logger.addAppender(new ConsoleAppender(new PatternLayout(),""+dto.getSize()));
+    	try {
 			Soup s=as.disassemble(dto,lastsoupid, lastwordid);
 			s.initialize();
 			dao.storeSoup(s);
 			
 		} catch (Exception e) {
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),""+e.getMessage()));
+	    	
 			e.printStackTrace();
 			// TODO: handle exception
 			return false;
@@ -112,16 +123,23 @@ private static final long serialVersionUID = 1L;
 	@Override
 	public int getScoreGame(SoupDTO sdto,String user) throws RemoteException {
 		// TODO Auto-generated method stub
-		System.out.println("empiezo score");
+		
 		Soup s=dao.getSoup(sdto.getNombre());
 		int score=s.calculatePuntuation(sdto.getArraywords());
 		User u=dao.getUser(user);
+		dao.deleteUser(u.getUser());
+		int n=dao.getAllUser().size();
+		System.out.println(n);
+		//IManagerDAO dao2=new ManagerDAO();
+		
+		if(n==0) {
+			
 		Record record=new Record(dao.getLastRecordId(), new Date(System.currentTimeMillis()), score , u);
 		u.addRecord(record);
-		dao.storeScore(record);
-		//dao.deleteUser(u.getUser());
-		//dao.storeUser(u);
-		System.out.println("acabo score");
+		//dao.storeScore(record);
+		dao.storeUser(u);
+		}
+		System.out.println("salgo");
 		return score;
 	}
 //	public void setScore(User u, int score) throws RemoteException {

@@ -9,6 +9,12 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
+import es.deusto.spqServer.dao.ManagerDAO;
 //Mail sender class 
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
@@ -17,7 +23,8 @@ public class MailSender {
 	private final String port = "587";
 	private final String subject = "Gateway Simulation: Sending SMS to Screen ...";
 	private String to;
-	
+	private final static Logger logger = Logger.getLogger(MailSender.class.getName());
+
 	private Properties props;
 
 	public MailSender(String destination) {
@@ -43,9 +50,14 @@ public class MailSender {
 			msg.setFrom(new InternetAddress(from));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			Transport.send(msg);
-			System.out.println("Message sent to: " + to);
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"Message sent to: " + to));
+			
+			
 		} catch (Exception ex) {
-			System.err.println(" $ Error sending message: " + ex);
+			logger.addAppender(new ConsoleAppender(new PatternLayout()," $ Error sending message: " + ex));
+			logger.fatal(" $ Error sending message: ", ex);
+	    	
+			
 		}
 		return "OK";
 	}
