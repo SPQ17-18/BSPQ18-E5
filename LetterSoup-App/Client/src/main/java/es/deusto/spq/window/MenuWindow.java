@@ -76,7 +76,7 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(String[] args,String nameSoup,String user) {
+	public MenuWindow(final String[] args,String nameSoup,String user) {
 		this.arg=args;
 		this.us=user;
 		this.nameS=nameSoup;
@@ -148,8 +148,10 @@ public class MenuWindow extends JFrame implements Runnable {
 		JButton btnPlay = new JButton("Play!");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SolveSoup ss = new SolveSoup(arg,nameS,us);
-				ss.setVisible(true);
+				SelectSoup Select = new SelectSoup(arg, nameS, us);
+				Select.setVisible(true);
+//				SolveSoup ss = new SolveSoup(arg,nameS,us);
+//				ss.setVisible(true);
 			}
 		});
 		btnPlay.setFont(new Font("Avenir", Font.PLAIN, 17));
@@ -157,12 +159,18 @@ public class MenuWindow extends JFrame implements Runnable {
 		panel.add(btnPlay);
 		
 		JButton btnSeeScore = new JButton("See score");
-		pw = new PointsWindow(args);
+	
 		
 		btnSeeScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				pw = new PointsWindow(args);
 				pw.setUser(us);
-				pw.getUser();
+				try {
+					pw.getUser();
+				} catch (RemoteException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				pw.setVisible(true);
 			}
 		});

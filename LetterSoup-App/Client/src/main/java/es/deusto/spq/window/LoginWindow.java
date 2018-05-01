@@ -50,7 +50,6 @@ public class LoginWindow extends JFrame implements Runnable {
 	String hour, minutes , seconds, ampm;
 	Calendar cal;
 	Thread t1;
-	controller cont =null;
 	private JButton btnGo;
 	private String[] args=null;
 	
@@ -81,22 +80,18 @@ public class LoginWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 * @param args 
 	 */
-	public LoginWindow(String[] args) {
+	public LoginWindow(final String[] args) {
 		this.args=args;
 		ArrayList<JButton> botonera=new ArrayList<JButton>();
-	 	try {
-			cont=new controller(args);
-		} catch (RemoteException e) {
-			// Auto-generated catch block
-			e.printStackTrace();
+		try {
+			controller.setController(args);
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
-		
-
-		
 		setResizable(false);
 
 		setResizable(true);
-//github.com/SPQ17-18/BSPQ18-E5.git
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 50, 750, 500);
 		setLocationRelativeTo(null);
@@ -265,19 +260,19 @@ public class LoginWindow extends JFrame implements Runnable {
 		button_1.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_1);
 		JButton button_2 = new JButton("Enter");
-		mw = new MenuWindow(args, null, textFieldUsername.getText());
-		
+			
 		
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				cont.login(textFieldUsername.getText(), passwordField.getText());
+				controller.getController().login(textFieldUsername.getText(), passwordField.getText());
 
 
-				if(cont.login(textFieldUsername.getText(), passwordField.getText())==true) {
+				if(controller.getController().login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
 					
+					mw = new MenuWindow(args, null, textFieldUsername.getText());
 					mw.setUser(textFieldUsername.getText());
 					mw.setVisible(true);
 				}else {

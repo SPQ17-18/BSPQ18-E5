@@ -39,7 +39,6 @@ public class PointsWindow extends JFrame {
 	private JList<String> textPaneP;
 	private String [] a;
 	private String [] b;
-	private controller cont;
 	private ScoreDTO score = null;
 	private String [] args=null;
 	private String user=null;
@@ -145,16 +144,9 @@ public class PointsWindow extends JFrame {
 
 
 	}
-	public void getUser() {
+	public void getUser() throws RemoteException {
 		System.out.println("get user");
-		try {
-			cont = new controller(args);
-			score=cont.getScore(user);
-			
-		} catch (RemoteException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		score=controller.getController().getScore(user);
 		a=new String[score.getArrayDate().size()];
 		b=new String[score.getArrayrecord().size()];
 		

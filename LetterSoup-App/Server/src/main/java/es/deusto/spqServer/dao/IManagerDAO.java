@@ -25,7 +25,9 @@ public interface IManagerDAO {
 	public void storeUser(User user);
 	public int getLastSoupId();
 	public int getLastWordId();
+	
 	public String [] getSoups();
+	
 	public Soup getSoup(String Soupname);
 	public int getLastRecordId();
 	public void storeScore(Record record);
