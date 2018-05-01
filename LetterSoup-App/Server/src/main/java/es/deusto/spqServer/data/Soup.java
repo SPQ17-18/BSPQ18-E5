@@ -8,6 +8,11 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
+import es.deusto.spqServer.dao.ManagerDAO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
@@ -18,6 +23,8 @@ import es.deusto.spqServer.dto.SoupDTO;
  *
  */
 public class Soup {
+	private final static Logger logger = Logger.getLogger(Soup.class.getName());
+
 	@PrimaryKey
 	private int soup_id;
 	
@@ -127,7 +134,8 @@ public class Soup {
 		this.words.add(word);
 	}
 	public void initialize() {
-		System.out.println("initialize");
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),"Initialize"));
+    	
 		//Word(int word_id, char position, String word, int x, int y, Soup soup)
 		char [][] arrayContent=new char[this.size][this.size];
 		for(int i=0;i<size;i++) {

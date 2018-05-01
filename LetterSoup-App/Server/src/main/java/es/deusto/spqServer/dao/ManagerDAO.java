@@ -11,10 +11,16 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
 import es.deusto.spqServer.data.User;
 import es.deusto.spqServer.data.Word;
+
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.PropertyConfigurator;
 
 
 
@@ -26,6 +32,9 @@ import es.deusto.spqServer.data.Word;
 public class ManagerDAO implements IManagerDAO {
 
 private PersistenceManagerFactory pmf;
+private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName());
+
+
 	
 	public ManagerDAO() {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -39,7 +48,9 @@ private PersistenceManagerFactory pmf;
 	       pm.makePersistent(object);
 	       tx.commit();
 	    } catch (Exception ex) {
-	    	System.out.println("   $ Error storing an object: " + ex.getMessage());
+	    	logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error storing an object: " + ex.getMessage()));
+	    	logger.fatal("   $ Error storing an object: ", ex);
+	    	
 	    	System.out.println(ex.getStackTrace());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
@@ -50,7 +61,8 @@ private PersistenceManagerFactory pmf;
 	}
 //store soup
 	public void storeSoup(Soup soup) {
-		System.out.println("   * Storing an object: " + soup.getSoup_id());
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),"   * Storing an object: " + soup.getSoup_id()));
+    	
 		 this.storeObject(soup);
 	}
 //store user
@@ -82,11 +94,12 @@ private PersistenceManagerFactory pmf;
 			User us=result.get(0);
 			for(int i=0;i<us.getScore().size();i++) {
 				records.add(new Record(us.getScore().get(i).getRecord_id(),us.getScore().get(i).getDate(), us.getScore().get(i).getRecord(), us.getScore().get(i).getUser()));
-				System.out.println(us.getScore().get(i).getRecord_id());
-				System.out.println(us.getScore().get(i).getDate());
-				System.out.println(us.getScore().get(i).getRecord());
-				System.out.println(us.getScore().get(i).getUser().getUser());
-			}
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord_id()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getDate()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getUser().getUser()));
+		    	
+				}
 			
 						
 			System.out.println("All  retrieved.");
@@ -95,7 +108,9 @@ private PersistenceManagerFactory pmf;
 			
 			tx.commit();			
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving all users: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving all users: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving all users: " + ex.getMessage(), ex);
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -124,23 +139,23 @@ private PersistenceManagerFactory pmf;
 			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName()+ " WHERE User=='"+data[0]+"'");
 			List <User> result = (List<User>) q.execute();
 			us=new User(result.get(0).getUser(),result.get(0).getPassword(),result.get(0).getRol(),result.get(0).getEmail());
-			
 						
-			System.out.println("All  retrieved.");
-			
-			
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"All  retrieved."));
+	    	
 			
 			tx.commit();			
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving all Users: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving all Users: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving all Users: " + ex.getMessage(), ex);
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
 	    	}
     		pm.close(); 
 	    }
-	    
-		System.out.println(us.getPassword());
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getPassword()));
+    	
 		return us.getPassword().equals(data[1]);
 		
 	}
@@ -161,17 +176,20 @@ private PersistenceManagerFactory pmf;
 			us=new User(result.get(0).getUser(),result.get(0).getPassword(),result.get(0).getRol(),result.get(0).getEmail());
 			ArrayList<Record> arr=new ArrayList<Record>();
 			for(int i=0;i<result.get(0).getScore().size();i++) {
-				Record r=new Record(result.get(0).getScore().get(i).getRecord_id(),result.get(0).getScore().get(i).getDate(),result.get(0).getScore().get(i).getRecord(),result.get(0));
+				Record r=new Record(result.get(0).getScore().get(i).getRecord_id(),result.get(0).getScore().get(i).getDate(),result.get(0).getScore().get(i).getRecord(),us);
 				us.addRecord(r);
 			}
 						
-			System.out.println("All  retrieved.");
 			
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"All  retrieved."));
+	    	
 			
 			
 			tx.commit();			
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving User: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving User: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving User: ", ex);
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -179,7 +197,8 @@ private PersistenceManagerFactory pmf;
     		pm.close(); 
 	    }
 	    
-		System.out.println(us.getPassword());
+		logger.addAppender(new ConsoleAppender(new PatternLayout(),us.getPassword()));
+    	
 		return us;
 		
 	}
@@ -197,15 +216,15 @@ private PersistenceManagerFactory pmf;
 			tx.begin();			
 			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName());
 			result = (List<User>) q.execute();
-						
-			System.out.println("All  retrieved.");
-			
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"All  retrieved."));
+	    	
 			
 			
 			tx.commit();			
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving User: " + ex.getMessage());
-	    } finally {
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving User: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving User: " + ex.getMessage(), ex);
+	    		    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
 	    	}
@@ -240,7 +259,9 @@ private PersistenceManagerFactory pmf;
 			
 			tx.commit();	
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving some Soups: " + ex.getMessage());
+	    	logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some Soups: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving some Soups: " + ex.getMessage(), ex);
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -272,7 +293,10 @@ private PersistenceManagerFactory pmf;
 			
 			tx.commit();	
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some Soups: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving some Soups: " + ex.getMessage(), ex);
+	    	
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -310,7 +334,10 @@ private PersistenceManagerFactory pmf;
 			
 			tx.commit();	
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some soups: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving some soups: " + ex.getMessage(), ex);
+	    	
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -347,7 +374,10 @@ private PersistenceManagerFactory pmf;
 			
 			tx.commit();	
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some soups: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving some soups: " + ex.getMessage(), ex);
+	    	
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -384,7 +414,9 @@ private PersistenceManagerFactory pmf;
 			   
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("   $ Error cleaning the soup: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error cleaning the soup: " + ex.getMessage()));
+	    	logger.fatal("   $ Error cleaning the soup: ", ex);
+	    	
 			ex.printStackTrace();
 		} finally {
 			if (tx != null && tx.isActive()) {
@@ -419,7 +451,10 @@ private PersistenceManagerFactory pmf;
 			tx.commit();
 			
 		} catch (Exception ex) {
-			System.out.println("   $ Error cleaning the user: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error cleaning the user: " + ex.getMessage()));
+	    	logger.fatal("   $ Error cleaning the user: ", ex);
+	    	
+			
 			ex.printStackTrace();
 		} finally {
 			if (tx != null && tx.isActive()) {
@@ -450,7 +485,9 @@ private PersistenceManagerFactory pmf;
 			soupid = result.get(result.size()-1).getSoup_id()+1;
 			tx.commit();					
 		} catch (Exception ex) {
-			System.out.println("   $ Error the last soup: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error the last soup: " + ex.getMessage()));
+	    	logger.fatal("   $ Error the last soup: ", ex);
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -471,10 +508,14 @@ private PersistenceManagerFactory pmf;
 			Query<?> q = pm.newQuery("SELECT FROM " + Record.class.getName() + 
                     " ORDER BY record_id");
 			List <Record> result = (List<Record>) q.execute();
+			System.out.println(result.size());
 			recordid = result.get(result.size()-1).getRecord_id()+1;
 			tx.commit();					
 		} catch (Exception ex) {
-			System.out.println("   $ Error the last soup: " + ex.getMessage());
+			//logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error the last record: " + ex.getMessage()));
+	    	logger.fatal("   $ Error the last record: ", ex);
+	    	
+			
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -498,7 +539,10 @@ private PersistenceManagerFactory pmf;
 			wordid = result.get(result.size()-1).getWord_id()+1;
 			tx.commit();					
 		} catch (Exception ex) {
-			System.out.println("   $ Error the last word: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error the last word: " + ex.getMessage()));
+	    	logger.fatal("   $ Error the last word: ", ex);
+	    	
+			
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -534,7 +578,10 @@ public List<String> soupList() {
 			
 			tx.commit();	
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some soups: " + ex.getMessage()));
+	    	logger.fatal("   $ Error retrieving some soups: ", ex);
+	    	
+	    	
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -575,16 +622,23 @@ public List<String> soupList() {
 		dao.storeSoup(s1);		
 		//dao.deleteSoup(s1.getSoup_id());		
 		//dao.deleteSoup(s.getSoup_id());
+		
 		System.out.println("La cantidad de sopas de letras es:\n");
 		System.out.println(dao.getNumSoup().size());
 		System.out.println("El contenido de la sopa s es:\n");
 		System.out.println(dao.getSoup(s.getSoup_id()));
 		User u=new User("a1", "abc", 'S',"a1@gmail.com");
+		User u2=new User("a2", "abc", 'S',"a2@gmail.com");
+		
 		Date date=new Date();
 		Record r1=new Record(1,date, 5,u);
+		Record r2=new Record(2,date, 5,u2);
+		u2.addRecord(r2);
 		u.addRecord(r1);
 		System.out.println("Store user");
 		dao.storeUser(u);
+		dao.storeUser(u2);
+		
 		System.out.println("Get records");
 		//dao.getRecords(u);
 		System.out.println("Is correct");
@@ -628,7 +682,7 @@ public List<String> soupList() {
 ////	
 //}
 //	
-	
+
 	
 //	public static void main(String[] args) {
 //	
