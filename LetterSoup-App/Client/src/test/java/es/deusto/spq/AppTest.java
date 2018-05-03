@@ -3,6 +3,7 @@ package es.deusto.spq;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +15,15 @@ import es.deusto.spq.window.MenuWindow;
 import es.deusto.spq.window.PointsWindow;
 import es.deusto.spq.window.Register;
 import es.deusto.spq.window.SelectSoup;
+import es.deusto.spqServer.dao.IManagerDAO;
+import es.deusto.spqServer.data.Record;
+import es.deusto.spqServer.data.Soup;
+import es.deusto.spqServer.data.User;
+import es.deusto.spqServer.data.Word;
+import es.deusto.spqServer.dto.Assembler;
+import es.deusto.spqServer.dto.SoupDTO;
+import es.deusto.spqServer.remote.IFacade;
+import es.deusto.spqServer.server.LetterSoupServer;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.TestCase;
 
@@ -23,14 +33,14 @@ import junit.framework.TestCase;
 public class AppTest extends TestCase
 {
 	
-private controller cont;
-private LoginWindow lw;
-private MenuWindow mw;
-private Register r;
-private SelectSoup sp;
-private PointsWindow pw;
-private ExamMode em;
-private String[] args= {"127.0.0.1","1099","LetterSoupServer"};
+	 Record record;
+	 Soup soup;
+	 User user;
+	 Word word;
+	 Assembler assembler;
+	 SoupDTO soupDTO;
+	 String[] args= {"127.0.0.1","1099","LetterSoupServer"};
+
 
 	
     /**
@@ -43,13 +53,7 @@ private String[] args= {"127.0.0.1","1099","LetterSoupServer"};
      * @return the suite of tests being tested
      */
 @Before public void setup() {
-	cont = new controller();
-	lw = new LoginWindow(args);
-	mw = new MenuWindow(args,null,"a1");
-	r = new Register();
-	sp = new SelectSoup(args,null,"a1");
-	pw = new PointsWindow(args);
-	em = new ExamMode();
+	
 	
 }
    // public static Test suite()
@@ -63,13 +67,44 @@ private String[] args= {"127.0.0.1","1099","LetterSoupServer"};
      */
 	@Test public void testApp() throws RemoteException
     {
-		controller.getController();
-		controller.getController().setController(args);
-		controller.getController().login("a1", "abc");
-		controller.getController().soupList();
-		controller.getController().setController(args);
-        lw.main(args);
+
+		String[] a= {"s12","s1","s2","s12","s12","s12","s12"};
+		assertTrue(controller.getController().setController(args));
+		assertTrue(controller.getController().login("a1", "abc"));
+		assertTrue(controller.getController().sendMail("miau", "aitor.santa@opendeusto.es"));
+		String[] b=controller.getController().soupList();
+		assertTrue(b[0].equals(a[0]));
 		
+		
+		List<Word> words=new ArrayList();
+		
+	user=new User("a1","abc", 'S', "a1@gmail.com");
+	record= new Record(1, new Date(), 1, user);
+	soup=new Soup(1,"Ny","NYNY",2,words);
+	word=new Word(1, 'H', "Ny", 1, 1, soup);
+	words.add(word);
+	assembler= new Assembler();
+	 ArrayList<String> arraywords=new ArrayList<String>();
+	 
+	 ArrayList<Integer> arrayposx=new ArrayList<Integer>();
+	 ArrayList<Integer> arrayposy=new ArrayList<Integer>();
+	 ArrayList<Character> arrayorientation=new ArrayList<Character>();
+	 
+	 arraywords.add(soup.getWords().get(0).getWord());
+	 arrayposx.add(soup.getWords().get(0).getX());
+	 arrayposy.add(soup.getWords().get(0).getY());
+	 arrayorientation.add(soup.getWords().get(0).getPosition());
+	
+	soupDTO = new SoupDTO(arraywords,arrayposx,arrayposy,arrayorientation,2,"s12");
+		
+		controller.getController().IntroduceSoup(soupDTO);
+	SoupDTO soupDTO2=controller.getController().getSoup("s12");
+	assertEquals(soupDTO.getNombre(), "s12");
+	
+	System.out.println(controller.getScore("a1").getArrayrecord().get(0));
+	int a11=controller.getScore("a1").getArrayrecord().get(0);
+	assertEquals(a11,5);
+	
     }
 	
 }
