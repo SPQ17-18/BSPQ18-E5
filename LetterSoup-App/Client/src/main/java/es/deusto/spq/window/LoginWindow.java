@@ -34,6 +34,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.awt.Component;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 
 public class LoginWindow extends JFrame implements Runnable {
@@ -262,11 +263,37 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelButtons.add(btnRegister);
 		button_1.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelButtons.add(button_1);
+		
+		
+		
 		JButton button_2 = new JButton("Enter");
 			
 		
 		button_2.addActionListener(new ActionListener() {
+			
+			public void keyPressed(KeyEvent e) {
+						
+				if(e.getKeyCode()==KeyEvent.VK_ACCEPT){
+					controller.getController().login(textFieldUsername.getText(), passwordField.getText());
+
+
+					if(controller.getController().login(textFieldUsername.getText(), passwordField.getText())==true) {
+						JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
+						System.out.println("logged");
+						
+						mw = new MenuWindow(args, null, textFieldUsername.getText());
+						mw.setUser(textFieldUsername.getText());
+						mw.setVisible(true);
+					}else {
+						JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
+						System.out.println("log in failed");
+					}
+					
+				}
+			}
+
 			public void actionPerformed(ActionEvent e) {
+				
 
 				controller.getController().login(textFieldUsername.getText(), passwordField.getText());
 
