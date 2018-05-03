@@ -32,7 +32,7 @@ public class SoupTest {
 		soup=new Soup(1,"Ny","NYNY",2,words);
 		word=new Word(1, 'H', "Ny", 0, 0, soup);
 		words.add(word);
-		assembler= new Assembler();
+		
 	}
 	
 
