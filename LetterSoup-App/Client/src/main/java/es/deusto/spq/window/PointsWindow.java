@@ -133,6 +133,7 @@ public class PointsWindow extends JFrame {
 		
 //		textPaneD = new JTextPane();
 //		textPaneD.setEditable(false);
+
 		//panelE.add(textPaneD);
 		
 //		textPaneP = new JTextPane();

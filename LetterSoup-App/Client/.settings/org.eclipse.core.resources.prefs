@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8
+=======
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8
+>>>>>>> 65deddac81cca1509ab8abd74b317df2616f1a8d
 =======
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8

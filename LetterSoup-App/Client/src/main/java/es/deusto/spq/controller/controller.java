@@ -40,10 +40,10 @@ public class controller {
 	}
 
 	
-	public static void setController(String[] args) throws RemoteException {
+	public static boolean setController(String[] args) throws RemoteException {
 		sl = new RMIServiceLocator();
 		sl.setServices(args[0], args[1], args[2]);
-		
+		return true;
 	}
 	
 	
@@ -121,15 +121,18 @@ public class controller {
 		}//Takes from the DB the soup with that name
 		return sDTO;
 	}
-	public static void sendMail(String message,String email) {//send a message to an email
+
+	public static boolean sendMail(String message,String email) {//send a message to an email
+		boolean sent=false;
 		try {
 			sl.getService().sendMail(message,email);
+			sent=true;
 		} catch (RemoteException e) {
 			
 			e.printStackTrace();
 		} 
 
-	
+	return sent;
 	}
 
 	//public ArrayList<Record> getScore(User u) {

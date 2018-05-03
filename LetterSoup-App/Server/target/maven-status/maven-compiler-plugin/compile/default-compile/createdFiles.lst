@@ -16,3 +16,4 @@ es\deusto\spqServer\data\User.class
 es\deusto\spqServer\dao\IManagerDAO.class
 es\deusto\spqServer\dto\Assembler.class
 es\deusto\spqServer\data\Word.class
+es\deusto\spqServer\gateway\MailSender$1.class

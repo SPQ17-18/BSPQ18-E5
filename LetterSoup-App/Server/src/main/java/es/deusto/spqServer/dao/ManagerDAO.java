@@ -93,7 +93,7 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 			List <User> result = (List<User>) q.execute();
 			User us=result.get(0);
 			for(int i=0;i<us.getScore().size();i++) {
-				records.add(new Record(us.getScore().get(i).getRecord_id(),us.getScore().get(i).getDate(), us.getScore().get(i).getRecord(), us));
+				records.add(new Record(us.getScore().get(i).getRecord_id(),us.getScore().get(i).getDate(), us.getScore().get(i).getRecord(), us.getScore().get(i).getUser()));
 				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord_id()));
 				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getDate()));
 				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord()));
@@ -211,6 +211,7 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 		User us=null;
 		
 		pm.getFetchPlan().setMaxFetchDepth(3);
+<<<<<<< HEAD
 		List <User> results=new ArrayList<User>();
 		List <User> result=null;
 		
@@ -241,7 +242,7 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 	    }
 	    
 		
-		return results;
+		return result;
 		
 	}
 	
