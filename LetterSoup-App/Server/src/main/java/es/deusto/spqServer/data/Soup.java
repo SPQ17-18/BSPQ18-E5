@@ -49,6 +49,17 @@ public class Soup {
 	}
 	
 	
+	public Soup(int soup_id, String nombre, String content, int size, List<Word> words) {
+		super();
+		this.soup_id = soup_id;
+		this.nombre = nombre;
+		this.content = content;
+		this.size = size;
+		this.words = words;
+	}
+
+
+
 
 	public String getNombre() {
 		return nombre;

@@ -41,7 +41,7 @@ public class LetterSoupServer {
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader ( System.in );
 			java.io.BufferedReader stdin = new java.io.BufferedReader ( inputStreamReader );
 			String line  = stdin.readLine();
-			logger.addAppender(new ConsoleAppender(new PatternLayout(),"he acabado"));
+			logger.addAppender(new ConsoleAppender(new PatternLayout(),"I have finished"));
 	    	
 						
 		} catch (Exception e) {

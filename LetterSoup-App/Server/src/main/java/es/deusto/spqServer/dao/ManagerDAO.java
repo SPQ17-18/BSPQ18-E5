@@ -257,6 +257,7 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 				
 			}
 			
+			
 			tx.commit();	
 		} catch (Exception ex) {
 	    	logger.addAppender(new ConsoleAppender(new PatternLayout(),"   $ Error retrieving some Soups: " + ex.getMessage()));
