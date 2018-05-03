@@ -237,7 +237,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>es.deusto.spqServer.server.LetterSoupServer</mainClass>
+									<mainClass>es.deusto.spqServer.dao.ManagerDAO</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
