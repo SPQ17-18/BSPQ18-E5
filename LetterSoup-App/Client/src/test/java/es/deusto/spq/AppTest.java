@@ -101,7 +101,6 @@ public class AppTest extends TestCase
 	SoupDTO soupDTO2=controller.getController().getSoup("s12");
 	assertEquals(soupDTO.getNombre(), "s12");
 	
-	System.out.println(controller.getScore("a1").getArrayrecord().get(0));
 	int a11=controller.getScore("a1").getArrayrecord().get(0);
 	assertEquals(a11,5);
 	
