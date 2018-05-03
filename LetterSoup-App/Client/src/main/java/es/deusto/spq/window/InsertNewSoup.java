@@ -291,12 +291,14 @@ public class InsertNewSoup extends JFrame {
 		
 	}
 	
+	
 	public void insertWord(String word,int positionx,int positiony,char pos) {
 		words.add(word);
 		posx.add(positionx);
 		posy.add(positiony);
 		posicion.add(pos);
 		int x=positionx;
+		int a;
 		int y=positiony;
 		for(int i=0;i<word.length();i++) {
 			if(pos=='v' || pos=='V') {
