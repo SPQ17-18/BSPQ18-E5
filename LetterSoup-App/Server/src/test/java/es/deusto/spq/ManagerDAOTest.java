@@ -24,6 +24,7 @@ import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -54,11 +55,11 @@ public class ManagerDAOTest{
 		s1.initialize();
 		u3=new User("a11", "abc", 'S',"a1@gmail.com");
 		u4=new User("a21", "abc", 'S',"a2@gmail.com");
-		a= new Word(-2, 'V', "YES", 1, 3, s1);
-		b= new Word(-3, 'H', "NO", 2, 1, s1);
+		a= new Word(22, 'V', "YES", 1, 3, s1);
+		b= new Word(32, 'H', "NO", 2, 1, s1);
 		Date date=new Date();
-		Record r1=new Record(3,date, 5,u4);
-		Record r2=new Record(4,date, 5,u3);
+		Record r1=new Record(23,date, 5,u4);
+		Record r2=new Record(24,date, 5,u3);
 		u3.addRecord(r2);
 		u4.addRecord(r1);
 		dao.storeUser(u3);
@@ -83,14 +84,14 @@ public class ManagerDAOTest{
 	
 
 	@Test public void TestisCorrect() {
-		assertTrue(dao.isCorrect("a1#abc"));
-		assertFalse(dao.isCorrect("a1#ab"));
+		assertTrue(dao.isCorrect("a11#abc"));
+		assertFalse(dao.isCorrect("a11#ab"));
 				
 	}
 	
 	@Test public void testgetUser() {
-		User u=dao.getUser("a1");
-		assertEquals(u.getUser(),"a1");
+		User u=dao.getUser("a11");
+		assertEquals(u.getUser(),"a11");
 		assertEquals(u.getEmail(),"a1@gmail.com");
 		assertEquals(u.getRol(),'S');
 		assertEquals(u.getPassword(),"abc");
@@ -98,14 +99,14 @@ public class ManagerDAOTest{
 	}
 	
 	@Test public void testgetAllUser() {
-		assertEquals(dao.getAllUser().size(),3);
+		assertTrue(dao.getAllUser().size()>1);
 	}
 	
 	
 	
 	@Test public void getNumSoup() {
 		ArrayList<Integer> ar=dao.getNumSoup();
-		assertEquals(ar.size(),3);
+		assertTrue(ar.size()>1);
 		
 				
 	}
@@ -117,29 +118,22 @@ public class ManagerDAOTest{
 
 	
 	@Test public void getSoup() {
-		assertEquals(dao.getSoup("s1").getSoup_id(),1);
-		assertEquals(dao.getSoup("s1").getSize(),13);
+		assertEquals(dao.getSoup("s21").getSoup_id(),22);
+		assertEquals(dao.getSoup("s21").getSize(),13);
 		
 			}
 
 	
 	
 	@Test public void getSoups() {
-		assertEquals(dao.getSoups().length,3);
+		assertTrue(dao.getSoups().length>1);
 		
 			}
 	
 
 	//Database query that deletes soup selecting it by its ID
 
-	public void deleteSoup(int soupid) {		
-			}
-
-	
-	public void deleteUser(String user) {		
-				
-	}
-	
+		
 
 	
 	//Database query that selects the last soup's ID
@@ -149,14 +143,21 @@ public class ManagerDAOTest{
 		}
 	
 	@Test public void getLastRecordId() {
-		assertEquals(dao.getLastRecordId(),5);
+		assertEquals(dao.getLastRecordId(),25);
 		
 		}
 	
 	@Test public void getLastWordId() {
-		assertEquals(dao.getLastWordId(),8);
+		assertEquals(dao.getLastWordId(),33);
 		
 		}
+	
+	@AfterClass
+	 public static void tearDownClass() throws Exception {
+		dao.deleteUser("a11");
+		dao.deleteSoup(22);
+	 }
+
 
 
 		
