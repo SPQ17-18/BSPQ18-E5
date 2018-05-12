@@ -110,7 +110,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		JButton btnCancel = new JButton("Cancel");
 		btnSelect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuWindow mw = new MenuWindow(arg,nameS,us);
+				MenuWindow mw = new MenuWindow(arg,nameS,us,null);
 				mw.setVisible(true);
 			}
 		});

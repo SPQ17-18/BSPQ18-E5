@@ -48,12 +48,13 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JLabel lblWelcome;
 	private JPanel panel;
 	private static String [] ar= new String[3];
-	private JButton btnExamMode;
+	private JButton btnExamMode, btnSendEmail;
 	InsertNewSoup in;
 	PointsWindow pw;
 	private String us=null;
 	private String [] arg=null;
 	private String nameS=null;
+	private String rol=null;
 	
 //	/**
 //	 * Launch the application.
@@ -76,9 +77,10 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(final String[] args,String nameSoup,String user) {
+	public MenuWindow(final String[] args,String nameSoup,String user,String rol) {
 		this.arg=args;
 		this.us=user;
+		this.rol=rol;
 		this.nameS=nameSoup;
 		System.out.println("menu window");
 		setResizable(false);
@@ -191,9 +193,11 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnInsertNewSoup.setBounds(59, 173, 131, 29);
 		panel.add(btnInsertNewSoup);
 		
-		JButton btnSendEmail = new JButton("Send email");
+		btnSendEmail = new JButton("Send email");
 		btnSendEmail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				EmailWindow ew = new EmailWindow();
+				ew.setVisible(true);
 				
 //				ar[0]= "127.0.0.1";
 //				ar[1]= "1099";
@@ -212,7 +216,7 @@ public class MenuWindow extends JFrame implements Runnable {
 				
 			}
 		});
-		btnSendEmail.setBounds(59, 224, 131, 29);
+		btnSendEmail.setBounds(59, 268, 131, 29);
 		panel.add(btnSendEmail);
 		
 		btnExamMode = new JButton("Exam mode");
@@ -224,10 +228,10 @@ public class MenuWindow extends JFrame implements Runnable {
 				
 			}
 		});
-		btnExamMode.setBounds(59, 275, 131, 29);
+		btnExamMode.setBounds(59, 216, 131, 29);
 		panel.add(btnExamMode);
 	
-	System.out.println("menu window terminada");
+		setEmailButton();
 		
 	}	
 	
@@ -298,5 +302,13 @@ public class MenuWindow extends JFrame implements Runnable {
 	            } catch (InterruptedException e) {
 	            }
 	        }
+	}
+	
+	public void setEmailButton() {
+		if(rol=="Student") {
+			btnSendEmail.setVisible(false);
+		}else if(rol.equals(null)) {
+			//Nothing happens
+		}
 	}
 }

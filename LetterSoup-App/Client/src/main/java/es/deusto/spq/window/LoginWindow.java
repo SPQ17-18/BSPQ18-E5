@@ -52,6 +52,7 @@ public class LoginWindow extends JFrame implements Runnable {
 	Thread t1;
 	private JButton btnGo;
 	private String[] args=null;
+	private String rol;
 	
 	MenuWindow mw;
 
@@ -197,6 +198,7 @@ public class LoginWindow extends JFrame implements Runnable {
 			}
 		});
 		comboBoxRoles.setModel(new DefaultComboBoxModel(new String[] {"", "Student", "Teacher", "Parent"}));
+		
 		comboBoxRoles.setFont(new Font("Avenir", Font.PLAIN, 16));
 		panelRoles.add(comboBoxRoles);
 		
@@ -271,13 +273,12 @@ public class LoginWindow extends JFrame implements Runnable {
 				if(controller.getController().login(textFieldUsername.getText(), passwordField.getText())==true) {
 					JOptionPane.showMessageDialog(null,"You have logged in" ,"log", JOptionPane.INFORMATION_MESSAGE);
 					System.out.println("logged");
-					
-					mw = new MenuWindow(args, null, textFieldUsername.getText());
+					rol=(String) comboBoxRoles.getSelectedItem();
+					mw = new MenuWindow(args, null, textFieldUsername.getText(),rol);
 					mw.setUser(textFieldUsername.getText());
 					mw.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
-					System.out.println("log in failed");
 				}
 				
 //github.com/SPQ17-18/BSPQ18-E5.git
