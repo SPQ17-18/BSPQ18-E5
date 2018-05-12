@@ -132,13 +132,13 @@ private static final long serialVersionUID = 1L;
 		int n=dao.getAllUser().size();
 		//IManagerDAO dao2=new ManagerDAO();
 		
-		if(n==0) {
+
 			
 		Record record=new Record(dao.getLastRecordId(), new Date(System.currentTimeMillis()), score , u);
 		u.addRecord(record);
 		//dao.storeScore(record);
 		dao.storeUser(u);
-		}
+		
 		System.out.println("salgo");
 		return score;
 	}

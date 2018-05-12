@@ -91,13 +91,15 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 			tx.begin();			
 			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName()+ " WHERE User=='"+user+"'");
 			List <User> result = (List<User>) q.execute();
-			User us=result.get(0);
-			for(int i=0;i<us.getScore().size();i++) {
-				records.add(new Record(us.getScore().get(i).getRecord_id(),us.getScore().get(i).getDate(), us.getScore().get(i).getRecord(), us.getScore().get(i).getUser()));
-				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord_id()));
-				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getDate()));
-				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getRecord()));
-				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+us.getScore().get(i).getUser().getUser()));
+			System.out.println(result.size());
+			User us=new User(result.get(0).getUser(),result.get(0).getPassword(),result.get(0).getRol(),result.get(0).getEmail());
+			
+			for(int i=0;i<result.get(0).getScore().size();i++) {
+				records.add(new Record(result.get(0).getScore().get(i).getRecord_id(),result.get(0).getScore().get(i).getDate(), result.get(0).getScore().get(i).getRecord(), us));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+result.get(0).getScore().get(i).getRecord_id()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+result.get(0).getScore().get(i).getDate()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+result.get(0).getScore().get(i).getRecord()));
+				logger.addAppender(new ConsoleAppender(new PatternLayout(),""+result.get(0).getScore().get(i).getUser().getUser()));
 		    	
 				}
 			
@@ -211,14 +213,24 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 		User us=null;
 		
 		pm.getFetchPlan().setMaxFetchDepth(3);
+
+		List <User> results=new ArrayList<User>();
 		List <User> result=null;
+		
 		try {
 			tx.begin();			
 			Query<?> q = pm.newQuery("SELECT FROM " + User.class.getName());
 			result = (List<User>) q.execute();
 			logger.addAppender(new ConsoleAppender(new PatternLayout(),"All  retrieved."));
-	    	
-			
+			for(int j=0;j<result.size();j++) {
+			us=new User(result.get(0).getUser(),result.get(0).getPassword(),result.get(0).getRol(),result.get(0).getEmail());
+			ArrayList<Record> arr=new ArrayList<Record>();
+			for(int i=0;i<result.get(0).getScore().size();i++) {
+				Record r=new Record(result.get(0).getScore().get(i).getRecord_id(),result.get(0).getScore().get(i).getDate(),result.get(0).getScore().get(i).getRecord(),us);
+				us.addRecord(r);
+			}
+			results.add(us);
+			}
 			
 			tx.commit();			
 		} catch (Exception ex) {
@@ -256,7 +268,6 @@ private final static Logger logger = Logger.getLogger(ManagerDAO.class.getName()
 				arrid.add(result.get(i).getSoup_id());
 				
 			}
-			
 			
 			tx.commit();	
 		} catch (Exception ex) {
@@ -647,89 +658,7 @@ public List<String> soupList() {
 		System.out.println("Is correct");
 		System.out.println(dao.isCorrect("a1#aebc"));
 		
-		
+	}
 		
 	}
 		
-			
-////public Soup getSoup(String Soupid) {
-////	PersistenceManager pm = pmf.getPersistenceManager();
-////
-////	Transaction tx = pm.currentTransaction();
-////	
-////	pm.getFetchPlan().setMaxFetchDepth(4);
-////	
-////	Soup result=null;
-////
-////	try {
-////		tx.begin();			
-////		Query<?> q = pm.newQuery("SELECT FROM " + Soup.class+" WHERE nombre== "+Soupid);
-////		 result = ((Soup) q.execute());
-////		
-////		
-////		
-////		tx.commit();	
-////	} catch (Exception ex) {
-////    	System.out.println("   $ Error retrieving some soups: " + ex.getMessage());
-////    } finally {
-////    	if (tx != null && tx.isActive()) {
-////    		tx.rollback();
-////    	}
-////		pm.close(); 
-////    }
-////    				
-////	return result;
-////
-////	
-//}
-//	
-
-	
-//	public static void main(String[] args) {
-//	
-//		IManagerDAO dao= new ManagerDAO();
-//				
-//		if (System.getSecurityManager() == null) {
-//			System.setSecurityManager(new SecurityManager());
-//		}
-//		Soup s=new Soup(1, 13,"s1");
-//		Soup s1=new Soup(2, 13,"s2");
-//		Word a= new Word(1, 'V', "YES", 1, 3, s);
-//		Word b= new Word(2, 'H', "NO", 2, 1, s);
-//		s.setAword(a);
-//		s.setAword(b);
-//		s.initialize();
-//		dao.storeSoup(s);
-//		Word c= new Word(3, 'V', "PAST", 3, 5, s1);
-//		Word d= new Word(4, 'V', "NEW", 5,5, s1);
-//		Word e=new Word(5,'H',"OPEN",2,5,s1);
-//		s1.setAword(c);
-//		s1.setAword(d);
-//		s1.setAword(e);
-//		s1.initialize();
-//		dao.storeSoup(s1);		
-//		//dao.deleteSoup(s1.getSoup_id());		
-//		//dao.deleteSoup(s.getSoup_id());
-//		System.out.println("La cantidad de sopas de letras es:\n");
-//		System.out.println(dao.getNumSoup().size());
-//		System.out.println("El contenido de la sopa s es:\n");
-//		System.out.println(dao.getSoup(s.getSoup_id()));
-//		User u=new User("a1", "abc", 'S',"a1@gmail.com");
-//		Date date=new Date();
-//		Record r1=new Record(1,date, 5,u);
-//		u.addRecord(r1);
-//		System.out.println("Store user");
-//		dao.storeUser(u);
-//		System.out.println("Get records");
-//		dao.getRecords(u);
-//		System.out.println("Is correct");
-//		System.out.println(dao.isCorrect("a1#abc"));
-//		System.out.println("Is correct");
-//		System.out.println(dao.isCorrect("a1#aebc"));
-//		
-//		
-//		
-//	}
-
-	
-	}

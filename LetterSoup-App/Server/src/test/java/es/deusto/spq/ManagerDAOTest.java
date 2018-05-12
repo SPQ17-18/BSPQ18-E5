@@ -1,4 +1,4 @@
-package es.deusto.spqServer.dao;
+package es.deusto.spq;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +13,8 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-
+import es.deusto.spqServer.dao.IManagerDAO;
+import es.deusto.spqServer.dao.ManagerDAO;
 import es.deusto.spqServer.data.Record;
 import es.deusto.spqServer.data.Soup;
 import es.deusto.spqServer.data.User;
@@ -53,8 +54,8 @@ public class ManagerDAOTest{
 		s1.initialize();
 		u3=new User("a11", "abc", 'S',"a1@gmail.com");
 		u4=new User("a21", "abc", 'S',"a2@gmail.com");
-		a= new Word(6, 'V', "YES", 1, 3, s1);
-		b= new Word(7, 'H', "NO", 2, 1, s1);
+		a= new Word(-2, 'V', "YES", 1, 3, s1);
+		b= new Word(-3, 'H', "NO", 2, 1, s1);
 		Date date=new Date();
 		Record r1=new Record(3,date, 5,u4);
 		Record r2=new Record(4,date, 5,u3);
