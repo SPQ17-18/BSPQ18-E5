@@ -24,7 +24,11 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextPane;
-
+/**
+ * Shows the points scored.
+ * @author SPQ-E5
+ *
+ */
 public class PointsWindow extends JFrame {
 
 	private JPanel contentPane, panelE, panelW, PanelN, panelS;
@@ -65,7 +69,6 @@ public class PointsWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public PointsWindow(String [] args) {
-		System.out.println("Getting records...");
 		this.args=args;
 			
 		
@@ -144,8 +147,10 @@ public class PointsWindow extends JFrame {
 
 
 	}
+	/**
+	 * Getting the user
+	 */
 	public void getUser() throws RemoteException {
-		System.out.println("get user");
 		score=controller.getController().getScore(user);
 		a=new String[score.getArrayDate().size()];
 		b=new String[score.getArrayrecord().size()];

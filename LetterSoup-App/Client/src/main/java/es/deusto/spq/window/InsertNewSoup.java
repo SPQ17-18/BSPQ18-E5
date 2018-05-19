@@ -45,7 +45,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-
+/**
+ * This window is for inserting new soups and storing them in the DB
+ * @author SPQ-E5
+ *
+ */
 public class InsertNewSoup extends JFrame {
 
 	private JPanel contentPane, panelN, panelS, panelE;
@@ -104,8 +108,10 @@ public class InsertNewSoup extends JFrame {
 		panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
-		//mw = new MenuWindow(args);
 		
+		/**
+		 * Close the window
+		 */
 		btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -116,7 +122,10 @@ public class InsertNewSoup extends JFrame {
 		panelS.add(btnReturn);
 		
 		btnSave = new JButton("Save");
-
+		
+		/**
+		 * Stores the soup in the DB
+		 */
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SoupDTO s=new SoupDTO(words,posx,posy,posicion,Integer.parseInt(textFieldRows.getText()),"s12");
@@ -126,7 +135,6 @@ public class InsertNewSoup extends JFrame {
 			}
 		});
 		panelS.add(btnSave);
-		//Función para meter tantos botones como tamaño asignemos
 		
 		panelE = new JPanel();
 		panelE.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -153,6 +161,9 @@ public class InsertNewSoup extends JFrame {
 		panelE1.add(panelCreate);
 		panelCreate.setLayout(null);
 		
+		/**
+		 * Function for creating the soup
+		 */
 		JButton btnCreate = new JButton("Create");
 		btnCreate.addMouseListener(new MouseAdapter() {
 			@Override
@@ -160,7 +171,6 @@ public class InsertNewSoup extends JFrame {
 				textFieldRows.setEditable(false);
 				String text =textFieldRows.getText();
 				int num = Integer.parseInt(text);
-				//CREATE TABLE CON NUMBERO TODO
 				deletePanel();
 				panelC.setLayout(new GridLayout(num, num, 0, 0));
 				insertCasillas(num);
@@ -214,6 +224,9 @@ public class InsertNewSoup extends JFrame {
 		panelBlanck2 = new JPanel();
 		panelE1.add(panelBlanck2);
 		
+		/**
+		 * Storing words in the Data Base
+		 */
 		JButton btnConfirm = new JButton("Confirm");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -222,7 +235,6 @@ public class InsertNewSoup extends JFrame {
 				int num = Integer.parseInt(text);
 				
 				if(checkPos(num)==true) {
-					//TODO WE STORE THE WORD IN THE BD
 					String hv = (String) comboBoxVH.getSelectedItem();
 					char selection;
 					if(hv=="Vertical") {
@@ -230,9 +242,6 @@ public class InsertNewSoup extends JFrame {
 					}else {
 						selection='h';
 					}
-					
-					
-					
 					insertWord(textFieldWord.getText(), Integer.parseInt(textFieldPx.getText())-1,Integer.parseInt(textFieldPy.getText())-1, selection);
 					panelC.repaint();
 					panelC.revalidate();
@@ -275,6 +284,10 @@ public class InsertNewSoup extends JFrame {
 		}
 	}
 	
+	/**
+	 * Method for inserting shells
+	 * @param size
+	 */
 	public void insertCasillas(int size) {
 		
 		
@@ -291,7 +304,13 @@ public class InsertNewSoup extends JFrame {
 		
 	}
 	
-	
+	/**
+	 * Method for inserting words according to the allignment and position
+	 * @param word
+	 * @param positionx
+	 * @param positiony
+	 * @param pos
+	 */
 	public void insertWord(String word,int positionx,int positiony,char pos) {
 		words.add(word);
 		posx.add(positionx);
@@ -309,8 +328,5 @@ public class InsertNewSoup extends JFrame {
 			
 			}
 		}
-
-		
-//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 }

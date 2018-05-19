@@ -13,7 +13,7 @@ import javax.jdo.annotations.PrimaryKey;
 /**
  * 
  * Word class with his attributes, constructors, getters and setters
- *
+ * @autor SPQ-E5
  */
 public class Word {
 	@PrimaryKey

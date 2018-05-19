@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 
  * class for creating Score DTO, with attributes, constructor, getters and setters
- *
+ * @autor SPQ-E5
  */
 public class ScoreDTO implements Serializable{
 	private ArrayList<Date> arrayDate=new ArrayList<Date>();

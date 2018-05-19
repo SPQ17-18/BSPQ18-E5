@@ -16,28 +16,32 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * Window that provides with the window that sends emails from teachers to students
+ * @author SPQ-E5
+ *
+ */
 public class EmailWindow extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_1;
 	private JTextField textMessage;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EmailWindow frame = new EmailWindow();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					EmailWindow frame = new EmailWindow();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
@@ -55,6 +59,9 @@ public class EmailWindow extends JFrame {
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -64,7 +71,9 @@ public class EmailWindow extends JFrame {
 		});
 		btnExit.setFont(new Font("Avenir", Font.PLAIN, 13));
 		panelS.add(btnExit);
-		
+		/**
+		 * Gets the message and the user and retrieves the information to the controller 
+		 */
 		JButton btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

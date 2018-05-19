@@ -12,7 +12,11 @@ import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
 
-
+/**
+ * IFacade
+ * @autor SPQ-E5
+ *
+ */
 public interface IFacade extends Remote {
 	public boolean login(String userpass) throws RemoteException;
 	public boolean IntroduceSoup(SoupDTO dto) throws RemoteException;

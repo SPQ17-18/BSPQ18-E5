@@ -15,7 +15,11 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 
 import es.deusto.spqServer.dao.ManagerDAO;
-//Mail sender class 
+/**
+ * Class for allowing the mail to be sended
+ * @autor SPQ-E5
+ *
+ */
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
 	private final String password = "softwaredesign";

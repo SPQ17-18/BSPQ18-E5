@@ -22,7 +22,7 @@ import es.deusto.spqServer.dto.SoupDTO;
 import es.deusto.spqServer.gateway.MailSender;
 
 /**Class for creating assembler, DAO manager and mail sender and manage them
- * 
+ * @autor SPQ-E5
  *
  */
 public class LetterSoupManager extends UnicastRemoteObject implements IFacade {

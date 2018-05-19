@@ -35,7 +35,11 @@ import java.util.GregorianCalendar;
 import java.awt.Component;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * The window that allows all users to log in, taking into account their role.
+ * @author SPQ-E5
+ *
+ */
 public class LoginWindow extends JFrame implements Runnable {
 
 	private JPanel contentPane,panelNorth, panelSouth, panelEast, panelWest, panelSCenter, panelSRight, panelRoles, panelUsername, panelPassword, panelButtons;
@@ -118,6 +122,9 @@ public class LoginWindow extends JFrame implements Runnable {
 		contentPane.add(panelSouth, BorderLayout.SOUTH);
 		panelSouth.setLayout(new GridLayout(1, 0, 0, 0));
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnExit = new JButton("Exit");
 		btnExit.addMouseListener(new MouseAdapter() {
 			@Override
@@ -140,6 +147,9 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelSouth.add(panelSRight);
 		panelSRight.setLayout(null);
 		
+		/**
+		 * Provides an explanation on how to log in.
+		 */
 		buttonQ = new JButton("?");
 		buttonQ.addMouseListener(new MouseAdapter() {
 			@Override
@@ -150,17 +160,6 @@ public class LoginWindow extends JFrame implements Runnable {
 		buttonQ.setFont(new Font("Avenir", Font.PLAIN, 13));
 		buttonQ.setBounds(200, 0, 46, 29);
 		panelSRight.add(buttonQ);
-		
-		btnGo = new JButton("Go!");
-		
-		btnGo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				mw.setVisible(true);
-				//lw.dispose();
-			}
-		});
-		btnGo.setBounds(6, -1, 46, 29);
-		panelSRight.add(btnGo);
 		
 		panelWest = new JPanel();
 		contentPane.add(panelWest, BorderLayout.WEST);
@@ -241,6 +240,9 @@ public class LoginWindow extends JFrame implements Runnable {
 		panelButtons.setVisible(false);
 		panelEast.add(panelButtons);
 		
+		/**
+		 * Deletes all the fields
+		 */
 		JButton button_1 = new JButton("Delete");
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
@@ -280,8 +282,6 @@ public class LoginWindow extends JFrame implements Runnable {
 				}else {
 					JOptionPane.showMessageDialog(null,"The usser or the password is incorrect" ,"log error", JOptionPane.ERROR_MESSAGE);
 				}
-				
-//github.com/SPQ17-18/BSPQ18-E5.git
 			}
 		});
 		button_2.setFont(new Font("Avenir", Font.PLAIN, 16));

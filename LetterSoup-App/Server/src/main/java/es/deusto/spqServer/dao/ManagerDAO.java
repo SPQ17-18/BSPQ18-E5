@@ -27,7 +27,7 @@ import org.apache.log4j.PropertyConfigurator;
 /**
  * 
  * Class for managing all DAO actions
- *
+ * @autor SPQ-E5
  */
 public class ManagerDAO implements IManagerDAO {
 

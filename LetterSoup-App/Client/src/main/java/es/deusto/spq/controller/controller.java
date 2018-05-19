@@ -26,7 +26,7 @@ import es.deusto.spqServer.dto.SoupDTO;
 /**
  * 
  * Class for creating RMI connection
- *
+ * @autor SPQ-E5
  */
 public class controller {
 	private final static Logger logger = Logger.getLogger(controller.class.getName());

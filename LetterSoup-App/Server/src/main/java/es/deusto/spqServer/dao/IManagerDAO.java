@@ -12,7 +12,7 @@ import es.deusto.spqServer.data.Word;
 /**
  * 
  * Data access object interface 
- *
+ * @autor SPQ-E5
  */
 public interface IManagerDAO {
 	public void storeSoup(Soup soup);

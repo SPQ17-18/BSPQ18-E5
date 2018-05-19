@@ -19,7 +19,11 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * This window allows to register if the user is not already inside.
+ * @author SPQ-E5
+ *
+ */
 public class Register extends JFrame {
 
 	private JPanel contentPane;
@@ -68,6 +72,9 @@ public class Register extends JFrame {
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnCancel = new JButton("Cancel");
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -76,6 +83,9 @@ public class Register extends JFrame {
 		});
 		panelS.add(btnCancel);
 		
+		/**
+		 * Erases everything
+		 */
 		JButton btnDeleteAll = new JButton("Delete All");
 		btnDeleteAll.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -84,6 +94,9 @@ public class Register extends JFrame {
 		});
 		panelS.add(btnDeleteAll);
 		
+		/**
+		 * Registers the new user
+		 */
 		JButton btnRegister = new JButton("Register");
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

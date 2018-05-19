@@ -14,7 +14,7 @@ import javax.jdo.annotations.PrimaryKey;
 /**
  * 
  * Record class with his attributes, constructors, getters and setters
- *
+ * @autor SPQ-E5
  */
 public class Record {
 	@PrimaryKey

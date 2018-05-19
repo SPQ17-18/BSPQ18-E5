@@ -34,7 +34,11 @@ import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * Window for solving the soup
+ * @author SPQ-E5
+ *
+ */
 public class SolveSoup extends JFrame implements Runnable{
 
 	private JPanel contentPane, panelWest;
@@ -153,13 +157,18 @@ public class SolveSoup extends JFrame implements Runnable{
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		/**
+		 * Method for inserting the word 
+		 */
 		badd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
 				insertWord(textFieldWord.getText(),Integer.parseInt(textFieldPx.getText()),Integer.parseInt(textFieldPy.getText()),(Character) comboBoxVH.getSelectedItem());
 			}
 		});
 		
-		
+		/**
+		 * Close the window
+		 */
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
@@ -168,6 +177,9 @@ public class SolveSoup extends JFrame implements Runnable{
 		});
 		panelS.add(btnReturn);
 		
+		/**
+		 * When this button is clicked the game is finished. An overview pane is displayed.
+		 */
 		JButton btnFinish = new JButton("Finish");
 		btnFinish.addMouseListener(new MouseAdapter() {
 			@Override
@@ -230,7 +242,9 @@ public class SolveSoup extends JFrame implements Runnable{
 	}
 	
 	
-	
+	/**
+	 * Insert new shells
+	 */
 	public void insertCasillas() {
 		System.out.println("entro");
 		int size=sopa.getSize();
@@ -245,6 +259,9 @@ public class SolveSoup extends JFrame implements Runnable{
 		}
 	}
 	
+	/**
+	 * Insert new words
+	 */
 	public void insertWord(String word,int positionx,int positiony,char pos) {
 		words.add(word);
 		posx.add(positionx);
@@ -262,16 +279,15 @@ public class SolveSoup extends JFrame implements Runnable{
 			}
 		}
 
-
-		
-//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 	
 	public void actionPerformed() {
 		setVisible(false);
 	}
 	
-	
+	/**
+	 * Clock functionality
+	 */
 	 public void Clock() {
 	        t1 = new Thread(this);
 	        t1.start();

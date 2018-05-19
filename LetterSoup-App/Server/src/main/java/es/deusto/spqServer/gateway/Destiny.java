@@ -2,7 +2,7 @@ package es.deusto.spqServer.gateway;
 /**
  * 
  * class for setting destination address with attributes, constructor, getters and setters
- *
+ * @autor SPQ-E5
  */
 public class Destiny {
 
