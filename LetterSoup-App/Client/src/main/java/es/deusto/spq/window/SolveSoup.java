@@ -40,7 +40,7 @@ import java.awt.event.ActionEvent;
  *
  */
 public class SolveSoup extends JFrame implements Runnable{
-
+//Solve soup
 	private JPanel contentPane, panelWest;
 	private JTextField txtLetsPlay;
 	private JButton [][] casillas;
