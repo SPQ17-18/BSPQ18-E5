@@ -1,0 +1,27 @@
+var classes_1_1deusto_1_1spq_server_1_1data_1_1_soup =
+[
+    [ "Soup", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a813c9b198d8b2d094b0d88c98ba11e45", null ],
+    [ "Soup", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ae8b95f92fddfd80327b2201625a006ce", null ],
+    [ "calculatePuntuation", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a2c008b2caaca88e1707dec1640141b94", null ],
+    [ "calculateScore", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#aa06d35d9974412f21194428fb139b264", null ],
+    [ "fulfill", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ab3a59676b96045cdcbd9ee3d9756851d", null ],
+    [ "generateValue", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a926a285adffc1a785575f2b9ca987745", null ],
+    [ "getArrayContent", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a88b551ae2a51c3f698879941f6597406", null ],
+    [ "getContent", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ad29c715d3fa7f9e8ca14024b76f5b386", null ],
+    [ "getLevel", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ac3f036bb971fdb7e97263a290a32dd9e", null ],
+    [ "getNombre", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#aa2ad083f7ed9f8d1609d082af1d8d140", null ],
+    [ "getSize", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#afcd2b7e313aaf2fe4de2a12459b8a53d", null ],
+    [ "getSoup_id", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a2f4dede0e13f62f3baf16424eeaed02b", null ],
+    [ "getWords", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#aedd93c05a18594d0cf5f9135432aa6cd", null ],
+    [ "initialize", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a62d7eb72315d836c3c4476bfaf4f2a70", null ],
+    [ "insertWords", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a701cb75c77ceb120f1e38998d3e242dd", null ],
+    [ "ScoreDTO", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a9930277dcb7c8dfd9082d1d054355f3a", null ],
+    [ "setAword", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#afd30f2dc1ca78684a646e0cfe26f81ef", null ],
+    [ "setContent", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a9e9f8bc23f87d9a635113aef881b9d52", null ],
+    [ "setNombre", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a964acc3a80469ef6351f49dfcbf1c6b3", null ],
+    [ "setSize", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a37d24b544cfcda1b7672371e3968d587", null ],
+    [ "setSoup_id", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ac9d453cef9e5c03434749b4bb7f2c644", null ],
+    [ "setWords", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a32b08ec7d7738b5da4ee690cb9f505ba", null ],
+    [ "toString", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a95f3ea2e02dbdcd413d80ff7632c2c7f", null ],
+    [ "toStringArrayContent", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#a32aef2b00758831ac93ab54bdc1876c1", null ]
+];
