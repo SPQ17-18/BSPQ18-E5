@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import es.deusto.spqServer.data.Record;
@@ -17,7 +21,12 @@ import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.ScoreDTO;
 import es.deusto.spqServer.dto.SoupDTO;
 
+@PerfTest(invocations=5)
+@Required(max=1200,average=250)
+
 public class AssemblerTest {
+	@Rule
+	public ContiPerfRule i=new ContiPerfRule();
 	 Record record;
 	 Soup soup;
 	 User user;
@@ -28,7 +37,7 @@ public class AssemblerTest {
 	 List<Word> words;
 	 
 	@Before public void setUp() {
-		words=new ArrayList();
+		words=new ArrayList<Word>();
 		user=new User("a1","abc", 'S', "a1@gmail.com");
 		record= new Record(1, new Date(), 1, user);
 		soup=new Soup(1,"s12","NYNY",2,words);
@@ -72,12 +81,12 @@ public class AssemblerTest {
 		arrRecord.add(-2);
 		
 		Record s=new Record(0, new Date(),-2, user);
-		ArrayList<Record> arrrecord= new ArrayList(); 
+		ArrayList<Record> arrrecord= new ArrayList<Record>(); 
 		arrrecord.add(s);
 		
 		ScoreDTO sdto= new ScoreDTO(arrDate,arrRecord);
 		
-			assertEquals(assembler.assemble(arrrecord).getArrayDate().get(0),sdto.getArrayDate().get(0));
+			assertEquals(assembler.assemble(arrrecord).getArrayDate().get(0).getTime(),sdto.getArrayDate().get(0).getTime());
 			assertEquals(assembler.assemble(arrrecord).getArrayrecord().get(0),sdto.getArrayrecord().get(0));
 	}
 

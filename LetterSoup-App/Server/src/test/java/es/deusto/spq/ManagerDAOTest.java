@@ -24,9 +24,13 @@ import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.PropertyConfigurator;
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 
 
@@ -36,8 +40,13 @@ import org.junit.Test;
  * Class for managing all DAO actions
  *
  */
-public class ManagerDAOTest{
+@PerfTest(invocations=5)
+@Required(max=1200,average=250)
 
+public class ManagerDAOTest{
+	@Rule
+	public ContiPerfRule i=new ContiPerfRule();
+	
 	
 	private static Soup s1;
 	private static User u4;

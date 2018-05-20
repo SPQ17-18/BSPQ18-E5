@@ -37,7 +37,7 @@
     <dependency>
   		 <groupId>junit</groupId>
  		 <artifactId>junit</artifactId>
-  		 <version>4.12</version>
+  		 <version>4.10</version>
  		 <scope>test</scope>
 	</dependency>
 	<dependency>
@@ -71,6 +71,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.41</version>
         </dependency>
+		<dependency>
+			<groupId>org.databene</groupId>
+			<artifactId>contiperf</artifactId>
+			<version>2.3.4</version>
+			<scope>test</scope>
+		</dependency>
 		
   </dependencies>
   <build>
@@ -94,6 +100,13 @@
 						<format>xml</format>
 					</formats>
 				</configuration>
+				 <dependencies>
+                <dependency>
+                    <groupId>org.ow2.asm</groupId>
+                    <artifactId>asm</artifactId>
+                    <version>5.0.3</version>
+                </dependency>
+            </dependencies>
 			</plugin>
             <plugin>
                <groupId>org.datanucleus</groupId>

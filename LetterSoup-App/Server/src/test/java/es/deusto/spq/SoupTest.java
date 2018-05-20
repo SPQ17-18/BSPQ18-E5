@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import es.deusto.spqServer.data.Record;
@@ -16,7 +20,13 @@ import es.deusto.spqServer.data.Word;
 import es.deusto.spqServer.dto.Assembler;
 import es.deusto.spqServer.dto.SoupDTO;
 
+@PerfTest(invocations=5)
+@Required(max=1200,average=250)
+
 public class SoupTest {
+	@Rule
+	public ContiPerfRule i=new ContiPerfRule();
+	
 	 Record record;
 	 Soup soup;
 	 User user;
@@ -26,7 +36,7 @@ public class SoupTest {
 	 String[] args= {"127.0.0.1","1099","LetterSoupServer"};
 	 List<Word> words;
 	@Before public void setUp() {
-		words=new ArrayList();
+		words=new ArrayList<Word>();
 		user=new User("a1","abc", 'S', "a1@gmail.com");
 		record= new Record(1, new Date(), 1, user);
 		soup=new Soup(1,"Ny","NYNY",2,words);
@@ -58,7 +68,7 @@ public class SoupTest {
 	
 	}
 	@Test public void calculatePuntuation() {
-		ArrayList<String> arrWord = new ArrayList();;
+		ArrayList<String> arrWord = new ArrayList<String>();
 		arrWord.add("Ny");
 		assertEquals(soup.calculatePuntuation(arrWord),5);
 	}
