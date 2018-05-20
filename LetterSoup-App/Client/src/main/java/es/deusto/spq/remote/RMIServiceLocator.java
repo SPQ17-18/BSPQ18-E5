@@ -9,6 +9,7 @@ import es.deusto.spqServer.remote.IFacade;
 /**
  * 
  * Class for for setting the service locator
+ * @autor SPQ-E5
  *
  */
 public class RMIServiceLocator {

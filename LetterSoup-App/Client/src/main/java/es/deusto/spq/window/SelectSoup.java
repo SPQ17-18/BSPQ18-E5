@@ -1,6 +1,7 @@
 package es.deusto.spq.window;
 
 import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -21,10 +22,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class SelectSoup extends JFrame implements Runnable{
 /**
- * Window that shows all soups and allow user to select one of them. 
+ * Window that shows all soups and allow user to select one of them.
+ * @autor SPQ-E5 
  */
+public class SelectSoup extends JFrame implements Runnable{
+
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel panel;
@@ -107,10 +110,13 @@ public class SelectSoup extends JFrame implements Runnable{
 		btnSelect.setBounds(278, 26, 146, 23);
 		contentPane.add(btnSelect);
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnCancel = new JButton("Cancel");
 		btnSelect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuWindow mw = new MenuWindow(arg,nameS,us);
+				MenuWindow mw = new MenuWindow(arg,nameS,us,null);
 				mw.setVisible(true);
 			}
 		});
@@ -119,7 +125,6 @@ public class SelectSoup extends JFrame implements Runnable{
 	}
 
 	public void run() {
-		// TODO Auto-generated method stub
 		
 	}
 	

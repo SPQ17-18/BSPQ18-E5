@@ -15774,6 +15774,7 @@ java.security.AccessControlException: access denied ("java.lang.RuntimePermissio
 12-05-18_11:39:04 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Word
 12-05-18_11:39:04 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=705 ms, enhance=235 ms, total=940 ms. Compruebe el LOG para los detalles
 12-05-18_11:39:19 (main) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.autoCreateAll desconocida - vamos a ignorarla
+<<<<<<< HEAD
 12-05-18_12:56:02 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.9) para el API "JDO" utilisando el JRE "{2}"
 12-05-18_12:56:03 (main) INFO  [DataNucleus.Enhancer] - La clase "es.deusto.spqServer.data.Record" esta enhanced.
 12-05-18_12:56:03 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : es.deusto.spqServer.data.Record

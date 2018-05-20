@@ -15,7 +15,7 @@ import es.deusto.spqServer.remote.LetterSoupManager;
 /**
  * 
  * Server
- *
+ * @autor SPQ-E5
  */
 
 public class LetterSoupServer {

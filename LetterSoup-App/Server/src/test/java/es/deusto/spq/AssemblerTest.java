@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package es.deusto.spq;
 
 import static org.junit.Assert.*;

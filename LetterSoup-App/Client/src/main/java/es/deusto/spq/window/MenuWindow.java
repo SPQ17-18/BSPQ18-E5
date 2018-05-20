@@ -34,7 +34,11 @@ import java.util.GregorianCalendar;
 import java.awt.Component;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * The menu window displays all the options available for the user.
+ * @author SPQ-E5
+ *
+ */
 public class MenuWindow extends JFrame implements Runnable {
 
 	private JPanel contentPane,panelNorth, panelSouth, panelSCenter, panelSRight;
@@ -48,12 +52,13 @@ public class MenuWindow extends JFrame implements Runnable {
 	private JLabel lblWelcome;
 	private JPanel panel;
 	private static String [] ar= new String[3];
-	private JButton btnExamMode;
+	private JButton btnExamMode, btnSendEmail;
 	InsertNewSoup in;
 	PointsWindow pw;
 	private String us=null;
 	private String [] arg=null;
 	private String nameS=null;
+	private String rol=null;
 	
 //	/**
 //	 * Launch the application.
@@ -76,9 +81,10 @@ public class MenuWindow extends JFrame implements Runnable {
 	 * Create the frame.
 	 *  
 	 */
-	public MenuWindow(final String[] args,String nameSoup,String user) {
+	public MenuWindow(final String[] args,String nameSoup,String user,String rol) {
 		this.arg=args;
 		this.us=user;
+		this.rol=rol;
 		this.nameS=nameSoup;
 		System.out.println("menu window");
 		setResizable(false);
@@ -107,6 +113,9 @@ public class MenuWindow extends JFrame implements Runnable {
 		contentPane.add(panelSouth, BorderLayout.SOUTH);
 		panelSouth.setLayout(new GridLayout(1, 0, 0, 0));
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnExit = new JButton("Exit");
 		btnExit.addMouseListener(new MouseAdapter() {
 			@Override
@@ -145,13 +154,14 @@ public class MenuWindow extends JFrame implements Runnable {
 		panelCenter.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
+		/**
+		 * Opens the soup menu in order to play.
+		 */
 		JButton btnPlay = new JButton("Play!");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SelectSoup Select = new SelectSoup(arg, nameS, us);
 				Select.setVisible(true);
-//				SolveSoup ss = new SolveSoup(arg,nameS,us);
-//				ss.setVisible(true);
 			}
 		});
 		btnPlay.setFont(new Font("Avenir", Font.PLAIN, 17));
@@ -168,7 +178,6 @@ public class MenuWindow extends JFrame implements Runnable {
 				try {
 					pw.getUser();
 				} catch (RemoteException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				pw.setVisible(true);
@@ -191,30 +200,23 @@ public class MenuWindow extends JFrame implements Runnable {
 		btnInsertNewSoup.setBounds(59, 173, 131, 29);
 		panel.add(btnInsertNewSoup);
 		
-		JButton btnSendEmail = new JButton("Send email");
+		/**
+		 * Opens the send email window
+		 */
+		btnSendEmail = new JButton("Send email");
 		btnSendEmail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-//				ar[0]= "127.0.0.1";
-//				ar[1]= "1099";
-//				ar[2]="LetterSoupServer";
-//				
-//					try {
-//						controller c = new controller(ar);
-//						c.sendMail("We have a 10 :D", "aitor.santa@opendeusto.es");
-//					} catch (RemoteException e1) {
-//						// Auto-generated catch block
-//						e1.printStackTrace();
-//					}
-//			
-//				
-//				
+				EmailWindow ew = new EmailWindow();
+				ew.setVisible(true);			
 				
 			}
 		});
-		btnSendEmail.setBounds(59, 224, 131, 29);
+		btnSendEmail.setBounds(59, 268, 131, 29);
 		panel.add(btnSendEmail);
 		
+		/**
+		 * Opens the exam mode window
+		 */
 		btnExamMode = new JButton("Exam mode");
 		btnExamMode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -224,10 +226,10 @@ public class MenuWindow extends JFrame implements Runnable {
 				
 			}
 		});
-		btnExamMode.setBounds(59, 275, 131, 29);
+		btnExamMode.setBounds(59, 216, 131, 29);
 		panel.add(btnExamMode);
 	
-	System.out.println("menu window terminada");
+		setEmailButton();
 		
 	}	
 	
@@ -298,5 +300,16 @@ public class MenuWindow extends JFrame implements Runnable {
 	            } catch (InterruptedException e) {
 	            }
 	        }
+	}
+	
+	/**
+	 * Enables or disables the send email button, depending on the role (Student or teacher)
+	 */
+	public void setEmailButton() {
+		if(rol=="Student") {
+			btnSendEmail.setVisible(false);
+		}else if(rol.equals(null)) {
+			//Nothing happens
+		}
 	}
 }

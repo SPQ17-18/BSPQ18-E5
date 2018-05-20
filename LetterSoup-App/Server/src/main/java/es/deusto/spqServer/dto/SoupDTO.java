@@ -2,11 +2,12 @@ package es.deusto.spqServer.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
-public class SoupDTO implements Serializable {
 	/**
 	 * class for creating Soup DTO with attributes, constructor, getters and setters
+	 * @autor SPQ-E5
 	 */
+public class SoupDTO implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	private ArrayList<String> arraywords=new ArrayList<String>();
 	private ArrayList<Integer> arrayposx=new ArrayList<Integer>();

@@ -20,7 +20,7 @@ import es.deusto.spqServer.dto.SoupDTO;
 /**
  * 
  * Soup class with his attributes, constructors, getters and setters
- *
+ * @autor SPQ-E5
  */
 public class Soup {
 	private final static Logger logger = Logger.getLogger(Soup.class.getName());

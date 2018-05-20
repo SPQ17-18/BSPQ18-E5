@@ -2,7 +2,7 @@ package es.deusto.spqServer.gateway;
 /**
  * 
  * Factory for gateways
- *
+ * @autor SPQ-E5
  */
 public class GatewayFactory {
 

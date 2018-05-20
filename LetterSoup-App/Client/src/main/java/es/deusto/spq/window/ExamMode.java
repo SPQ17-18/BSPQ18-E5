@@ -28,7 +28,11 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/**
+ * The Soup is solved in an exam mode
+ * @author SPQ-E5
+ *
+ */
 public class ExamMode extends JFrame implements Runnable{
 
 	private JPanel contentPane, panelWest;
@@ -88,6 +92,9 @@ public class ExamMode extends JFrame implements Runnable{
 		JPanel panelS = new JPanel();
 		contentPane.add(panelS, BorderLayout.SOUTH);
 		
+		/**
+		 * Close the window
+		 */
 		JButton btnReturn = new JButton("Return");
 		btnReturn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
@@ -96,6 +103,9 @@ public class ExamMode extends JFrame implements Runnable{
 		});
 		panelS.add(btnReturn);
 		
+		/**
+		 * When the Finish button is pressed the time is recorded and an overview of the game is displayed. The window is closed.
+		 */
 		JButton btnFinish = new JButton("Finish");
 		btnFinish.addMouseListener(new MouseAdapter() {
 			@Override
@@ -152,7 +162,10 @@ public class ExamMode extends JFrame implements Runnable{
 	}
 	
 	
-
+	/**
+	 * Method to insert shells
+	 * @param size
+	 */
 	public void insertCasillas(int size) {
 		casillas=new JButton[size][size];
 		for(int i=0;i<size;i++) {
@@ -165,6 +178,13 @@ public class ExamMode extends JFrame implements Runnable{
 		}
 	}
 	
+	/**
+	 * Method to insert words in the table according to the position and the allignment.
+	 * @param word
+	 * @param positionx
+	 * @param positiony
+	 * @param pos
+	 */
 	public void insertWord(String word,int positionx,int positiony,char pos) {
 		words.add(word);
 		posx.add(positionx);
@@ -182,16 +202,18 @@ public class ExamMode extends JFrame implements Runnable{
 			}
 		}
 
-
-		
-//github.com/SPQ17-18/BSPQ18-E5.git
 	}
 	
+	/**
+	 * Visible = flase
+	 */
 	public void actionPerformed() {
 		setVisible(false);
 	}
 	
-	
+	/**
+	 * Clock functionality. Displays the clock in the window.
+	 */
 	 public void Clock() {
 	        t1 = new Thread(this);
 	        t1.start();
@@ -210,13 +232,11 @@ public class ExamMode extends JFrame implements Runnable{
 								lblNewLabel.setText(min+":"+sec);
 				                Thread.sleep(1000);
 								}
-		            	}
+		            		}
 
 		            } catch (InterruptedException e) {
-		            }
+		            		}
 		        }
 	}
-	 
-	 
-	 
+ 
 }
