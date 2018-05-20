@@ -23,29 +23,23 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "SPQ17-18/BSPQ18-E5", "index.html", [
-    [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
-    ] ],
+  [ "BSPQ18-E5", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ]
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_assembler_8java.html",
-"classes_1_1deusto_1_1spq_server_1_1gateway_1_1_destiny.html#ae0de544979c32f561e906700aabe55a5"
+".html",
+"interfacees_1_1deusto_1_1spq_server_1_1dao_1_1_i_manager_d_a_o.html#a18af53c2d58495e6779b272e300e1aa3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

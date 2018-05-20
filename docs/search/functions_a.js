@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['record',['Record',['../classes_1_1deusto_1_1spq_server_1_1data_1_1_record.html#a8cf4388f00c7cef3a74dfe05fb791ef6',1,'es::deusto::spqServer::data::Record']]],
-  ['register',['Register',['../classes_1_1deusto_1_1spq_1_1window_1_1_register.html#a0fc4d994cf3b9dbc89d85ba3d056e6ea',1,'es.deusto.spq.window.Register.Register()'],['../interfacees_1_1deusto_1_1spq_server_1_1remote_1_1_i_facade.html#aaaa6a4fb750365fe321a8547ca30d993',1,'es.deusto.spqServer.remote.IFacade.register()'],['../classes_1_1deusto_1_1spq_server_1_1remote_1_1_letter_soup_manager.html#a5098d6eed06bf51214adc04084eb9e4f',1,'es.deusto.spqServer.remote.LetterSoupManager.register()']]],
-  ['rmiservicelocator',['RMIServiceLocator',['../classes_1_1deusto_1_1spq_1_1remote_1_1_r_m_i_service_locator.html#a2bebd0f7647de3e5b354709fc1fc05b9',1,'es::deusto::spq::remote::RMIServiceLocator']]],
-  ['run',['run',['../classes_1_1deusto_1_1spq_1_1window_1_1_exam_mode.html#ae43836ecf7b9a5d3a513c0e1dc61beb4',1,'es.deusto.spq.window.ExamMode.run()'],['../classes_1_1deusto_1_1spq_1_1window_1_1_login_window.html#a4055a0c482c502b6b764a6f06051669d',1,'es.deusto.spq.window.LoginWindow.run()'],['../classes_1_1deusto_1_1spq_1_1window_1_1_menu_window.html#a084148237e7f887814d76fca47db8fdb',1,'es.deusto.spq.window.MenuWindow.run()'],['../classes_1_1deusto_1_1spq_1_1window_1_1_select_soup.html#a86e6fe2329ea387d91f006bf60a1798d',1,'es.deusto.spq.window.SelectSoup.run()'],['../classes_1_1deusto_1_1spq_1_1window_1_1_solve_soup.html#a92483381fc883da8e850125514311780',1,'es.deusto.spq.window.SolveSoup.run()']]]
+  ['selectsoup',['SelectSoup',['../classes_1_1deusto_1_1spq_1_1window_1_1_select_soup.html#a10036484dc007dd7e501e5bdda44ee8b',1,'es::deusto::spq::window::SelectSoup']]],
+  ['sendmessage',['sendMessage',['../classes_1_1deusto_1_1ingenieria_1_1sd_1_1sms_1_1server_1_1gateway_1_1_mail_sender.html#af41f055adde9a62f1c52cadee1f82cb9',1,'es::deusto::ingenieria::sd::sms::server::gateway::MailSender']]],
+  ['setemailbutton',['setEmailButton',['../classes_1_1deusto_1_1spq_1_1window_1_1_menu_window.html#ad69d4911f16fa54bef36fc67522298db',1,'es::deusto::spq::window::MenuWindow']]],
+  ['shouldanswerwithtrue',['shouldAnswerWithTrue',['../classes_1_1deusto_1_1ingenieria_1_1sd_1_1sms_1_1server_1_1_app_test.html#a0ab2dea1d70bd471fa83416c0bcb1c5f',1,'es::deusto::ingenieria::sd::sms::server::AppTest']]],
+  ['solvesoup',['SolveSoup',['../classes_1_1deusto_1_1spq_1_1window_1_1_solve_soup.html#a8c6a0ec8535be7047acd5842a1e6e1d0',1,'es::deusto::spq::window::SolveSoup']]],
+  ['souplist',['soupList',['../classes_1_1deusto_1_1spq_1_1controller_1_1controller.html#a7ee0312e8f38b0fb6c18421cc9638190',1,'es::deusto::spq::controller::controller']]]
 ];

@@ -5,6 +5,7 @@ var hierarchy =
     [ "es.deusto.ingenieria.sd.sms.server.App", "classes_1_1deusto_1_1ingenieria_1_1sd_1_1sms_1_1server_1_1_app.html", null ],
     [ "es.deusto.ingenieria.sd.sms.server.AppTest", "classes_1_1deusto_1_1ingenieria_1_1sd_1_1sms_1_1server_1_1_app_test.html", null ],
     [ "es.deusto.spqServer.dto.Assembler", "classes_1_1deusto_1_1spq_server_1_1dto_1_1_assembler.html", null ],
+    [ "es.deusto.spq.AssemblerTest", "classes_1_1deusto_1_1spq_1_1_assembler_test.html", null ],
     [ "es.deusto.spq.controller.controller", "classes_1_1deusto_1_1spq_1_1controller_1_1controller.html", null ],
     [ "es.deusto.spqServer.gateway.Destiny", "classes_1_1deusto_1_1spq_server_1_1gateway_1_1_destiny.html", null ],
     [ "es.deusto.spqServer.gateway.GatewayFactory", "classes_1_1deusto_1_1spq_server_1_1gateway_1_1_gateway_factory.html", null ],
@@ -14,6 +15,7 @@ var hierarchy =
     [ "es.deusto.spqServer.server.LetterSoupServer", "classes_1_1deusto_1_1spq_server_1_1server_1_1_letter_soup_server.html", null ],
     [ "es.deusto.ingenieria.sd.sms.server.gateway.MailSender", "classes_1_1deusto_1_1ingenieria_1_1sd_1_1sms_1_1server_1_1gateway_1_1_mail_sender.html", null ],
     [ "es.deusto.spqServer.gateway.MailSender", "classes_1_1deusto_1_1spq_server_1_1gateway_1_1_mail_sender.html", null ],
+    [ "es.deusto.spq.ManagerDAOTest", "classes_1_1deusto_1_1spq_1_1_manager_d_a_o_test.html", null ],
     [ "es.deusto.spqServer.data.Record", "classes_1_1deusto_1_1spq_server_1_1data_1_1_record.html", null ],
     [ "es.deusto.spq.remote.RMIServiceLocator", "classes_1_1deusto_1_1spq_1_1remote_1_1_r_m_i_service_locator.html", null ],
     [ "Runnable", null, [
@@ -24,6 +26,7 @@ var hierarchy =
       [ "es.deusto.spq.window.SolveSoup", "classes_1_1deusto_1_1spq_1_1window_1_1_solve_soup.html", null ]
     ] ],
     [ "es.deusto.spqServer.data.Soup", "classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html", null ],
+    [ "es.deusto.spq.SoupTest", "classes_1_1deusto_1_1spq_1_1_soup_test.html", null ],
     [ "es.deusto.spqServer.data.User", "classes_1_1deusto_1_1spq_server_1_1data_1_1_user.html", null ],
     [ "es.deusto.spqServer.data.Word", "classes_1_1deusto_1_1spq_server_1_1data_1_1_word.html", null ],
     [ "JFrame", null, [

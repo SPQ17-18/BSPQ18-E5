@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fulfill',['fulfill',['../classes_1_1deusto_1_1spq_server_1_1data_1_1_soup.html#ab3a59676b96045cdcbd9ee3d9756851d',1,'es::deusto::spqServer::data::Soup']]]
+  ['getscore',['getScore',['../classes_1_1deusto_1_1spq_1_1controller_1_1controller.html#a88e19ab49595586f7c74a7435a746158',1,'es::deusto::spq::controller::controller']]],
+  ['getuser',['getUser',['../classes_1_1deusto_1_1spq_1_1window_1_1_points_window.html#aa3476fb49c791155bd1083b16249dae1',1,'es::deusto::spq::window::PointsWindow']]]
 ];
