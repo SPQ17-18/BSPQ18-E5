@@ -1,9 +1,0 @@
-    ```yml
-    theme: jekyll-theme-tactile
-    title: LetterSoupApp
-    description: you wull have fun with online letter soups !!!
-    ```
-    
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
