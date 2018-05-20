@@ -13,6 +13,7 @@ import es.deusto.spqServer.remote.IFacade;
  */
 public class RMIServiceLocator {
 	private IFacade facade;
+	
 	private final static Logger logger = Logger.getLogger(controller.class.getName());
 	
 
