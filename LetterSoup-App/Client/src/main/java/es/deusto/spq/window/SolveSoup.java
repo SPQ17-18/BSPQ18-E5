@@ -207,6 +207,7 @@ public class SolveSoup extends JFrame implements Runnable{
 				
 				JOptionPane.showMessageDialog(null, "This is the overview of the game:\n- Time played: "+time+" \n- Total correct words: "+(score/5)+" \n- Total points: "+score, "Information summary", JOptionPane.INFORMATION_MESSAGE);
 				dispose();
+				System.out.println(words.get(0));
 			}
 		});
 		

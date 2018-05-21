@@ -114,7 +114,7 @@ public class SelectSoup extends JFrame implements Runnable{
 		 * Close the window
 		 */
 		JButton btnCancel = new JButton("Cancel");
-		btnSelect.addActionListener(new ActionListener() {
+		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MenuWindow mw = new MenuWindow(arg,nameS,us,null);
 				mw.setVisible(true);

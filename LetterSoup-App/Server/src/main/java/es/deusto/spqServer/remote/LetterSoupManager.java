@@ -129,16 +129,21 @@ private static final long serialVersionUID = 1L;
 		int score=s.calculatePuntuation(sdto.getArraywords());
 		User u=dao.getUser(user);
 		dao.deleteUser(u.getUser());
+		System.out.println("usuario eliminado");
 		int n=dao.getAllUser().size();
 		//IManagerDAO dao2=new ManagerDAO();
 		
-
+		Random r=new Random();
+		int id=r.nextInt(10000);
+	
 			
-		Record record=new Record(dao.getLastRecordId(), new Date(System.currentTimeMillis()), score , u);
+		Record record=new Record(id, new Date(System.currentTimeMillis()), score , u);
+	
 		u.addRecord(record);
+		System.out.println("al usuario se le ha metido record");
 		//dao.storeScore(record);
 		dao.storeUser(u);
-		
+		System.out.println("se ha vuelto a meter usuario");
 		System.out.println("salgo");
 		return score;
 	}
