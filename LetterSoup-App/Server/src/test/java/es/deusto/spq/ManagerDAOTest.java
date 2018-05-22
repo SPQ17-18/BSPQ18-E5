@@ -151,10 +151,10 @@ public class ManagerDAOTest{
 		assertEquals(dao.getLastSoupId(),23);
 		}
 	
-	@Test public void getLastRecordId() {
-		assertEquals(dao.getLastRecordId(),25);
+	//@Test public void getLastRecordId() {
+		//assertEquals(dao.getLastRecordId(),25);
 		
-		}
+		//}
 	
 	@Test public void getLastWordId() {
 		assertEquals(dao.getLastWordId(),33);
